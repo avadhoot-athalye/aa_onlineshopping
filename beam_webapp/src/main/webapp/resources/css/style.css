@@ -1,5 +1,5 @@
 body {
-	background-color: #000000;
+	background-color: #222;
 	background-image: url(../img/background-img.jpg);
 	background-position: top right;
 }
@@ -33,9 +33,11 @@ body {
 }
 .footer
 {
-	background: #000000;
+	background: #222;
+	border-color: #101010;
 	color: #b2b2b2;
-/* 	position: absolute; */
+	bottom: 0px;
+/* 	position: relative; */
 }
 
 .footer 
@@ -56,4 +58,5 @@ body {
 {
 	color: #fff;
 	text-decoration: none;
+	content: ''
 }

@@ -27,4 +27,63 @@ public class PageController {
 		return mv;
 	}
 
+	@RequestMapping(value="/contact")
+	
+	public ModelAndView contact() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Contact us");
+		mv.addObject("ifUserClickedContact", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/support")
+	
+	public ModelAndView support() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Support");
+		mv.addObject("ifUserClickedSupport", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/wallpapers")
+	
+	public ModelAndView wallpapers() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "wallpapers");
+		mv.addObject("ifUserClickedWallpapers", true);
+		return mv;
+	}
+
+	@RequestMapping(value="/cart")
+	
+	public ModelAndView cart() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "cart");
+		mv.addObject("ifUserClickedCart", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/login")
+	
+	public ModelAndView login() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "log in");
+		mv.addObject("ifUserClickedLogIn", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/signup")
+	
+	public ModelAndView signup() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Sign up");
+		mv.addObject("ifUserClickedSignUp", true);
+		return mv;
+	}
 }

@@ -5,9 +5,9 @@
 		</div>
 		<div class="footer-nav text-center">
 			<ul>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Contact Us</a></li>
-				<li><a href="#">Like Us</a></li>
+				<li><a href="${contextRoot}/about">About Us</a></li>
+				<li><a href="${contextRoot}/contact">Contact Us</a></li>
+				<li><a href="${contextRoot}/support">Support</a></li>
 			</ul>
 		</div>
 	</div>

@@ -27,7 +27,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="${img}/favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="${img}/favicon/favicon-96x96.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="${img}/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
+		<link rel="manifest" href="${img}/favicon/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
@@ -59,7 +59,29 @@
 			<%@include file="./about.jsp" %>
 		</c:if>
 		
+		<c:if test="${ifUserClickedContact == true}">
+			<%@include file="./contact.jsp" %>
+		</c:if>
 		
+		<c:if test="${ifUserClickedSupport == true}">
+			<%@include file="./support.jsp" %>
+		</c:if>
+		
+		<c:if test="${ifUserClickedWallpapers == true}">
+			<%@include file="./wallpapers.jsp" %>
+		</c:if>
+		
+		<c:if test="${ifUserClickedCart == true}">
+			<%@include file="./cart.jsp" %>
+		</c:if>
+		
+		<c:if test="${ifUserClickedLogIn == true}">
+			<%@include file="./login.jsp" %>
+		</c:if>
+		
+		<c:if test="${ifUserClickedSignUp == true}">
+			<%@include file="./signup.jsp" %>
+		</c:if>
 		
 		<%@include file="./share/footer.jsp" %>
 		
