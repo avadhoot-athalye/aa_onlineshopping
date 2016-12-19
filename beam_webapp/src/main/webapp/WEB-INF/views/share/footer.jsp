@@ -1,15 +1,14 @@
-<!--Start of the Footer -->
-		<footer class="site-footer">
-			<div class="container">
-					<div class="bottom-footer">
-						<div class="col-md-12 text-center">
-							<h6>@ Copyright by Avadhoot Athalye 2016</h6>
-							<ul class="footer-nav">
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Contact us</a></li>
-								<li><a href="#">Like us</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-		</footer>
+<footer class="footer">
+	<div class="container ">
+		<div class="row text-center footer-container">
+			<p>&#xA9 2016 Avadhoot Athalye. All rights reserved. </p>
+		</div>
+		<div class="footer-nav text-center">
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Like Us</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>

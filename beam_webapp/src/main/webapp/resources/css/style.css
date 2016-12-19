@@ -1,5 +1,5 @@
 body {
-	background-color: #000080;
+	background-color: #000000;
 	background-image: url(../img/background-img.jpg);
 	background-position: top right;
 }
@@ -27,39 +27,32 @@ body {
 {
 	margin-top: 50px;
 }
-.site-footer
+.footer-container
 {
-	background-color: #222;
-	color: #fff;
-	margin-top: 30px;
-	padding-top: 30px;
+	margin-top: 20px;
 }
-.bottom-footer
+.footer
 {
-	margin-top: 10px;
-	padding-top: 10px;
+	background: #000000;
 	color: #b2b2b2;
+/* 	position: absolute; */
 }
-.footer-nav
+
+.footer 
 {
-	text-align: center;
-	padding-left: 0px;
 	list-style: none;
 }
-.footer-nav li
+.footer-nav li 
 {
+	padding-top: 5px;
 	display: inline;
 	padding: 0 10px;
 }
-.footer-nav li:not(:first-child):before
-{
-	padding: 2px;
-}
-.footer-nav a
+.footer-nav a 
 {
 	color: #b2b2b2;
 }
-.footer-nav a:hover
+.footer-nav a:HOVER 
 {
 	color: #fff;
 	text-decoration: none;

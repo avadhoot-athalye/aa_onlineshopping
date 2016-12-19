@@ -32,12 +32,13 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
-		<title>Welcome to beam | ${title}</title>
+		<title>Beam | ${title}</title>
 		<!--Core css files -->
 		<link href="${css}/bootstrap-theme.css" rel="stylesheet">
 		<link href="${css}/bootstrap.css" rel="stylesheet">
 		<!--Custom css file -->
 		<link href="${css}/style.css" rel="stylesheet">
+<%-- 		<link href="${css}/sticky-footer.css" rel="stylesheet"> --%>
 	</HEAD>
 	
 	<!-- Body of the content starts here -->

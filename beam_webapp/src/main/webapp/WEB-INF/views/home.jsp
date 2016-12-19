@@ -41,52 +41,63 @@
 		</a>
 	</div>
 	<!--Carousal ends -->
-	<!-- Custom Content comes here -->
+
+	<!-- Custom Content starts here -->
+
 	<div class="page-header no-padding no-margin">
 		<h3>Recommended</h3>
 	</div>
-	<div class="row">
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<img src="${img}/theforest-content-img.png"
-					alt="theforest-content-img">
-				<div class="caption text-center">
-					<h3>The Forest</h3>
-					<!-- <p>...</p> -->
-					<p>
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button">Add to Cart</a>
-					</p>
+
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="${img}/theforest-content-img.png"
+						alt="theforest-content-img">
+					<div class="caption text-center">
+						<h3>The Forest</h3>
+						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
+							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+							dolor id nibh ultricies vehicula ut id elit.</p>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary" role="button">View</a> <a
+								href="#" class="btn btn-default" role="button">Add to Cart</a>
+						</p>
+
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<img src="${img}/civilisation5-content-img.png"
-					alt="civilisation5-content-img">
-				<div class="caption text-center">
-					<h3>Civilisation V</h3>
-					<!-- <p>...</p> -->
-					<p>
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button">Add to Cart</a>
-					</p>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="${img}/civilisation5-content-img.png"
+						alt="civilisation-content-img">
+					<div class="caption text-center">
+						<h3>Civilisation</h3>
+						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
+							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+							dolor id nibh ultricies vehicula ut id elit.</p>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary" role="button">View</a> <a
+								href="#" class="btn btn-default" role="button">Add to Cart</a>
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-sm-6 col-md-4">
-			<div class="thumbnail">
-				<img src="${img}/counterstrikego-content-img.png"
-					alt="counterstrikego-content-img">
-				<div class="caption text-center">
-					<h3>CS: Global Offensive</h3>
-					<!-- <p>...</p> -->
-					<p>
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button">Add to Cart</a>
-					</p>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="${img}/counterstrikego-content-img.png"
+						alt="counterstrikego-content-img">
+					<div class="caption text-center">
+						<h3>CS: Global Offensive</h3>
+						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
+							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
+							dolor id nibh ultricies vehicula ut id elit.</p>
+						<p class="text-center">
+							<a href="#" class="btn btn-primary" role="button">View</a> <a
+								href="#" class="btn btn-default" role="button">Add to Cart</a>
+						</p>
+					</div>
 				</div>
 			</div>
+
 		</div>
-	</div>
 </div>
