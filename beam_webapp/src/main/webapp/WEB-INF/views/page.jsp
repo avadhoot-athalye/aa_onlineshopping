@@ -83,6 +83,14 @@
 			<%@include file="./signup.jsp" %>
 		</c:if>
 		
+		<c:if test="${ifUserClickedGameCatalogue == true}">
+			<%@include file="./gamecatalogue.jsp" %>
+		</c:if>
+		
+		<c:if test="${ifUserClickedGame == true}">
+			<%@include file="./game.jsp" %>
+		</c:if>
+		
 		<%@include file="./share/footer.jsp" %>
 		
 		<!--End of the Footer -->

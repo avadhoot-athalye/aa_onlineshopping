@@ -1,13 +1,14 @@
 package com.beam.webapp.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PageController {
 	
-	@RequestMapping(value={"/","/home","/index","/default"})
+	@RequestMapping(value={"/","/home","/index","/default","/store"})
 	
 	public ModelAndView index() {
 		
@@ -86,4 +87,35 @@ public class PageController {
 		mv.addObject("ifUserClickedSignUp", true);
 		return mv;
 	}
+	
+	/*
+	 * For loading the product pages 
+	 */
+	
+	@RequestMapping(value="/games/all")
+	
+	public ModelAndView gamecatalogue() {
+		
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "Catalogue");
+		mv.addObject("ifUserClickedGameCatalogue", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/game/{id}")
+	
+	public ModelAndView game(@PathVariable("id") int id) {
+		ModelAndView mv = new ModelAndView("page");
+		/*
+		 * Code to feth the single product  using id
+		 * from the database
+		 */
+		
+		
+		mv.addObject("title", "");
+		mv.addObject("id", id);
+		mv.addObject("", true);
+		return mv;
+	}
+
 }
