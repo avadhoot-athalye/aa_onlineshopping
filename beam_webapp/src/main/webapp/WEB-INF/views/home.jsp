@@ -1,8 +1,7 @@
-<div class="mainright">
-	<div class="page-header no-padding no-margin">
-		<h3>Featured & Popular</h3>
-	</div>
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div class=" font-style">
+		<h3 class="header-margin">Featured & Popular</h3>
+
+	<div id="myCarousel" class="mainright carousel slide home-adjust  img-responsive" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -41,63 +40,71 @@
 		</a>
 	</div>
 	<!--Carousal ends -->
+	
 
-	<!-- Custom Content starts here -->
+	<!-- Bottom thumbnails starts here -->
 
-	<div class="page-header no-padding no-margin">
-		<h3>Recommended</h3>
+	<div class="page-header thumbnail-adjust no-padding font-style ">
+		<h3 class="header-margin">Recommended</h3>
 	</div>
 
-		<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="${img}/theforest-content-img.png"
-						alt="theforest-content-img">
-					<div class="caption text-center">
-						<h3>The Forest</h3>
-						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
-							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
-							dolor id nibh ultricies vehicula ut id elit.</p>
-						<p class="text-center">
-							<a href="#" class="btn btn-primary" role="button">View</a> <a
-								href="#" class="btn btn-default" role="button">Add to Cart</a>
-						</p>
+	<div class="row font-style">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="${img}/theforest-content-img.png"
+					alt="theforest-content-img">
+				<div class="caption text-center">
+					<h3 class="header-margin">The Forest</h3>
+					<p class="text-justify">Cras justo odio, dapibus ac facilisis
+						in, egestas eget quam. Donec id elit non mi porta gravida at eget
+						metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"
+							style="padding-left: none;"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 
-					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="${img}/civilisation5-content-img.png"
-						alt="civilisation-content-img">
-					<div class="caption text-center">
-						<h3>Civilisation</h3>
-						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
-							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
-							dolor id nibh ultricies vehicula ut id elit.</p>
-						<p class="text-center">
-							<a href="#" class="btn btn-primary" role="button">View</a> <a
-								href="#" class="btn btn-default" role="button">Add to Cart</a>
-						</p>
-					</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="${img}/civilisation5-content-img.png"
+					alt="civilisation-content-img">
+				<div class="caption text-center">
+					<h3 class="header-margin">Civilisation</h3>
+					<p class="text-justify">Cras justo odio, dapibus ac facilisis
+						in, egestas eget quam. Donec id elit non mi porta gravida at eget
+						metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"
+							style="padding-left: none;"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="${img}/counterstrikego-content-img.png"
-						alt="counterstrikego-content-img">
-					<div class="caption text-center">
-						<h3>CS: Global Offensive</h3>
-						<p class="text-justify">Cras justo odio, dapibus ac facilisis in, egestas eget
-							quam. Donec id elit non mi porta gravida at eget metus. Nullam id
-							dolor id nibh ultricies vehicula ut id elit.</p>
-						<p class="text-center">
-							<a href="#" class="btn btn-primary" role="button">View</a> <a
-								href="#" class="btn btn-default" role="button">Add to Cart</a>
-						</p>
-					</div>
+		</div>
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="${img}/counterstrikego-content-img.png"
+					alt="counterstrikego-content-img">
+				<div class="caption text-center">
+					<h3 class="header-margin">CS: Global Offensive</h3>
+					<p class="text-justify">Cras justo odio, dapibus ac facilisis
+						in, egestas eget quam. Donec id elit non mi porta gravida at eget
+						metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"
+							style="padding-left: none;"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
 			</div>
-
 		</div>
 </div>

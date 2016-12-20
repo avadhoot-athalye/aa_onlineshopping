@@ -60,3 +60,27 @@ body {
 	text-decoration: none;
 	content: ''
 }
+.font-style
+{
+	font-family: serif;
+	font-style: italic;
+}
+.header-margin
+{
+	margin-top: 10px;
+}
+.home-adjust
+{
+	width: 900px;
+	height: 500px;
+	margin: 0 0 0 auto;
+}
+.thumbnail-adjust
+{
+	padding-top: 5px;
+}
+.featured-content
+{
+	margin: 0 auto 0 0;
+	display: inline;
+}
