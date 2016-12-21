@@ -63,7 +63,7 @@ body {
 .font-style
 {
 	font-family: serif;
-	font-style: italic;
+	
 }
 .header-margin
 {
@@ -71,16 +71,39 @@ body {
 }
 .home-adjust
 {
-	width: 900px;
+	width: 800px;
 	height: 500px;
 	margin: 0 0 0 auto;
 }
 .thumbnail-adjust
 {
 	padding-top: 5px;
+	border-bottom: none;
+	margin: 20px auto 0 auto;
 }
 .featured-content
 {
 	margin: 0 auto 0 0;
 	display: inline;
+}
+
+.featured-content a
+{
+	color: #222;
+	text-decoration: none;
+	
+}
+
+.featured-content li
+{
+margin: 10px 0 0 0;
+}
+.div-featured
+{
+	margin: 0 10px 0 0;
+}
+
+.featured-content a:HOVER {
+	font-style: oblique;
+	color: #0362a2;
 }

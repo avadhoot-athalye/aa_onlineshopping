@@ -114,7 +114,7 @@ public class PageController {
 		
 		mv.addObject("title", "");
 		mv.addObject("id", id);
-		mv.addObject("", true);
+		mv.addObject("ifUserClickedGame", true);
 		return mv;
 	}
 
