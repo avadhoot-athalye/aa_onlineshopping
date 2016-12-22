@@ -29,7 +29,7 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="${img}/favicon/favicon-16x16.png">
 		<link rel="manifest" href="${img}/favicon/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="msapplication-TileImage" content="${img}/favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 
 		<title>Beam | ${title}</title>
@@ -38,7 +38,6 @@
 		<link href="${css}/bootstrap.css" rel="stylesheet">
 		<!--Custom css file -->
 		<link href="${css}/style.css" rel="stylesheet">
-<%-- 		<link href="${css}/sticky-footer.css" rel="stylesheet"> --%>
 	</HEAD>
 	
 	<!-- Body of the content starts here -->
