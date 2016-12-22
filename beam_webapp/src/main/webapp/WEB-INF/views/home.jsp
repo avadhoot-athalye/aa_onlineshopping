@@ -92,8 +92,7 @@
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
-		<div class="item active row font-style">
-			<div class="container col-md-12">
+		<div class="item active row font-style col-md-12">
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<img src="${img}/theforest-content-img.png"
@@ -106,8 +105,7 @@
 								elit.</p>
 							<p class="text-center">
 								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
+									href="#" class="btn btn-default" role="button"> <span
 									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
 								</a>
 							</p>
@@ -126,8 +124,7 @@
 								elit.</p>
 							<p class="text-center">
 								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
+									href="#" class="btn btn-default" role="button"> <span
 									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
 								</a>
 							</p>
@@ -146,19 +143,16 @@
 								elit.</p>
 							<p class="text-center">
 								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
+									href="#" class="btn btn-default" role="button"> <span
 									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
 								</a>
 							</p>
 						</div>
 					</div>
 				</div>
-			</div>
 		</div>
 		<!-- First div of 3 ends here -->
-		<div class="item font-style">
-			<div class="container col-md-12">
+		<div class="item row col-md-12 font-style">
 				<div class="col-md-4">
 					<div class="thumbnail">
 						<img src="${img}/theforest-content-img.png"
@@ -220,8 +214,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- Second div of 3 ends here -->
+			</div> <!-- Second div of 3 ends here -->
 		</div>
 		<!-- Left and right controls -->
 		<a class="left carousel-control" href="#myContent" role="button"
