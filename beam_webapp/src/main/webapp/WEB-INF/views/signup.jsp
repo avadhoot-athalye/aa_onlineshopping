@@ -1,4 +1,4 @@
-<div class="container">
+
 	<div class="well">
 		<form class="form-horizontal sign-up-form">
 
@@ -43,10 +43,9 @@
 				</div>
 			</div>
 			<div class="form-group">
-			<div class="col-sm-offset-5  col-sm-3">
-				<button type="submit" class="btn btn-primary">Sign Up</button>
+			<div class="text-center">
+				<button type="submit" class="btn btn-primary ">Sign Up</button>
 			</div>
 			</div>
 		</form>
 	</div>
-</div>

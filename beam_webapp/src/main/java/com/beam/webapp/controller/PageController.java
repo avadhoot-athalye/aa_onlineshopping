@@ -102,9 +102,9 @@ public class PageController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/game/{id}")
+	@RequestMapping(value="/game")
 	
-	public ModelAndView game(@PathVariable("id") int id) {
+	public ModelAndView game() {
 		ModelAndView mv = new ModelAndView("page");
 		/*
 		 * Code to feth the single product  using id
@@ -112,8 +112,8 @@ public class PageController {
 		 */
 		
 		
-		mv.addObject("title", "");
-		mv.addObject("id", id);
+		mv.addObject("title", "gamepage");
+//		mv.addObject("id", id);
 		mv.addObject("ifUserClickedGame", true);
 		return mv;
 	}

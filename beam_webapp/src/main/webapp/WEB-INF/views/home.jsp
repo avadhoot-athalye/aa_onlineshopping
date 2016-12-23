@@ -11,20 +11,20 @@
 			<li><a href="#">EARLY ACCESS</a></li>
 			<li><a href="#">DEMOS</a></li>
 			<li><a href="#">VIRTUAL REALITY</a></li>
-			<h3></h3>
+			<hr>
 		</ul>
 		<ul>
-			<h5>BROWSE BY GENRE</h5>
+			<h5><small>BROWSE BY GENRE</small></h5>
 			<li><a href="#">ACTION</a></li>
 			<li><a href="#">ADVENTURE</a></li>
 			<li><a href="#">CASUAL</a></li>
 			<li><a href="#">INDIE</a></li>
 			<li><a href="#">RACING</a></li>
 			<li><a href="#">MULTIPLAYER</a></li>
-			<h3></h3>
+			<hr>
 		</ul>
 		<ul>
-			<h5>BROWSE BY PLATFORM</h5>
+			<h5><small>BROWSE BY PLATFORM</small></h5>
 			<li><a href="#">MAC OS X</a></li>
 			<li><a href="#">WINDOWS</a></li>
 			<li><a href="#">PLAYSTATION</a></li>
@@ -43,7 +43,7 @@
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
-				<div class="item active">
+				<div class="item active img img-responsive">
 					<img src="${img}/gta5.jpg" alt="Grand Theft Auto V">
 				</div>
 

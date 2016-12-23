@@ -72,6 +72,7 @@
 			<!--navbar-right closed -->
 
 		</div>
+		
 	</div>
 	<!--container closed -->
 </nav>
