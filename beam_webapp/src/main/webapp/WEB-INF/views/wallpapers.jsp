@@ -1,33 +1,76 @@
-<div class="text-center">
-	<h3>Wallpapers are loading...</h3>
-</div>
-<div class="game-catalogue-settings col-sd-9">
-	<table class="table table-settings">
-		<tr>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/230x230"></td>
-		</tr>
-		<tr>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/230x230"></td>
-		</tr>
 
-		<tr>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/230x230"></td>
-		</tr>
+<div class="row basic-setting">
 
-		<tr>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/285x285"></td>
-			<td><img alt="" src="http://placehold.it/230x230"></td>
-		</tr>
-	</table>
+	<%@include file="./share/featured & Recommeded.jsp"%>
+
+	<div class="panel col-md-9 ">
+		<div class=" game-catalogue-settings">
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			<div class="thumbnail thumbnail-setting col-md-4">
+				<img src="http://placehold.it/1200x628" alt="...">
+			</div>
+			
+
+		</div>
+		<!-- Row 1 ended here -->
+		
+				
+	</div>
 </div>
