@@ -3,9 +3,9 @@
 	<h3 class="header-margin">Featured & Popular</h3>
 </div>
 <div class="row div-featured">
-	
-	<%@include file ="./share/featured & Recommeded.jsp" %>
-	
+
+	<%@include file="./share/featured & Recommeded.jsp"%>
+
 	<div class="col-md-9">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
@@ -49,6 +49,9 @@
 		<!--Carousal ends -->
 
 	</div>
+	<div class="col-md-9 text-center special-banner">
+		<img alt="" src="http://placehold.it/817x150">
+	</div>
 </div>
 
 
@@ -67,136 +70,219 @@
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
-		<div class="item active row font-style col-md-12">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/theforest-content-img.png"
-							alt="theforest-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">The Forest</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
-						</div>
-					</div>
+		<div class="item active row font-style col-md-12 carousal-thumb">
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/civilisation5-content-img.png"
-							alt="civilisation-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">Civilisation</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
-						</div>
-					</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/counterstrikego-content-img.png"
-							alt="counterstrikego-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">CS: Global Offensive</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
-						</div>
-					</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
+				</div>
+			</div>
 		</div>
 		<!-- First div of 3 ends here -->
-		<div class="item row col-md-12 font-style">
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/theforest-content-img.png"
-							alt="theforest-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">The Forest</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
+		<div class="item row col-md-12 carousal-thumb">
 
-						</div>
-					</div>
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/civilisation5-content-img.png"
-							alt="civilisation-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">Civilisation</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
-						</div>
-					</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
-				<div class="col-md-4">
-					<div class="thumbnail">
-						<img src="${img}/counterstrikego-content-img.png"
-							alt="counterstrikego-content-img">
-						<div class="caption text-center">
-							<h3 class="header-margin">CS: Global Offensive</h3>
-							<p class="text-justify">Cras justo odio, dapibus ac facilisis
-								in, egestas eget quam. Donec id elit non mi porta gravida at
-								eget metus. Nullam id dolor id nibh ultricies vehicula ut id
-								elit.</p>
-							<p class="text-center">
-								<a href="#" class="btn btn-primary" role="button">View</a> <a
-									href="#" class="btn btn-default" role="button"
-									style="padding-left: none;"> <span
-									class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-								</a>
-							</p>
-						</div>
-					</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
 				</div>
-			</div> <!-- Second div of 3 ends here -->
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="thumbnail thumbnail-setting col-md-3">
+				<img src="http://placehold.it/180x215" alt="">
+				<div class="caption">
+					<h4 class="">The Forest</h4>
+					<p class="text-center">
+						<a href="#" class="btn btn-primary" role="button">View</a> <a
+							href="#" class="btn btn-default" role="button"> <span
+							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
+						</a>
+					</p>
+				</div>
+			</div>
 		</div>
-		<!-- Left and right controls -->
-		<a class="left carousel-control " href="#myContent" role="button"
-			data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
-			aria-hidden="true"></span> <span class="sr-only">Previous</span>
-		</a> <a class="right carousel-control" href="#myContent" role="button"
-			data-slide="next"> <span class="glyphicon glyphicon-chevron-right" 
-			aria-hidden="true"></span><span class="sr-only">Next</span>
-		</a>
 	</div>
+
+
+	<!-- Left and right controls -->
+	<a class="left carousel-control " href="#myContent" role="button"
+		data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
+		aria-hidden="true"></span> <span class="sr-only">Previous</span>
+	</a> <a class="right carousel-control" href="#myContent" role="button"
+		data-slide="next"> <span class="glyphicon glyphicon-chevron-right"
+		aria-hidden="true"></span><span class="sr-only">Next</span>
+	</a>
+</div>
+
+<div class="row bottom-featured-game">
+	<!-- Left side featured games -->
+	<div class="col-md-6">
+		<div class="media panel">
+			<div class="media-left">
+				<a href="#"> <img class="media-object"
+					src="http://placehold.it/150x150" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">GAME TITLE</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+					sem. </p>
+			</div>
+		</div>
+		<div class="media panel">
+			<div class="media-left">
+				<a href="#"> <img class="media-object"
+					src="http://placehold.it/150x150" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">GAME TITLE</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+					sem. </p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Right side featured games -->
+	<div class="col-md-6">
+		<div class="media panel">
+			<div class="media-left">
+				<a href="#"> <img class="media-object"
+					src="http://placehold.it/150x150" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">GAME TITLE</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+					sem. </p>
+			</div>
+		</div>
+		<div class="media panel">
+			<div class="media-left">
+				<a href="#"> <img class="media-object"
+					src="http://placehold.it/150x150" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">GAME TITLE</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+					sem. </p>
+			</div>
+		</div>
+	</div>
+</div>

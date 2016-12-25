@@ -148,3 +148,14 @@ margin: 10px 0 0 0;
 .basic-setting {
 	margin-top: 20px;
 }
+.carousal-thumb {
+	margin: 10px auto auto auto; 
+}
+.special-banner {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.bottom-featured-game {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}

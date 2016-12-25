@@ -42,7 +42,7 @@
 				</ul>
 			</div>
 			<div class="navbar-header navbar-right padding-right">
-				<form class="navbar-form navbar-left" role="Search">
+				<form class="navbar-form navbar-left visible-lg" role="Search">
 					<div class="form-group">
 						<input type="text" class="form-control"
 							placeholder="Search for a game">
