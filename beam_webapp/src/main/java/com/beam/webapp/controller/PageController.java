@@ -1,8 +1,8 @@
 package com.beam.webapp.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -10,9 +10,14 @@ public class PageController {
 	
 	@RequestMapping(value={"/","/home","/index","/default","/store"})
 	
-	public ModelAndView index() {
+	public ModelAndView index(@RequestParam (value="login", required=false) String msg) {
+		
 		
 		ModelAndView mv = new ModelAndView("page");
+		
+		if(msg != null) {
+			mv.addObject("msg", msg);
+		}
 		mv.addObject("title", "Home");
 		mv.addObject("ifUserClickedHome", true);
 		return mv;
@@ -70,9 +75,13 @@ public class PageController {
 	
 	@RequestMapping(value="/login")
 	
-	public ModelAndView login() {
+	public ModelAndView login(@RequestParam (value="login", required=false)String msg) {
 		
 		ModelAndView mv = new ModelAndView("page");
+		
+		if(msg != null) {
+			mv.addObject("msg", msg);
+		}
 		mv.addObject("title", "log in");
 		mv.addObject("ifUserClickedLogIn", true);
 		return mv;

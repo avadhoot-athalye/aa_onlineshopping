@@ -1,6 +1,11 @@
+<c:if test = "${not empty msg }">
+<div class="alert alert-danger">
+${msg}
+</div>
+</c:if>
 
 <div class="well">
-	<form class="form-horizontal sign-up-form">
+	<form class="form-horizontal sign-up-form" method="post" action="${contextRoot}/login">
 
 		<h2 class="text-center header-sign-up">Log In</h2>
 		<div class="form-group">

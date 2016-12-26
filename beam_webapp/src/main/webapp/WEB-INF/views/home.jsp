@@ -1,3 +1,8 @@
+<c:if test = "${not empty msg }">
+<div class="alert alert-danger">
+${msg}
+</div>
+</c:if>
 
 <div class=" font-style">
 	<h3 class="header-margin">Featured & Popular</h3>
@@ -208,7 +213,7 @@
 
 
 	<!-- Left and right controls -->
-	<a class="left carousel-control " href="#myContent" role="button"
+	<a class="left carousel-control" href="#myContent" role="button"
 		data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
 		aria-hidden="true"></span> <span class="sr-only">Previous</span>
 	</a> <a class="right carousel-control" href="#myContent" role="button"
@@ -216,7 +221,9 @@
 		aria-hidden="true"></span><span class="sr-only">Next</span>
 	</a>
 </div>
-
+<div class="page-header thumbnail-adjust no-padding font-style ">
+	<h3 class="header-margin">Best-seller</h3>
+</div>
 <div class="row bottom-featured-game">
 	<!-- Left side featured games -->
 	<div class="col-md-6">
@@ -227,7 +234,7 @@
 				</a>
 			</div>
 			<div class="media-body">
-				<h4 class="media-heading">GAME TITLE</h4>
+				<h4 class="media-heading header-margin">GAME TITLE</h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -242,7 +249,7 @@
 				</a>
 			</div>
 			<div class="media-body">
-				<h4 class="media-heading">GAME TITLE</h4>
+				<h4 class="media-heading header-margin">GAME TITLE</h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -261,7 +268,7 @@
 				</a>
 			</div>
 			<div class="media-body">
-				<h4 class="media-heading">GAME TITLE</h4>
+				<h4 class="media-heading header-margin">GAME TITLE</h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -276,7 +283,7 @@
 				</a>
 			</div>
 			<div class="media-body">
-				<h4 class="media-heading">GAME TITLE</h4>
+				<h4 class="media-heading header-margin">GAME TITLE</h4>
 				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
