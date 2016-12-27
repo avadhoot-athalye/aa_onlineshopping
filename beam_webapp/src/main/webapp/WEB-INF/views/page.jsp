@@ -55,23 +55,23 @@
 		
 		
 		<c:if test="${ifUserClickedHome == true}">
-			<%@include file="./home.jsp" %>
+			<%@include file="admin/home.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedAbout == true}">
-			<%@include file="./about.jsp" %>
+			<%@include file="admin/about.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedContact == true}">
-			<%@include file="./contact.jsp" %>
+			<%@include file="admin/contact.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedSupport == true}">
-			<%@include file="./support.jsp" %>
+			<%@include file="admin/support.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedWallpapers == true}">
-			<%@include file="./wallpapers.jsp" %>
+			<%@include file="admin/wallpapers.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedCart == true}">
@@ -87,11 +87,11 @@
 		</c:if>
 		
 		<c:if test="${ifUserClickedGameCatalogue == true}">
-			<%@include file="./gamecatalogue.jsp" %>
+			<%@include file="admin/gamecatalogue.jsp" %>
 		</c:if>
 		
 		<c:if test="${ifUserClickedGame == true}">
-			<%@include file="./game.jsp" %>
+			<%@include file="admin/game.jsp" %>
 		</c:if>
 		
 		<%@include file="./share/footer.jsp" %>

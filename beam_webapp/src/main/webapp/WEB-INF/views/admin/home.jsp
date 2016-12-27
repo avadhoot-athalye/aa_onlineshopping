@@ -9,7 +9,7 @@ ${msg}
 </div>
 <div class="row div-featured">
 
-	<%@include file="./share/featured & Recommeded.jsp"%>
+	<%@include file="../share/featured & Recommeded.jsp"%>
 
 	<div class="col-md-9">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">

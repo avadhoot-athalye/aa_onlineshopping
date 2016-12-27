@@ -1,5 +1,5 @@
 ${id}
-<div class="row col-mad-12 wells">
+<div class="row col-mad-12">
 
 	<div class="col-md-4 body">
 		<div class="thumbnail thumbnail-setting-g">
@@ -22,7 +22,19 @@ ${id}
 				mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
 				semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
 				porttitor eu, consequat vitae, eleifend ac, enim.</p>
+			<br>
+			
+			<div class="row col-md-12">
+				<div class="col-md-5">
+					<a href="#" class="btn btn-warning" role="button"> <span
+						class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</a> <a href="#" class="btn btn-success" role="button">BUY NOW</a>
+				</div>
+				<div class="col-md-5 col-md-offset 2">
+					<h4>&#8377 1200</h4>
+				</div>
+			</div>
 		</div>
-		
+
 	</div>
 </div>

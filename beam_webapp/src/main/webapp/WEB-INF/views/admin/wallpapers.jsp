@@ -1,7 +1,7 @@
 
 <div class="row basic-setting">
 
-	<%@include file="./share/featured & Recommeded.jsp"%>
+	<%@include file="../share/featured & Recommeded.jsp"%>
 
 	<div class="panel col-md-9 ">
 		<div class=" game-catalogue-settings">
