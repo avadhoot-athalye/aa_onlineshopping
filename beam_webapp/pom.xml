@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.beam</groupId>
-	<artifactId>beam_webapp</artifactId>
+	<artifactId>webapp</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>beam_webapp Maven Webapp</name>
@@ -17,7 +17,7 @@
 		<!-- Linking backend project with the front end -->
 		<dependency>
 			<groupId>com.beam</groupId>
-			<artifactId>beam_backend</artifactId>
+			<artifactId>backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

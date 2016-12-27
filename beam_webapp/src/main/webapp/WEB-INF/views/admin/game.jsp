@@ -23,7 +23,7 @@ ${id}
 				semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
 				porttitor eu, consequat vitae, eleifend ac, enim.</p>
 			<br>
-			
+
 			<div class="row col-md-12">
 				<div class="col-md-5">
 					<a href="#" class="btn btn-warning" role="button"> <span

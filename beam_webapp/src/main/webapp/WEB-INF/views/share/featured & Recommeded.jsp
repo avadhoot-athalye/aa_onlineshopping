@@ -29,5 +29,6 @@
 		</ul>
 		<ul>
 			<li><a href="#">HARDWARE & CONSOLE</a></li>
+			<li><a href="${contextRoot}/wallpapers">WALLPAPERS</a></li>
 		</ul>
 	</div>

@@ -36,9 +36,7 @@
 							<li role="separator" class="divider"></li>
 							<li><a href="#">MAC OS X</a></li>
 							<li><a href="#">WINDOWS</a></li>
-						</ul></li>
-					<%-- 					<li><a href="${contextRoot}/about">About</a></li> --%>
-					<li><a href="${contextRoot}/wallpapers">WALLPAPERS</a></li>
+						</ul>
 				</ul>
 			</div>
 			<div class="navbar-header navbar-right padding-right">
