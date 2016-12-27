@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.test</groupId>
+	<groupId>com.beam</groupId>
 	<artifactId>beam_webapp</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
@@ -16,7 +16,7 @@
 	<dependencies>
 		<!-- Linking backend project with the front end -->
 		<dependency>
-			<groupId>com.test</groupId>
+			<groupId>com.beam</groupId>
 			<artifactId>beam_backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

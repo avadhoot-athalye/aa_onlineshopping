@@ -3,14 +3,19 @@ package com.beam.backend.daoimpl;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.beam.backend.dao.Accessible;
 import com.beam.backend.entity.Product;
 
-@Repository
+@Repository("productDAO")
 public class ProductDAOImpl implements Accessible{
-	
+	@Autowired
+	private SessionFactory sessionFactory;
 	List<Product> products = new ArrayList<>(); 
 	{
 	
@@ -35,6 +40,14 @@ public class ProductDAOImpl implements Accessible{
 			}
 		}
 		return null;
+	}
+
+	@Override
+	@Transactional
+	public boolean add(Product product) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().persist(product);
+		return true;
 	}
 
 }
