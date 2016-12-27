@@ -131,9 +131,9 @@ margin: 10px 0 0 0;
 .sign-up-setting {
 	
 }
-.game-catalogue-settings {
-	margin-top: 25px;
-}
+/* .game-catalogue-settings { */
+/* 	margin-top: 25px; */
+/* } */
 .table-settings {
 	width: 500px;
 	height: 100%;
@@ -162,4 +162,8 @@ margin: 10px 0 0 0;
 .ci-settings {
 	margin-left: -50%;
 	margin-bottom: -75%;
+}
+.thumbnail-setting-g{
+	width: 400px;
+	margin-right: 10px;
 }

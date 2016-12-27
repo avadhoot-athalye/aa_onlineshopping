@@ -59,9 +59,9 @@
 						class="dropdown-toggle dropdown">ADMIN<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="#">ACTION</a></li>
-							<li><a href="#">ANOTHER ACTION</a></li>
-							<li><a href="#">SOMETHING ELSE</a></li>
+							<li><a href="#">ADD PRODUCTS</a></li>
+							<li><a href="#">CREAT NEW CATEGORY</a></li>
+							<li><a href="#">ADD WALLPAPERS</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">Separated link</a></li>
 						</ul></li>

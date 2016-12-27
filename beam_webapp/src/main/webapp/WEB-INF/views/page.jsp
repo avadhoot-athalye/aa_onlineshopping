@@ -38,6 +38,10 @@
 		<link href="${css}/bootstrap.css" rel="stylesheet">
 		<!--Custom css file -->
 		<link href="${css}/style.css" rel="stylesheet">
+		<!-- Pace.css for loader -->
+<%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
+		
+		
 	</HEAD>
 	
 	<!-- Body of the content starts here -->
@@ -97,5 +101,6 @@
 		<!-- Script placed at the end -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+<%-- 		<script src="${js}/pace.js"></script> --%>
 	</body>
 </HTML>
