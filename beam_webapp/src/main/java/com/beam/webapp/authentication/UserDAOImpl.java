@@ -1,4 +1,4 @@
-package com.beam.demo.authentication;
+package com.beam.webapp.authentication;
 
 import org.springframework.stereotype.Repository;
 

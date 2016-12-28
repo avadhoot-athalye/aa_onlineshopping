@@ -1,4 +1,4 @@
-package com.test.beam_backend;
+package com.beam.backend;
 
 /**
  * Hello world!

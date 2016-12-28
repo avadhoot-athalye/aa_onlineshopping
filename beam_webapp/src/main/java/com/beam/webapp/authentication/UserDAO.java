@@ -1,4 +1,4 @@
-package com.beam.demo.authentication;
+package com.beam.webapp.authentication;
 
 public interface UserDAO {
 

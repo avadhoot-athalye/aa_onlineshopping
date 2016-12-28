@@ -22,8 +22,8 @@
 							<div class="col-md-6">
 								<h4>Product Details</h4>
 							</div>
-							<div class="col-md-offset-2 col-md-4">
-								<h4>Total Amount</h4>
+							<div class="col-md-offset-3 col-md-2">
+								<h4>Amount</h4>
 							</div>
 						</div>
 					</div>
@@ -34,16 +34,38 @@
 							<img class="img-responsive" alt=""
 								src="http://placehold.it/100x100">
 						</div>
-						<div class="col-md-6 col-xs-12">
+						<div class="col-md-5 col-xs-12">
 							<strong>PRODUCT NAME</strong>
 						</div>
 						<div class="col-md-2 col-xs-12">
-						
+
+<!-- 							<div class="row col-md-8"> -->
+<!-- 								<span>QUANTITY &nbsp;</span> -->
+<!-- 							</div> -->
+							<div class="row col-md-4">
+								<div class="input-group spinner">
+									<input type="text" class="form-control" value="1">
+									<div class="input-group-btn-vertical">
+
+										<button class="btn btn-default" type="button">
+											<i class="fa fa-caret-up"></i>
+
+										</button>
+										<button class="btn btn-default" type="button">
+											<i class="fa fa-caret-down"></i>
+
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1 col-xs-12">
 							<strong>&#8377 1200</strong>
 						</div>
 						<div class="col-md-2 col-xs-12">
-							<h5>QUANTITY</h5>
+							<span class="glyphicon glyphicon-trash"> REMOVE</span>
 						</div>
+
 					</div>
 				</div>
 				<div class="panel-heading">
@@ -52,7 +74,7 @@
 							<div class="col-md-6">
 								<h4>Total Amount</h4>
 							</div>
-							<div class="col-md-offset-2 col-md-4">
+							<div class="col-md-offset-3 col-md-3">
 								<h4>&#8377 1200</h4>
 							</div>
 						</div>
