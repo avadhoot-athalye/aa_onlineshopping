@@ -1,7 +1,8 @@
 body {
-	background-color: #fff;
+	background-color: ##e1e3ea;
 	background-image: url(../img/background-img.jpg);
 	background-position: top right;
+	background-repeat: repeat;
 }
 .no-margin 
 {

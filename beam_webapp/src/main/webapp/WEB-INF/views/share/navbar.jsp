@@ -10,8 +10,8 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand no-padding padding-left" href="${contextRoot}/"><img
-				src="${img}/Logo.png"></a>
+			<a class="navbar-brand no-padding padding-left"
+				href="${contextRoot}/"><img src="${img}/Logo.png"></a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-games-navbar-collapse-1">
 			<div class="navbar-header">
@@ -40,13 +40,18 @@
 				</ul>
 			</div>
 			<div class="navbar-header navbar-right padding-right">
-				<form class="navbar-form navbar-left visible-lg" role="Search">
-					<div class="form-group">
-						<input type="text" class="form-control"
-							placeholder="Search for a game">
+
+				<form class="navbar-form navbar-left" role="search">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search for a game">
+						<div class="input-group-btn">
+							<button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+						</div>
 					</div>
-					<button type="submit" class="btn btn-default">SEARCH</button>
 				</form>
+
 				<ul class="nav navbar-nav navbar-right">
 					<li role="presentation"><a href="${contextRoot}/cart"><span
 							class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
@@ -61,16 +66,24 @@
 							<li><a href="#">CREAT NEW CATEGORY</a></li>
 							<li><a href="#">ADD WALLPAPERS</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
+							<li><a href="#">Settings</a></li>
 						</ul></li>
-						
+					<li><a href="#" data-toggle="dropdown"
+						class="dropdown-toggle dropdown">USER<span class="caret"
+							aria-haspopup="true" aria-expanded="true"></span></a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">MY WISHLIST</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Settings</a></li>
+						</ul></li>
+
 				</ul>
 
 			</div>
 			<!--navbar-right closed -->
 
 		</div>
-		
+
 	</div>
 	<!--container closed -->
 </nav>

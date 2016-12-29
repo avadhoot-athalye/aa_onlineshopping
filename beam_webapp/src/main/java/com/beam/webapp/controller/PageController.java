@@ -18,7 +18,7 @@ public class PageController {
 		if(msg != null) {
 			mv.addObject("msg", msg);
 		}
-		mv.addObject("title", "Home");
+		mv.addObject("title", "Welcome to Beam");
 		mv.addObject("ifUserClickedHome", true);
 		return mv;
 	}
@@ -106,7 +106,7 @@ public class PageController {
 	public ModelAndView gamecatalogue() {
 		
 		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "Catalogue");
+		mv.addObject("title", "All games");
 		mv.addObject("ifUserClickedGameCatalogue", true);
 		return mv;
 	}

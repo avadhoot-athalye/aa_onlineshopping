@@ -46,7 +46,7 @@
 	content="${img}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>Beam | ${title}</title>
+<title>${title} | Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap-theme.css" rel="stylesheet">
 <link href="${css}/bootstrap.css" rel="stylesheet">
