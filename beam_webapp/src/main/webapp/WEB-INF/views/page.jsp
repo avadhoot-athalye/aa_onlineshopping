@@ -54,6 +54,7 @@
 <link href="${css}/style.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <!-- Pace.css for loader -->
 <%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
 
@@ -63,7 +64,7 @@
 <!-- Body of the content starts here -->
 <body>
 	<div class="container margin-centered">
-		<div class="page-header no-margin no-padding">
+		<div class="no-margin no-padding">
 			<img src="${img}/page-header.jpg" class="img-responsive">
 		</div>
 		<!--Header image ends -->

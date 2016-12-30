@@ -23,6 +23,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- Panel Body starts here -->
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-md-2 col-xs-12">
@@ -56,6 +57,56 @@
 								</div>
 
 							</div>
+							
+							
+						</div>
+
+
+						<div class="col-md-1 col-xs-12">
+							<strong>&#8377 1200</strong>
+						</div>
+						<div class="col-md-2 col-xs-12">
+							<span class="glyphicon glyphicon-trash"> REMOVE</span>
+						</div>
+
+					</div>
+				</div> <!-- Panel Body ends here -->
+				
+								<div class="panel-body">
+					<div class="row">
+						<div class="col-md-2 col-xs-12">
+							<img class="img-responsive" alt=""
+								src="http://placehold.it/100x100">
+						</div>
+						<div class="col-md-3 col-xs-12">
+							<strong>PRODUCT NAME</strong>
+						</div>
+
+						<!-- Quantity is added here -->
+						<div class="col-md-4 col-xs-12">
+							<div class="col-md-12">
+
+								<div class="row col-md-offset-4 col-md-2">
+									<span>QUANTITY &nbsp;</span>
+								</div>
+
+								<div class="row col-md-offset-2 col-md-4">
+									<div class="input-group spinner">
+										<input type="text" class="form-control" value="1">
+										<div class="input-group-btn-vertical">
+											<button class="btn btn-default" type="button">
+												<i class="fa fa-caret-up"></i>
+											</button>
+											<button class="btn btn-default" type="button">
+												<i class="fa fa-caret-down"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							
+							
 						</div>
 
 

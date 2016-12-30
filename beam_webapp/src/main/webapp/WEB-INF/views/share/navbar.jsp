@@ -1,5 +1,5 @@
 <!--Navigation bar starts -->
-<nav class="navbar navbar-inverse navbar-static-top no-margin"
+<nav class="nav-main navbar-static-top no-margin"
 	role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -13,21 +13,22 @@
 			<a class="navbar-brand no-padding padding-left"
 				href="${contextRoot}/"><img src="${img}/Logo.png"></a>
 		</div>
-		<div class="collapse navbar-collapse" id="bs-games-navbar-collapse-1">
+		
+		<div class="collapse navbar-collapse nav-main" id="bs-games-navbar-collapse-1">
 			<div class="navbar-header">
-				<ul class="nav navbar-nav">
-					<li><a href="${contextRoot}/store">STORE</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
+				<ul class="nav navbar-nav nav-main nav-item">
+					<li><a href="${contextRoot}/store" class="nav-item">STORE</a></li>
+					
+					<li class="dropdown "><a href="#" class="dropdown-toggle nav-item"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">GAMES <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="${contextRoot}/games/all">ALL GAMES</a></li>
+							<li><a href="${contextRoot}/games/all" class="nav-item">ALL GAMES</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">NEW RELEASES</a></li>
 							<li><a href="#">MOST POPULAR</a></li>
 							<li><a href="#">EARLY ACCESS</a></li>
 							<li role="separator" class="divider"></li>
-							<!--  <div class="popup_menu_subheader">Browse by genre:</div> -->
 							<li><a href="#">ACTION</a></li>
 							<li><a href="#">ADVENTURE</a></li>
 							<li><a href="#">CASUAL</a></li>
@@ -52,29 +53,31 @@
 					</div>
 				</form>
 
-				<ul class="nav navbar-nav navbar-right">
-					<li role="presentation"><a href="${contextRoot}/cart"><span
+				<ul class="nav navbar-nav navbar-right nav-item">
+					<li role="presentation"><a href="${contextRoot}/cart" class="nav-item"><span
 							class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-							CART <span class="badge">0</span></a></li>
-					<li><a href="${contextRoot}/login">LOG IN</a></li>
-					<li><a href="${contextRoot}/signup">SIGN UP</a></li>
+							CART <span class="badge"></span></a></li>
+					<li><a href="${contextRoot}/login" class="nav-item">LOG IN</a></li>
+					<li><a href="${contextRoot}/signup" class="nav-item">SIGN UP</a></li>
 					<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown">ADMIN<span class="caret"
+						class="dropdown-toggle dropdown nav-item">ADMIN<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li><a href="#">ADD PRODUCTS</a></li>
 							<li><a href="#">CREAT NEW CATEGORY</a></li>
 							<li><a href="#">ADD WALLPAPERS</a></li>
+							<li><a href="#">SETTINGS</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Settings</a></li>
+							<li><a href="#">LOG OUT</a></li>
 						</ul></li>
 					<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown">USER<span class="caret"
+						class="dropdown-toggle dropdown nav-item">USER<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li><a href="#">MY WISHLIST</a></li>
+							<li><a href="#">SETTINGS</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Settings</a></li>
+							<li><a href="#">LOG OUT</a></li>
 						</ul></li>
 
 				</ul>

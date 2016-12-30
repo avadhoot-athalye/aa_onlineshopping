@@ -68,10 +68,10 @@ ${msg}
 
 <div id="myContent" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myContent" data-slide-to="0" class="active"></li>
-		<li data-target="#myContent" data-slide-to="1"></li>
-	</ol>
+<!-- 	<ol class="carousel-indicators"> -->
+<!-- 		<li data-target="#myContent" data-slide-to="0" class="active"></li> -->
+<!-- 		<li data-target="#myContent" data-slide-to="1"></li> -->
+<!-- 	</ol> -->
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">

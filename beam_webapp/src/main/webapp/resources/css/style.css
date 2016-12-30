@@ -3,6 +3,43 @@ body {
 	background-image: url(../img/background-img.jpg);
 	background-position: top right;
 	background-repeat: repeat;
+	font:"Open Sans", sans-serif; 
+}
+.nav-main {
+	background-color: #222;
+	color: #fff;
+	height: 50px;
+}
+
+.nav-item {
+	color: #fff;
+}
+
+.nav-item  li  a:hover {
+	color:#fff;
+	background-color: #444;
+} 
+
+.nav-item  li  a:open {
+	color:#fff;
+	background-color: #444;
+} 
+
+.dropdown-menu{
+	background-color: #222;
+	
+}
+.dropdown-menu li a {
+	background-color: #222;
+	color: #fff;
+}
+
+.dropdown-menu li a:HOVER {
+	background-color: #444;
+	color: #fff;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+	background-color: #444;
 }
 .no-margin 
 {
@@ -65,16 +102,6 @@ body {
 {
 	color: #fff;
 	text-decoration: none;
-}
-.font-style
-{
-	font-family: serif;
-	
-}
-.font-style h5
-{
-	font-style: bold;
-	
 }
 
 .header-margin
