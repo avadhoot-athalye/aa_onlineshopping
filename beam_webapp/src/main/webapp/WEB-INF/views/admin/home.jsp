@@ -7,11 +7,11 @@ ${msg}
 <div class=" font-style">
 	<h3 class="header-margin">Featured & Popular</h3>
 </div>
-<div class="row div-featured">
+<div class="row div-featured ">
 
 	<%@include file="../share/featured & Recommeded.jsp"%>
 
-	<div class="col-md-9">
+	<div class="col-md-9 visible-lg visible-md visible-sm">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -54,7 +54,7 @@ ${msg}
 		<!--Carousal ends -->
 
 	</div>
-	<div class="col-md-9 text-center special-banner">
+	<div class="col-md-9 text-center special-banner img img-responsive">
 		<img alt="" src="http://placehold.it/817x150">
 	</div>
 </div>

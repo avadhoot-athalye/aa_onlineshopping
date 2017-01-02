@@ -1,5 +1,5 @@
 
-	<div class="col-md-3 font-style featured-content">
+	<div class="col-md-3 font-style featured-content visible-lg">
 		<ul>
 			<li><a href="${contextRoot}/games/all">ALL GAMES</a></li>
 			<li><a href="#">NEW RELEASES</a></li>

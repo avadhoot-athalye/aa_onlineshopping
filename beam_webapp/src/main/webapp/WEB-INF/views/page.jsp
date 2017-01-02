@@ -65,7 +65,7 @@
 <body>
 	<div class="container margin-centered">
 		<div class="no-margin no-padding">
-			<img src="${img}/page-header.jpg" class="img-responsive">
+			<img src="${img}/page-header.jpg" class="img img-responsive visible-lg">
 		</div>
 		<!--Header image ends -->
 

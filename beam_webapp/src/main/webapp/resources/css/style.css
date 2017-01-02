@@ -27,18 +27,27 @@ body {
 
 .dropdown-menu{
 	background-color: #222;
-	
 }
 .dropdown-menu li a {
 	background-color: #222;
 	color: #fff;
 }
-
-.dropdown-menu li a:HOVER {
+.dropdown-menu .divider {
 	background-color: #444;
-	color: #fff;
 }
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+
+.dropdown-menu > li > a:hover {
+	background-color: #222;
+	color: #444;
+}
+.nav .open > a{
+	color: #fff;
+	background-color: #444;
+}
+.nav .open > a:focus{
+	background-color: #444;
+}
+.nav .open > a:hover{
 	background-color: #444;
 }
 .no-margin 

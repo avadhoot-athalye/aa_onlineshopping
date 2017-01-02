@@ -22,7 +22,7 @@
 					<li class="dropdown "><a href="#" class="dropdown-toggle nav-item"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">GAMES <span class="caret"></span></a>
-						<ul class="dropdown-menu">
+						<ul class="dropdown-menu nav-item">
 							<li><a href="${contextRoot}/games/all" class="nav-item">ALL GAMES</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">NEW RELEASES</a></li>
@@ -42,7 +42,7 @@
 			</div>
 			<div class="navbar-header navbar-right padding-right">
 
-				<form class="navbar-form navbar-left" role="search">
+				<form class="navbar-form navbar-left visible-lg" role="search">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Search for a game">
 						<div class="input-group-btn">
@@ -71,7 +71,7 @@
 							<li><a href="#">LOG OUT</a></li>
 						</ul></li>
 					<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown nav-item">USER<span class="caret"
+						class="dropdown-toggle dropdown nav-item padding-right">USER<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li><a href="#">MY WISHLIST</a></li>
