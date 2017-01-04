@@ -112,6 +112,10 @@
 			<%@include file="admin/game.jsp"%>
 		</c:if>
 
+		<c:if test="${ifUserClickedSettings == true}">
+			<%@include file="user/profilesettings.jsp"%>
+		</c:if>
+		
 		<%@include file="./share/footer.jsp"%>
 
 		<!--End of the Footer -->

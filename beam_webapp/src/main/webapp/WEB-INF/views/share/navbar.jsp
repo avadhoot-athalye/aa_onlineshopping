@@ -74,8 +74,9 @@
 						class="dropdown-toggle dropdown nav-item padding-right">USER<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="#">MY WISHLIST</a></li>
-							<li><a href="#">SETTINGS</a></li>
+							<li><a href="${contextRoot}/profile">HELLO USER</a></li>
+							<li><a href="${contextRoot}/myorders">MY ORDERS</a></li>
+							<li><a href="${contextRoot}/mywishlist">MY WISHLIST</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">LOG OUT</a></li>
 						</ul></li>
