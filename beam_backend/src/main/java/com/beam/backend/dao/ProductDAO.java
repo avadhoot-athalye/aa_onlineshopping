@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.beam.backend.entity.Product;
 
-public interface Accessible {
+public interface ProductDAO {
 	
 	List<Product> list();
 	Product get (int id);

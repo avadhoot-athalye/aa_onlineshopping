@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.beam.backend.dao.Accessible;
+import com.beam.backend.dao.ProductDAO;
 import com.beam.backend.entity.Product;
 
 
@@ -22,7 +22,7 @@ import com.beam.backend.entity.Product;
 	// */
 
 	@Autowired
-	private Accessible accessible;
+	private ProductDAO accessible;
 
 	@RequestMapping(value = "/list")
 	public @ResponseBody List<Product> productList() { // need to receive

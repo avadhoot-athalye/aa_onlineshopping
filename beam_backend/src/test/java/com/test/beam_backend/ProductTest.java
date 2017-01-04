@@ -2,7 +2,7 @@ package com.test.beam_backend;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.beam.backend.dao.Accessible;
+import com.beam.backend.dao.ProductDAO;
 import com.beam.backend.entity.Product;
 
 public class ProductTest {
@@ -16,7 +16,7 @@ public class ProductTest {
 		context.refresh();
 		
 		//get the ProductDAO
-		Accessible productDAO = (Accessible) context.getBean("productDAO");
+		ProductDAO productDAO = (ProductDAO) context.getBean("productDAO");
 		
 		Product p = new Product();
 		
