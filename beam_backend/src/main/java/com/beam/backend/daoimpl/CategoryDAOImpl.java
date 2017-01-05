@@ -1,40 +1,42 @@
 package com.beam.backend.daoimpl;
 
-import java.util.ArrayList;
 import java.util.List;
+
 import javax.transaction.Transactional;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import com.beam.backend.dao.ProductDAO;
-import com.beam.backend.entity.Product;
 
-@Repository("productDAO")
-public class ProductDAOImpl implements ProductDAO{
+import com.beam.backend.dao.CategoryDAO;
+import com.beam.backend.entity.Category;
+
+@Repository ("categoryDAO")
+public class CategoryDAOImpl implements CategoryDAO{
 	
 	@Autowired
 	private SessionFactory sessionfactory;
 
 	@Override
 	@Transactional
-	public List<Product> list() {
-		String hql = "from Product";
+	public List<Category> list() {
+		String hql = "from Category";
 		Query query = sessionfactory.getCurrentSession().createQuery(hql);
 		return query.list();
 	}
 
 	@Override
 	@Transactional
-	public Product get(int id) {
-		return sessionfactory.getCurrentSession().get(Product.class, id);
+	public Category getCategory(int id) {
+		return sessionfactory.getCurrentSession().get(Category.class, id);
 	}
 
 	@Override
 	@Transactional
-	public boolean addProduct(Product product) {
+	public boolean addCategory(Category category) {
 		try {
-			sessionfactory.getCurrentSession().save(product);
+			sessionfactory.getCurrentSession().save(category);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -45,9 +47,21 @@ public class ProductDAOImpl implements ProductDAO{
 
 	@Override
 	@Transactional
-	public boolean updateProduct(Product product) {
+	public boolean updateCategory(Category category) {
 		try {
-			sessionfactory.getCurrentSession().update(product);
+			sessionfactory.getCurrentSession().update(category);
+			return true;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			return false;
+		}
+	}
+
+	@Override
+	@Transactional
+	public boolean deleteCategory(Category category) {
+		try {
+			sessionfactory.getCurrentSession().delete(category);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -55,25 +69,5 @@ public class ProductDAOImpl implements ProductDAO{
 		}
 		
 	}
-
-	@Override
-	@Transactional
-	public boolean deleteProduct(Product product) {
-		try {
-			sessionfactory.getCurrentSession().delete(product);
-			return true;
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-			return false;
-		}
-		
-	}
-
-	@Override
-	@Transactional
-	public Product getByCategory(int categoryId) {
-		return sessionfactory.getCurrentSession().get(Product.class, categoryId);
-	}
-	
 
 }
