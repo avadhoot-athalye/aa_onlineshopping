@@ -15,6 +15,7 @@ public class Product {
 		private String product_description;
 		private double product_price;
 		private int product_quantity;
+		private int category_id;
 		
 		public int getProduct_id() {
 			return product_id;
@@ -45,6 +46,12 @@ public class Product {
 		}
 		public void setProduct_quantity(int product_quantity) {
 			this.product_quantity = product_quantity;
+		}
+		public int getCategory_id() {
+			return category_id;
+		}
+		public void setCategory_id(int category_id) {
+			this.category_id = category_id;
 		}
 		
 		
