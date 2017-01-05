@@ -87,3 +87,30 @@ product_id bigint(10) not null,
 constraint fk_ordered_product_id FOREIGN KEY(product_id)
 references product(product_id)
 )
+
+create table supplier
+(
+supplier_id identity,
+supplier_name varchar2(30) not null,
+supplier_contact_no varchar2(30) not null,
+)
+
+create table wishlist
+(
+wishlist_id identity,
+wishlist_grand_total decimal(8,2) not null,
+user_id bigint(10) not null,
+constraint fk_wish_user_id FOREIGN KEY(user_id)
+references user(user_id)
+)
+
+create table wishlist_items
+(
+item_id identity,
+wishlist_id int(10) not null,
+constraint fk_wishlist_id  FOREIGN KEY(wishlist_id )
+references wishlist(wishlist_id ),
+product_id int(10) not null,
+constraint fk_wishlist_product_id FOREIGN KEY(product_id)
+references product(product_id)
+)

@@ -63,9 +63,10 @@
 						class="dropdown-toggle dropdown nav-item">ADMIN<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="#">ADD PRODUCTS</a></li>
+							<li><a href="#">ADD NEW PRODUCT</a></li>
 							<li><a href="#">CREAT NEW CATEGORY</a></li>
-							<li><a href="#">ADD WALLPAPERS</a></li>
+							<li><a href="#">ADD NEW SUPPLIER</a></li>
+							<li><a href="#">ADD NEW WALLPAPER</a></li>
 							<li><a href="#">SETTINGS</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">LOG OUT</a></li>

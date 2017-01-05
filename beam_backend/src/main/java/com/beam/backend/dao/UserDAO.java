@@ -7,8 +7,8 @@ import com.beam.backend.entity.User;
 public interface UserDAO {
 
 	List<User> list();
-	User get (int id);
-	User addUser(User user);
-	User deleteUser(User user);
-	User updateUser(User user);
+	User getUser (int id);
+	boolean addUser(User user);
+	boolean deleteUser(User user);
+	boolean updateUser(User user);
 }

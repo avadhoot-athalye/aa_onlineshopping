@@ -1,25 +1,46 @@
 package com.beam.backend.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
+import org.springframework.stereotype.Component;
+
 @Entity
+@Component
 public class User {
-	@Id @GeneratedValue
+	
+	@Id 
+	@Column(name="User_id")
 	private int id;
+	
 	private String username;
+	
+	@Column(name="User_firstname")
 	private String firstname;
+	
+	@Column(name="User_lastname")
 	private String lastname;
+	
+	@Column(name="User_emailid")
 	private String emailid;
+	
+	@Column(name="User_mobileno")
 	private String mobilenumber;
+	
+	@Column(name="User_password")
 	private String password;
+	
 	@Transient
 	private String confirm_password;
-	@OneToOne
+	
+	@Column(name="User_role")
 	private String Role;
+	
+	@Column(name="User_enable")
 	private boolean enabled;
 	
 	
