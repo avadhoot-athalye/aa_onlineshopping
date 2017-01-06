@@ -116,6 +116,10 @@
 			<%@include file="user/profilesettings.jsp"%>
 		</c:if>
 		
+		<c:if test="${ifAdminClickedSettings == true}">
+			<%@include file="admin/authority.jsp"%>
+		</c:if>
+		
 		<%@include file="./share/footer.jsp"%>
 
 		<!--End of the Footer -->

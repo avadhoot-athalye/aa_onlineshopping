@@ -170,4 +170,69 @@ public class PageController {
 		mv.addObject("ifUserClickedmywishlist", true);
 		return mv;
 	}
+	
+	@RequestMapping(value="/authority")
+	
+	public ModelAndView authority() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "authority");
+		mv.addObject("ifAdminClickedSettings", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/addproduct")
+	
+	public ModelAndView addproduct() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Add a product");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewProduct", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/addcategory")
+	
+	public ModelAndView addcategory() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Add a category");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewCategory", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/addsupplier")
+	
+	public ModelAndView addsupplier() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Add a category");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewSupplier", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/addwallpaper")
+	
+	public ModelAndView addwallpaper() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Add a category");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewWallpaper", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/adminsettings")
+	
+	public ModelAndView adminsettings() {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("title", "Add a category");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedMySettings", true);
+		return mv;
+	}
 }

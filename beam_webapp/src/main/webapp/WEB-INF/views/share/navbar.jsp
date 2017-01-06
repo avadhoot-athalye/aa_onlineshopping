@@ -63,11 +63,11 @@
 						class="dropdown-toggle dropdown nav-item">ADMIN<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="#">ADD NEW PRODUCT</a></li>
-							<li><a href="#">CREAT NEW CATEGORY</a></li>
-							<li><a href="#">ADD NEW SUPPLIER</a></li>
-							<li><a href="#">ADD NEW WALLPAPER</a></li>
-							<li><a href="#">SETTINGS</a></li>
+							<li><a href="${contextRoot}/addproduct">ADD NEW PRODUCT</a></li>
+							<li><a href="${contextRoot}/addcategory">CREAT NEW CATEGORY</a></li>
+							<li><a href="${contextRoot}/addsupplier">ADD NEW SUPPLIER</a></li>
+							<li><a href="${contextRoot}/addwallpaper">ADD NEW WALLPAPER</a></li>
+							<li><a href="${contextRoot}/adminsettings">SETTINGS</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="#">LOG OUT</a></li>
 						</ul></li>

@@ -184,6 +184,7 @@ ul li a:hover {
 .sign-up-form {
 	margin-top: 50px;
 }
+
 .header-sign-up {
 	margin-bottom: 15px;
 }
@@ -203,6 +204,7 @@ ul li a:hover {
 	width: 200px;
 	margin-right: 10px;
 }
+
 .basic-setting {
 	margin-top: 20px;
 }
@@ -272,6 +274,7 @@ ul li a:hover {
 	top: 0;
 	left: 4px;
 }
+
 .account-tab {
 	background-color: #222;
 	padding: 0px 0px 0px 0px;
@@ -286,19 +289,29 @@ ul li a:hover {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	
 }
 
 .account-tab li a {
 	color: #fff;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .account-tab li a:hover {
 	color: #fff;
 }
+
 .panel-acctab {
 	margin-top: 50px;
 	margin-bottom: 50px;
-	width: 
+	width:
+}
+
+#ad_setting{
+	background-color: #f5f5f5;
+}
+
+#ad_setting li a {
+	color: #262626;
+	text-decoration: none;
+	background-color: #f5f5f5;
 }
