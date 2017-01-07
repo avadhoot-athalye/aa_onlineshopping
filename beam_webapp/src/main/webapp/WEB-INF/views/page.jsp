@@ -120,6 +120,8 @@
 			<%@include file="admin/authority.jsp"%>
 		</c:if>
 		
+		
+		
 		<%@include file="./share/footer.jsp"%>
 
 		<!--End of the Footer -->

@@ -7,232 +7,253 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class PageController {
-	
-	@RequestMapping(value={"/","/home","/index","/default","/store"})
-	
-	public ModelAndView index(@RequestParam (value="login", required=false) String msg) {
-		
-		
+
+	@RequestMapping(value = { "/", "/home", "/index", "/default", "/store" })
+
+	public ModelAndView index(@RequestParam(value = "login", required = false) String msg) {
+
 		ModelAndView mv = new ModelAndView("page");
-		
-		if(msg != null) {
+
+		if (msg != null) {
 			mv.addObject("msg", msg);
 		}
 		mv.addObject("title", "Welcome to Beam");
 		mv.addObject("ifUserClickedHome", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/about")
-	
+
+	@RequestMapping(value = "/about")
+
 	public ModelAndView about() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "About us");
 		mv.addObject("ifUserClickedAbout", true);
 		return mv;
 	}
 
-	@RequestMapping(value="/contact")
-	
+	@RequestMapping(value = "/contact")
+
 	public ModelAndView contact() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Contact us");
 		mv.addObject("ifUserClickedContact", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/support")
-	
+
+	@RequestMapping(value = "/support")
+
 	public ModelAndView support() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Support");
 		mv.addObject("ifUserClickedSupport", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/wallpapers")
-	
+
+	@RequestMapping(value = "/wallpapers")
+
 	public ModelAndView wallpapers() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "wallpapers");
 		mv.addObject("ifUserClickedWallpapers", true);
 		return mv;
 	}
 
-	@RequestMapping(value="/cart")
-	
+	@RequestMapping(value = "/cart")
+
 	public ModelAndView cart() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "cart");
 		mv.addObject("ifUserClickedCart", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/login")
-	
-	public ModelAndView login(@RequestParam (value="login", required=false)String msg) {
-		
+
+	@RequestMapping(value = "/login")
+
+	public ModelAndView login(@RequestParam(value = "login", required = false) String msg) {
+
 		ModelAndView mv = new ModelAndView("page");
-		
-		if(msg != null) {
+
+		if (msg != null) {
 			mv.addObject("msg", msg);
 		}
 		mv.addObject("title", "log in");
 		mv.addObject("ifUserClickedLogIn", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/signup")
-	
+
+	@RequestMapping(value = "/signup")
+
 	public ModelAndView signup() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Sign up");
 		mv.addObject("ifUserClickedSignUp", true);
 		return mv;
 	}
-	
+
 	/*
-	 * For loading the product pages 
+	 * For loading the product pages
 	 */
-	
-	@RequestMapping(value="/games/all")
-	
+
+	@RequestMapping(value = "/games/all")
+
 	public ModelAndView gamecatalogue() {
-		
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "All games");
 		mv.addObject("ifUserClickedGameCatalogue", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/game")
-	
+
+	@RequestMapping(value = "/game")
+
 	public ModelAndView game() {
 		ModelAndView mv = new ModelAndView("page");
 		/*
-		 * Code to feth the single product  using id
-		 * from the database
+		 * Code to feth the single product using id from the database
 		 */
-		
-		
+
 		mv.addObject("title", "gamepage");
-//		mv.addObject("id", id);
+		// mv.addObject("id", id);
 		mv.addObject("ifUserClickedGame", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/settings")
-	
+
+	@RequestMapping(value = "/settings")
+
 	public ModelAndView settings() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "settings");
-//		mv.addObject("id", id);
+		// mv.addObject("id", id);
 		mv.addObject("ifUserClickedSettings", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/profile")
-	
+
+	@RequestMapping(value = "/profile")
+
 	public ModelAndView profile() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "profile");
 		mv.addObject("ifUserClickedSettings", true);
 		mv.addObject("ifUserClickedProfile", true);
 		return mv;
 	}
 
-	@RequestMapping(value="/myorders")
-	
+	@RequestMapping(value = "/myorders")
+
 	public ModelAndView myorders() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "myorders");
 		mv.addObject("ifUserClickedSettings", true);
 		mv.addObject("ifUserClickedmyorders", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/mywishlist")
-	
+
+	@RequestMapping(value = "/mywishlist")
+
 	public ModelAndView mywishlist() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "myorders");
 		mv.addObject("ifUserClickedSettings", true);
 		mv.addObject("ifUserClickedmywishlist", true);
 		return mv;
 	}
 	
-	@RequestMapping(value="/authority")
-	
+	@RequestMapping(value = "/userpassword")
+
+	public ModelAndView userpassword() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "change your password");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedChangePassword", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/authority")
+
 	public ModelAndView authority() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "authority");
 		mv.addObject("ifAdminClickedSettings", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/addproduct")
-	
+
+	@RequestMapping(value = "/addproduct")
+
 	public ModelAndView addproduct() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "Add a product");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewProduct", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/addcategory")
-	
+
+	@RequestMapping(value = "/addcategory")
+
 	public ModelAndView addcategory() {
 		ModelAndView mv = new ModelAndView("page");
-		
+
 		mv.addObject("title", "Add a category");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewCategory", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/addsupplier")
-	
+
+	@RequestMapping(value = "/addsupplier")
+
 	public ModelAndView addsupplier() {
 		ModelAndView mv = new ModelAndView("page");
-		
-		mv.addObject("title", "Add a category");
+
+		mv.addObject("title", "Add a supplier");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewSupplier", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/addwallpaper")
-	
+
+	@RequestMapping(value = "/addwallpaper")
+
 	public ModelAndView addwallpaper() {
 		ModelAndView mv = new ModelAndView("page");
-		
-		mv.addObject("title", "Add a category");
+
+		mv.addObject("title", "Add a wallpaper");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewWallpaper", true);
 		return mv;
 	}
-	
-	@RequestMapping(value="/adminsettings")
-	
+
+	@RequestMapping(value = "/adminsettings")
+
 	public ModelAndView adminsettings() {
 		ModelAndView mv = new ModelAndView("page");
-		
-		mv.addObject("title", "Add a category");
+
+		mv.addObject("title", "setting");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedMySettings", true);
 		return mv;
 	}
+
+	@RequestMapping(value = "/adminpassword")
+
+	public ModelAndView adminpassword() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "change your password");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedChangePassword", true);
+		return mv;
+	}
+	
+
 }

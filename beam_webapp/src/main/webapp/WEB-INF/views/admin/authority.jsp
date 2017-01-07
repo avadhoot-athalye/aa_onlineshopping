@@ -30,5 +30,9 @@
 			<%@include file="admin_settings.jsp"%>
 		</c:if>
 		
+		<c:if test="${ifAdminClickedChangePassword == true}">
+			<%@include file="admin_pwd.jsp"%>
+		</c:if>
+		
 	</div>
 </div>

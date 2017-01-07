@@ -1,7 +1,14 @@
 
 <div class="well">
 	<form class="form-horizontal sign-up-form">
-	
+
+		<!-- View all products -->
+		
+		<div id="changepwd" class="form-group">
+			<div id="viewallproducts" class="text-right">
+				<a href="${contextRoot}/">View All Products</a>
+			</div>
+		</div>
 		<!-- Add a product here -->
 
 		<h2 class="text-center header-sign-up">Add a new product</h2>
@@ -10,7 +17,7 @@
 		<div class="form-group">
 			<label for="productname" class="col-sm-5 control-label">Product
 				Name:</label>
-			<div class="col-sm-3">
+			<div class="col-sm-3 input-group">
 				<input type="text" id="productname" name="productname"
 					placeholder="Add a name of product" class="form-control" />
 			</div>
@@ -21,7 +28,7 @@
 		<div class="form-group">
 			<label for="productcategory" class="col-sm-5 control-label">Choose
 				a category:</label>
-			<div class="col-sm-3">
+			<div class="col-sm-3 input-group">
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button"
 						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
@@ -45,7 +52,7 @@
 		<div class="form-group">
 			<label for="choosesupplier" class="col-sm-5 control-label">Choose
 				a supplier:</label>
-			<div class="col-sm-3">
+			<div class="col-sm-3 input-group">
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button"
 						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
@@ -63,48 +70,49 @@
 		</div>
 
 		<!-- Set a price here -->
-		
-		
+
+
 		<div class="form-group">
 			<label for="setprice" class="col-sm-5 control-label">Set a
 				price:</label>
-			<div class="col-sm-3">
+			<div class="col-sm-3 input-group">
 				<input type="number" id="setprice" name="setprice"
 					class="form-control" placeholder="Set a Price" />
 			</div>
 		</div>
 
 		<!-- Set stock here -->
-		
+
 		<div class="form-group">
 			<label for="quantity" class="col-sm-5 control-label">Available
 				Stock:</label>
-			<div class="col-sm-3">
+			<div class="col-sm-3 input-group">
 				<input type="number" id="quantity" name="quantity"
-					class="form-control" placeholder="Available in stock"/>
+					class="form-control" placeholder="Available in stock" />
 			</div>
 		</div>
 
 		<!-- Add a product description -->
-		
-		
+
+
 		<div class="form-group">
-			<label for="exampleTextarea" class="col-sm-5 control-label">Add a product description</label>
-			<div class="col-sm-3">
-			<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+			<label for="exampleTextarea" class="col-sm-5 control-label">Add
+				a product description</label>
+			<div class="col-sm-3 input-group">
+				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
 			</div>
 		</div>
 
 		<!-- Add photo here here -->
-		
+
 		<div class="form-group">
 			<div class="row">
 				<label for="exampleInputFile" class="col-sm-5 control-label">Add
 					a cover photo</label>
-				<div class="col-sm-3">
+				<div class="col-sm-3 input-group">
 					<input type="file" class="form-control-file" id="exampleInputFile"
 						aria-describedby="fileHelp"> <small id="fileHelp"
-						class="form-text text-muted" ></small>
+						class="form-text text-muted"></small>
 				</div>
 			</div>
 		</div>

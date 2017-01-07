@@ -315,3 +315,6 @@ ul li a:hover {
 	text-decoration: none;
 	background-color: #f5f5f5;
 }
+#changepwd a {
+	margin-right: 10px;
+}
