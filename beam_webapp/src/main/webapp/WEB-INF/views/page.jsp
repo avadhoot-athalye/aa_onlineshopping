@@ -93,7 +93,7 @@
 		</c:if>
 
 		<c:if test="${ifUserClickedCart == true}">
-			<%@include file="./cart.jsp"%>
+			<%@include file="user/cart.jsp"%>
 		</c:if>
 
 		<c:if test="${ifUserClickedLogIn == true}">
@@ -118,6 +118,14 @@
 		
 		<c:if test="${ifAdminClickedSettings == true}">
 			<%@include file="admin/authority.jsp"%>
+		</c:if>
+		
+		<c:if test="${ifUserClickedCheckout == true}">
+			<%@include file="user/confirm_address.jsp"%>
+		</c:if>
+		
+		<c:if test="${ifUserClickedUpdate == true}">
+			<%@include file="user/order summary.jsp"%>
 		</c:if>
 		
 		

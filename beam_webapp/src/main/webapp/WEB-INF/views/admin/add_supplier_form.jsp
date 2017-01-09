@@ -2,6 +2,14 @@
 <div class="well">
 	<form class="form-horizontal sign-up-form">
 
+		<!-- View all suppliers -->
+
+		<div id="changepwd" class="form-group">
+			<div id="viewallsuppliers" class="text-right">
+				<a href="${contextRoot}/allsuppliers">View All Suppliers</a>
+			</div>
+		</div>
+
 		<!-- Add a category here -->
 
 		<h2 class="text-center header-sign-up">Add a Supplier</h2>

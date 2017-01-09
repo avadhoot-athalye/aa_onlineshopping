@@ -21,9 +21,9 @@ public class AuthenticationController {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-//		if (userDAO.isValid(username, password)) {
-//			return "redirect:/index?login=success";
-//		}
+		if (userDAO.isValid(username, password)) {
+			return "redirect:/index?login=success";
+		}
 		return "redirect:/login?login=failure";
 	}
 }

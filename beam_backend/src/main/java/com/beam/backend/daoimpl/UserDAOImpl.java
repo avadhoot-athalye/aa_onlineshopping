@@ -70,5 +70,13 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
+	@Override
+	public boolean isValid(String username, String password) {
+		if(username.equals("admin") && password.equals("2311")) {
+			return true;
+		}
+		return false;
+	}
+
 
 }

@@ -137,15 +137,15 @@
 
 	<div class="row">
 		<div class="col-md-2">
-			<button class="btn btn-primary special-banner ">
+			<a class="btn btn-primary special-banner" href="${contextRoot}/" role="navigation">
 				<span class="glyphicon glyphicon-arrow-left "></span>&nbsp;Continue
 				Shopping
-			</button>
+			</a>
 		</div>
 
 		<div class="col-md-offset-8 col-md-2">
-			<button class="btn btn-success special-banner ">Proceed To
-				Checkout&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
+			<a class="btn btn-success special-banner" href="${contextRoot}/confirmaddress" role="button">Proceed To
+				Checkout&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a>
 		</div>
 
 	</div>

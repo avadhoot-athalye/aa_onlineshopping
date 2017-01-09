@@ -1,7 +1,11 @@
-<c:if test = "${not empty msg }">
-<div class="alert alert-danger">
-${msg}
-</div>
+<c:if test="${not empty msg }">
+	<div class="alert alert-success alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		${msg}
+	</div>
 </c:if>
 
 <div class=" font-style">
@@ -68,10 +72,10 @@ ${msg}
 
 <div id="myContent" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
-<!-- 	<ol class="carousel-indicators"> -->
-<!-- 		<li data-target="#myContent" data-slide-to="0" class="active"></li> -->
-<!-- 		<li data-target="#myContent" data-slide-to="1"></li> -->
-<!-- 	</ol> -->
+	<!-- 	<ol class="carousel-indicators"> -->
+	<!-- 		<li data-target="#myContent" data-slide-to="0" class="active"></li> -->
+	<!-- 		<li data-target="#myContent" data-slide-to="1"></li> -->
+	<!-- 	</ol> -->
 
 	<!-- Wrapper for slides -->
 	<div class="carousel-inner" role="listbox">
@@ -239,7 +243,7 @@ ${msg}
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem. </p>
+					sem.</p>
 			</div>
 		</div>
 		<div class="media panel">
@@ -254,7 +258,7 @@ ${msg}
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem. </p>
+					sem.</p>
 			</div>
 		</div>
 	</div>
@@ -273,7 +277,7 @@ ${msg}
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem. </p>
+					sem.</p>
 			</div>
 		</div>
 		<div class="media panel">
@@ -288,7 +292,7 @@ ${msg}
 					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem. </p>
+					sem.</p>
 			</div>
 		</div>
 	</div>

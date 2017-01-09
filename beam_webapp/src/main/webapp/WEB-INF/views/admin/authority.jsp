@@ -34,5 +34,17 @@
 			<%@include file="admin_pwd.jsp"%>
 		</c:if>
 		
+		<c:if test="${ifAdminClickedViewAllProducts == true}">
+			<%@include file="product_table.jsp"%>
+		</c:if>
+		
+		<c:if test="${ifAdminClickedViewAllCategories == true}">
+			<%@include file="category_table.jsp"%>
+		</c:if>
+		
+		<c:if test="${ifAdminClickedViewAllSuppliers == true}">
+			<%@include file="supplier_table.jsp"%>
+		</c:if>
+		
 	</div>
 </div>

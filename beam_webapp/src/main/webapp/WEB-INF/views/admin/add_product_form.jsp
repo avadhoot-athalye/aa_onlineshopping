@@ -6,12 +6,14 @@
 		
 		<div id="changepwd" class="form-group">
 			<div id="viewallproducts" class="text-right">
-				<a href="${contextRoot}/">View All Products</a>
+				<a href="${contextRoot}/allproducts">View All Products</a>
 			</div>
 		</div>
+		
+		
 		<!-- Add a product here -->
 
-		<h2 class="text-center header-sign-up">Add a new product</h2>
+		<h2 class="text-center header-sign-up">Add a Product</h2>
 
 		<!-- Add a product name here -->
 		<div class="form-group">

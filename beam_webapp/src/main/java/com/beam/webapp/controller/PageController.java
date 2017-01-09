@@ -178,6 +178,17 @@ public class PageController {
 		mv.addObject("ifUserClickedChangePassword", true);
 		return mv;
 	}
+	
+	@RequestMapping(value = "/updateaddress")
+
+	public ModelAndView updateaddress() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "Update the address");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedAddress", true);
+		return mv;
+	}
 
 	@RequestMapping(value = "/authority")
 
@@ -252,6 +263,59 @@ public class PageController {
 		mv.addObject("title", "change your password");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedChangePassword", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/allproducts")
+
+	public ModelAndView allproducts() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "View all products");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedViewAllProducts", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/allcategories")
+
+	public ModelAndView allcategories() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "View all categories");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedViewAllCategories", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/allsuppliers")
+
+	public ModelAndView allsuppliers() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "View all suppliers");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedViewAllSuppliers", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/confirmaddress")
+
+	public ModelAndView confirmaddress() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "View all suppliers");
+		mv.addObject("ifUserClickedCheckout", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/ordersummary")
+
+	public ModelAndView ordersummary() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "Order Confirmation");
+		mv.addObject("ifUserClickedUpdate", true);
 		return mv;
 	}
 	

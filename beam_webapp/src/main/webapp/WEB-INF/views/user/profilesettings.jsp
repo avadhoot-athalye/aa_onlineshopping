@@ -19,6 +19,10 @@
 			<%@include file="mywishlist.jsp"%>
 		</c:if>
 		
+		<c:if test="${ifUserClickedAddress == true}">
+			<%@include file="update_address.jsp"%>
+		</c:if>
+		
 		<c:if test="${ifUserClickedChangePassword == true}">
 			<%@include file="user_pwd.jsp"%>
 		</c:if>
