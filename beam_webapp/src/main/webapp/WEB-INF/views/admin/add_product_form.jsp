@@ -1,16 +1,17 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <div class="well">
-	<form class="form-horizontal sign-up-form">
+	<form:form class="form-horizontal sign-up-form" method="post" action="${contextRoot}/admin/product/save" modelAttribute="product">
 
 		<!-- View all products -->
-		
+
 		<div id="changepwd" class="form-group">
 			<div id="viewallproducts" class="text-right">
 				<a href="${contextRoot}/allproducts">View All Products</a>
 			</div>
 		</div>
-		
-		
+
+
 		<!-- Add a product here -->
 
 		<h2 class="text-center header-sign-up">Add a Product</h2>
@@ -20,8 +21,9 @@
 			<label for="productname" class="col-sm-5 control-label">Product
 				Name:</label>
 			<div class="col-sm-3 input-group">
-				<input type="text" id="productname" name="productname"
+				<form:input path="product_name" type="text" 
 					placeholder="Add a name of product" class="form-control" />
+				<form:input type="hidden" path="product_id"></form:input>
 			</div>
 		</div>
 
@@ -31,45 +33,25 @@
 			<label for="productcategory" class="col-sm-5 control-label">Choose
 				a category:</label>
 			<div class="col-sm-3 input-group">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button"
-						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="true">
-						Add a category <span class="caret"></span>
-					</button>
-					<ul id="ad_setting" class="dropdown-menu"
-						aria-labelledby="dropdownMenu1">
-						<li><a href="#">New Releases</a></li>
-						<li><a href="#">Most Popular</a></li>
-						<li><a href="#">Early Access</a></li>
-						<li><a href="#">Demo</a></li>
-						<li><a href="#">Pre-Order</a></li>
-					</ul>
-				</div>
+				<form:select path="category_id" class="form-control">
+				<c:forEach items="${categories}" var="category">
+					<form:option value="${category.category_id}">${category.category_name }</form:option>
+				</c:forEach>
+				</form:select>
 			</div>
 		</div>
 
-		<!-- Choose supplier here -->
+	 		<!-- Choose supplier here --> 
 
-		<div class="form-group">
-			<label for="choosesupplier" class="col-sm-5 control-label">Choose
-				a supplier:</label>
-			<div class="col-sm-3 input-group">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button"
-						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="true">
-						Choose a supplier <span class="caret"></span>
-					</button>
-					<ul id="ad_setting" class="dropdown-menu"
-						aria-labelledby="dropdownMenu1">
-						<li><a href="#">Game.Inc</a></li>
-						<li><a href="#">BlackWheels.pvt.ltd</a></li>
-						<li><a href="#">RedL.corp</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+<!-- 		<div class="form-group"> -->
+<!-- 			<label for="choosesupplier" class="col-sm-5 control-label">Choose -->
+<!-- 				a supplier:</label> -->
+<!-- 			<div class="col-sm-3 input-group"> -->
+<%-- 				<form:select path="supplier" class="form-control"> --%>
+<%-- 					<form:option path="supplier" value="">Game.Inc</form:option> --%>
+<%-- 				</form:select> --%>
+<!-- 			</div> -->
+<!-- 		</div> -->
 
 		<!-- Set a price here -->
 
@@ -78,7 +60,7 @@
 			<label for="setprice" class="col-sm-5 control-label">Set a
 				price:</label>
 			<div class="col-sm-3 input-group">
-				<input type="number" id="setprice" name="setprice"
+				<form:input path="product_price" type="number" id="setprice" name="setprice"
 					class="form-control" placeholder="Set a Price" />
 			</div>
 		</div>
@@ -89,7 +71,7 @@
 			<label for="quantity" class="col-sm-5 control-label">Available
 				Stock:</label>
 			<div class="col-sm-3 input-group">
-				<input type="number" id="quantity" name="quantity"
+				<form:input path="product_quantity" type="number" id="quantity" name="quantity"
 					class="form-control" placeholder="Available in stock" />
 			</div>
 		</div>
@@ -101,7 +83,7 @@
 			<label for="exampleTextarea" class="col-sm-5 control-label">Add
 				a product description</label>
 			<div class="col-sm-3 input-group">
-				<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+				<form:textarea path="product_description" class="form-control" id="exampleTextarea" rows="3"></form:textarea>
 			</div>
 		</div>
 
@@ -112,9 +94,9 @@
 				<label for="exampleInputFile" class="col-sm-5 control-label">Add
 					a cover photo</label>
 				<div class="col-sm-3 input-group">
-					<input type="file" class="form-control-file" id="exampleInputFile"
+					<input path="cover" type="file" class="form-control-file" id="exampleInputFile"
 						aria-describedby="fileHelp"> <small id="fileHelp"
-						class="form-text text-muted"></small>
+						class="form-text text-muted"></small></input>
 				</div>
 			</div>
 		</div>
@@ -128,5 +110,5 @@
 
 
 
-	</form>
+	</form:form>
 </div>

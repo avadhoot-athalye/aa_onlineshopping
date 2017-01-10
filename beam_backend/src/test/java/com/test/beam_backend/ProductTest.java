@@ -36,17 +36,17 @@ public class ProductTest {
 	 */
 	
 	
-//	@Test
-//	public void addProductTest()  {
-//		product.setProduct_id(1);
-//		product.setProduct_name("NFS");
-//		product.setProduct_price(1200);
-//		product.setProduct_quantity(50);
-//		product.setProduct_description("This is a game");
-//		product.setCategory_id(1);
-//		
-//		Assert.assertEquals(true, productDAO.addProduct(product));
-//	}
+	@Test
+	public void addProductTest()  {
+		product.setProduct_id(1);
+		product.setProduct_name("NFS");
+		product.setProduct_price(1200);
+		product.setProduct_quantity(50);
+		product.setProduct_description("This is a game");
+		product.setCategory_id(1);
+		
+		Assert.assertEquals(true, productDAO.addProduct(product));
+	}
 	
 	
 	
@@ -95,9 +95,9 @@ public class ProductTest {
 	 * Test case to get product by category
 	 */
 	
-	@Test
-	public void getByCategoryTest() {
-		product = productDAO.getByCategory(1);
-		Assert.assertEquals(true, productDAO.getByCategory(1));
-	}
+//	@Test
+//	public void getByCategoryTest() {
+//		product = productDAO.getByCategory(1);
+//		Assert.assertEquals(true, productDAO.getByCategory(1));
+//	}
 }

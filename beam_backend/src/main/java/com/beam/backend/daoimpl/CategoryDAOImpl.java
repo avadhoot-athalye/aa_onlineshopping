@@ -1,13 +1,11 @@
 package com.beam.backend.daoimpl;
 
 import java.util.List;
-
-import javax.transaction.Transactional;
-
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.beam.backend.dao.CategoryDAO;
 import com.beam.backend.entity.Category;
@@ -36,7 +34,7 @@ public class CategoryDAOImpl implements CategoryDAO{
 	@Transactional
 	public boolean addCategory(Category category) {
 		try {
-			sessionfactory.getCurrentSession().save(category);
+			sessionfactory.getCurrentSession().persist(category);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

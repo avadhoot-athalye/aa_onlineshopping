@@ -8,7 +8,8 @@
 
 		<!-- Update address Line 1 here -->
 		<div class="form-group">
-			<label for="address_line_1" class="col-sm-5 control-label">Address Line 1</label>
+			<label for="address_line_1" class="col-sm-5 control-label">Address
+				Line 1</label>
 			<div class="col-sm-3 input-group">
 				<input type="text" id="address_line_1" name="address_line_1"
 					placeholder="Room no, Street name" class="form-control" />
@@ -17,13 +18,14 @@
 
 		<!-- Update address Line 2 here -->
 		<div class="form-group">
-			<label for="address_line_2" class="col-sm-5 control-label">Address Line 2</label>
+			<label for="address_line_2" class="col-sm-5 control-label">Address
+				Line 2</label>
 			<div class="col-sm-3 input-group">
 				<input type="text" id="address_line_2" name="address_line_2"
 					placeholder="local area name" class="form-control" />
 			</div>
 		</div>
-		
+
 		<!-- Update landmark here -->
 		<div class="form-group">
 			<label for="landmark" class="col-sm-5 control-label">Landmark</label>
@@ -36,66 +38,44 @@
 		<!-- Choose country here -->
 
 		<div class="form-group">
-			<label for="ccountry" class="col-sm-5 control-label">Choose
-				a Country: </label>
+			<label for="ccountry" class="col-sm-5 control-label">Choose a
+				Country: </label>
 			<div class="col-sm-3 input-group">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button"
-						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="true">
-						Choose a country <span class="caret"></span>
-					</button>
-					<ul id="ad_setting" class="dropdown-menu"
-						aria-labelledby="dropdownMenu1">
-						<li><a href="#">USA</a></li>
-						<li><a href="#">China</a></li>
-						<li><a href="#">India</a></li>
-					</ul>
-				</div>
+				<select class="form-control">
+					<option>USA</option>
+					<option>UK</option>
+					<option>China</option>
+					<option>India</option>
+				</select>
 			</div>
 		</div>
-		
+
 		<!-- Choose state here -->
 
 		<div class="form-group">
-			<label for="state" class="col-sm-5 control-label">Choose
-				a State:</label>
+			<label for="state" class="col-sm-5 control-label">Choose a
+				State:</label>
 			<div class="col-sm-3 input-group">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button"
-						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="true">
-						Choose a state <span class="caret"></span>
-					</button>
-					<ul id="ad_setting" class="dropdown-menu"
-						aria-labelledby="dropdownMenu1">
-						<li><a href="#">Andhra Pradesh</a></li>
-						<li><a href="#">Gujarat</a></li>
-						<li><a href="#">Maharashtra</a></li>
-					</ul>
-				</div>
+				<select class="form-control">
+					<option>Andhra Pradesh</option>
+					<option>Gujarat</option>
+					<option>Maharashtra</option>
+					<option>Kerala</option>
+				</select>
 			</div>
 		</div>
-		
+
 		<!-- Choose state here -->
 
 		<div class="form-group">
-			<label for="city" class="col-sm-5 control-label">Choose
-				a City:</label>
+			<label for="city" class="col-sm-5 control-label">Choose a
+				City:</label>
 			<div class="col-sm-3 input-group">
-				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button"
-						id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="true">
-						Choose a city <span class="caret"></span>
-					</button>
-					<ul id="ad_setting" class="dropdown-menu"
-						aria-labelledby="dropdownMenu1">
-						<li><a href="#">Mumbai</a></li>
-						<li><a href="#">Pune</a></li>
-						<li><a href="#">Nagpur</a></li>
-					</ul>
-				</div>
+				<select class="form-control">
+					<option>Mumbai</option>
+					<option>Nagpur</option>
+					<option>Pune</option>
+				</select>
 			</div>
 		</div>
 
@@ -104,8 +84,8 @@
 		<div class="form-group">
 			<label for="pincode" class="col-sm-5 control-label">Pincode:</label>
 			<div class="col-sm-3 input-group">
-				<input type="text" id="pincode" name="pincode"
-					class="form-control" placeholder="pincode" />
+				<input type="text" id="pincode" name="pincode" class="form-control"
+					placeholder="pincode" />
 			</div>
 		</div>
 
@@ -115,7 +95,7 @@
 			<div class="text-center">
 				<button type="submit" class="btn btn-primary ">Update</button>
 			</div>
-		</div>		
+		</div>
 
 	</form>
 </div>

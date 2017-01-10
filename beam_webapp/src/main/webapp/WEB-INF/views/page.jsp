@@ -1,5 +1,7 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
 <s:url value="/resources/img" var="img" />
@@ -127,8 +129,6 @@
 		<c:if test="${ifUserClickedUpdate == true}">
 			<%@include file="user/order summary.jsp"%>
 		</c:if>
-		
-		
 		
 		<%@include file="./share/footer.jsp"%>
 

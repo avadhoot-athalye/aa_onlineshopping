@@ -1,6 +1,8 @@
 package com.beam.backend.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
@@ -9,13 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Product {
 
-		@Id
+		@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 		private int product_id;
 		private String product_name;
 		private String product_description;
 		private double product_price;
 		private int product_quantity;
 		private int category_id;
+
 		
 		public int getProduct_id() {
 			return product_id;

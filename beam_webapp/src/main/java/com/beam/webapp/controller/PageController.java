@@ -1,12 +1,24 @@
 package com.beam.webapp.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.beam.backend.dao.CategoryDAO;
+import com.beam.backend.entity.Category;
+
 @Controller
 public class PageController {
+
+	@Autowired
+	CategoryDAO categoryDAO;
+
+	@Autowired
+	Category category;
 
 	@RequestMapping(value = { "/", "/home", "/index", "/default", "/store" })
 
@@ -167,7 +179,7 @@ public class PageController {
 		mv.addObject("ifUserClickedmywishlist", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/userpassword")
 
 	public ModelAndView userpassword() {
@@ -178,7 +190,7 @@ public class PageController {
 		mv.addObject("ifUserClickedChangePassword", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/updateaddress")
 
 	public ModelAndView updateaddress() {
@@ -200,72 +212,6 @@ public class PageController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/addproduct")
-
-	public ModelAndView addproduct() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "Add a product");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedAddNewProduct", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/addcategory")
-
-	public ModelAndView addcategory() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "Add a category");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedAddNewCategory", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/addsupplier")
-
-	public ModelAndView addsupplier() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "Add a supplier");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedAddNewSupplier", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/addwallpaper")
-
-	public ModelAndView addwallpaper() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "Add a wallpaper");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedAddNewWallpaper", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/adminsettings")
-
-	public ModelAndView adminsettings() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "setting");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedMySettings", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/adminpassword")
-
-	public ModelAndView adminpassword() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "change your password");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedChangePassword", true);
-		return mv;
-	}
-	
 	@RequestMapping(value = "/allproducts")
 
 	public ModelAndView allproducts() {
@@ -276,18 +222,18 @@ public class PageController {
 		mv.addObject("ifAdminClickedViewAllProducts", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/allcategories")
 
 	public ModelAndView allcategories() {
 		ModelAndView mv = new ModelAndView("page");
-
+		mv.addObject("categories", categoryDAO.list());
 		mv.addObject("title", "View all categories");
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedViewAllCategories", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/allsuppliers")
 
 	public ModelAndView allsuppliers() {
@@ -298,7 +244,7 @@ public class PageController {
 		mv.addObject("ifAdminClickedViewAllSuppliers", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/confirmaddress")
 
 	public ModelAndView confirmaddress() {
@@ -308,7 +254,7 @@ public class PageController {
 		mv.addObject("ifUserClickedCheckout", true);
 		return mv;
 	}
-	
+
 	@RequestMapping(value = "/ordersummary")
 
 	public ModelAndView ordersummary() {
@@ -318,6 +264,7 @@ public class PageController {
 		mv.addObject("ifUserClickedUpdate", true);
 		return mv;
 	}
+
 	
 
 }

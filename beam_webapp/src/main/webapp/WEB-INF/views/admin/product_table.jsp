@@ -14,7 +14,9 @@
 			<td>This is a game</td>
 			<td>1200</td>
 			<td>50</td>
-			<td><a href="${contextRoot}/addproduct">Edit |</a> <a href="">Delete</a></td>
+			<td><a href="${contextRoot}/addproduct"><span
+					class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
+				href="${contextRoot}/"><span class="glyphicon glyphicon-trash"></span></a></td>
 		</tr>
 	</tbody>
 </table>

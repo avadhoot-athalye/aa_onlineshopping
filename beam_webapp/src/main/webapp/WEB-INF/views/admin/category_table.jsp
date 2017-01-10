@@ -2,15 +2,22 @@
 	<thead>
 		<tr>
 			<th>CATEGORY NAME</th>
-			<th>CATEGORY DESCRIPTION</th>	
+			<th>CATEGORY DESCRIPTION</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>New Releases</td>
-			<td>This category is for new release games</td>
-			<td><a href="${contextRoot}/addcategory">Edit |</a> <a href="">Delete</a></td>
-		</tr>
+		<c:forEach items="${categories}" var="category">
+			<tr>
+				<td>${category.category_name}</td>
+				<td>${category.category_description}</td>
+				<td><a
+					href="${contextRoot}/admin/editcategory/${category.category_id}"><span
+						class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
+					href="${contextRoot}/admin/deletecategory/${category.category_id}"><span
+						class="glyphicon glyphicon-trash"></span></a></td>
+			</tr>
+		</c:forEach>
 	</tbody>
 </table>
+
