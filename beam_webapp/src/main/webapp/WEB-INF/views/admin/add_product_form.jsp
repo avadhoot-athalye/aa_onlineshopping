@@ -7,7 +7,7 @@
 
 		<div id="changepwd" class="form-group">
 			<div id="viewallproducts" class="text-right">
-				<a href="${contextRoot}/allproducts">View All Products</a>
+				<a href="${contextRoot}/admin/allproducts">View All Products</a>
 			</div>
 		</div>
 
@@ -43,15 +43,17 @@
 
 	 		<!-- Choose supplier here --> 
 
-<!-- 		<div class="form-group"> -->
-<!-- 			<label for="choosesupplier" class="col-sm-5 control-label">Choose -->
-<!-- 				a supplier:</label> -->
-<!-- 			<div class="col-sm-3 input-group"> -->
-<%-- 				<form:select path="supplier" class="form-control"> --%>
-<%-- 					<form:option path="supplier" value="">Game.Inc</form:option> --%>
-<%-- 				</form:select> --%>
-<!-- 			</div> -->
-<!-- 		</div> -->
+		<div class="form-group">
+			<label for="choosesupplier" class="col-sm-5 control-label">Choose
+				a supplier:</label>
+			<div class="col-sm-3 input-group">
+				<form:select path="supplierId" class="form-control">
+					<c:forEach items="${suppliers}" var="supplier">
+						<form:option value="${supplier.id}">${supplier.name}</form:option>
+					</c:forEach>
+				</form:select>
+			</div>
+		</div>
 
 		<!-- Set a price here -->
 

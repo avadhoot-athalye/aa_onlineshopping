@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import com.beam.backend.dao.CategoryDAO;
 import com.beam.backend.dao.ProductDAO;
+import com.beam.backend.dao.SupplierDAO;
 import com.beam.backend.entity.Category;
 import com.beam.backend.entity.Product;
-import com.test.beam_backend.CategoryTestCase;
+import com.beam.backend.entity.Supplier;
 
 @Controller
 @RequestMapping(value={"/admin"})
 public class AdminController {
 
 	/*
-	 * Methods for categories
+	 * category modifaction
 	 */
 	@Autowired
 	CategoryDAO categoryDAO;
@@ -27,7 +28,7 @@ public class AdminController {
 	Category category;
 	
 	/*
-	 * To view list of all categpries
+	 * To view list of all categories
 	 */
 
 	@RequestMapping(value = "/allcategories")
@@ -103,13 +104,14 @@ public class AdminController {
 		category = categoryDAO.getCategory(id);
 		
 		categoryDAO.deleteCategory(category);
-		return "redirect:/allcategories";
+		return "redirect:/admin/allcategories";
 	}
+
 	
 	
 	
 	/*
-	 * Methods for products
+	 * For product modification
 	 */
 	
 	@Autowired
@@ -117,6 +119,10 @@ public class AdminController {
 	
 	@Autowired
 	Product product;
+	
+	/*
+	 * To add products
+	 */
 	
 	@RequestMapping(value = "/addproduct")
 
@@ -126,6 +132,7 @@ public class AdminController {
 		mv.addObject("title", "Add a product");
 		mv.addObject("product", new Product());
 		mv.addObject("categories", categoryDAO.list());
+		mv.addObject("suppliers", supplierDAO.list());
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewProduct", true);
 		return mv;
@@ -135,7 +142,7 @@ public class AdminController {
 
 	public String saveProduct(@ModelAttribute Product product) {
 		
-		if(product.getCategory_id() == 0) {
+		if(product.getProduct_id() == 0) {
 			productDAO.addProduct(product);
 		} else {
 			productDAO.updateProduct(product);
@@ -143,18 +150,153 @@ public class AdminController {
 		return "redirect:/admin/addproduct";
 		
 	}
+	
+	
+	/*
+	 * To view list of all products
+	 */
+	
+	
+	@RequestMapping(value = "/allproducts")
 
+	public ModelAndView allproducts() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "View all products");
+		mv.addObject("products", productDAO.list());
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedViewAllProducts", true);
+		return mv;
+	}
+	
+	@RequestMapping(value="/productlistmodel")
+	
+	public ModelAndView productListModel(@ModelAttribute Product product, String categoryName, String supplierName) {
+		ModelAndView mv = new ModelAndView("page");
+		
+		mv.addObject("categoryName", categoryDAO.getCategory(product.getCategory_id()));
+		
+		return mv;
+	}
+	
+	/*
+	 * To update products
+	 */
+	@RequestMapping(value = "/editproduct/{product.product_id}")
+
+	public ModelAndView editProducts(@PathVariable("product.product_id") int productId) {
+		
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "Edit product");
+		mv.addObject("product", productDAO.get(productId));
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewProduct", true);
+		return mv;
+	}
+	
+	/*
+	 * To delete product
+	 */
+	@RequestMapping(value = { "/deleteproduct/{product.product_id}" }, method = RequestMethod.GET)
+
+	public String deleteProduct(@PathVariable(name = "product.product_id") int productId) {
+		
+		product = productDAO.get(productId);
+		
+		productDAO.deleteProduct(product);
+		return "redirect:/admin/allproducts";
+	}
+	
+	/*
+	 * For supplier modification
+	 */
+
+	@Autowired
+	SupplierDAO supplierDAO;
+	
+	@Autowired
+	Supplier supplier;
+	
+	/*
+	 * To add suppliers
+	 */
+	
 	@RequestMapping(value = "/addsupplier")
 
 	public ModelAndView addsupplier() {
 		ModelAndView mv = new ModelAndView("page");
 
 		mv.addObject("title", "Add a supplier");
+		mv.addObject("supplier", new Supplier());
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewSupplier", true);
 		return mv;
 	}
 
+
+	@RequestMapping(value = { "/supplier/save" }, method = RequestMethod.POST)
+
+	public String saveSupplier(@ModelAttribute Supplier supplier) {
+
+		if (supplier.getId() == 0) {
+			supplierDAO.addSupplier(supplier);
+		} else {
+			supplierDAO.updateSupplier(supplier);
+		}
+		return "redirect:/admin/addsupplier";
+	}
+	
+	
+	/*
+	 * To view all suppliers
+	 */
+	
+	
+	@RequestMapping(value = "/allsuppliers")
+
+	public ModelAndView allsuppliers() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("suppliers", supplierDAO.list());
+		mv.addObject("title", "View all suppliers");
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedViewAllSuppliers", true);
+		return mv;
+	}
+	
+	/*
+	 * To update suppliers
+	 */
+	
+	@RequestMapping(value = "/editsupplier/{supplier.id}")
+
+	public ModelAndView editSupplier(@PathVariable("supplier.id") int supplierid) {
+		
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "Edit supplier");
+		mv.addObject("supplier", supplierDAO.getSupplier(supplierid));
+		mv.addObject("ifAdminClickedSettings", true);
+		mv.addObject("ifAdminClickedAddNewSupplier", true);
+		return mv;
+	}
+	
+		/*
+		 * To delete suppliers
+		 */
+	
+	@RequestMapping(value = { "/deletesupplier/{supplier.id}" }, method = RequestMethod.GET)
+
+	public String deleteSupplier(@PathVariable(name = "supplier.id") int supplierid) {
+		
+		supplier = supplierDAO.getSupplier(supplierid);
+		
+		supplierDAO.deleteSupplier(supplier);
+		return "redirect:/admin/allsuppliers";
+	}
+	
+	
 	@RequestMapping(value = "/addwallpaper")
 
 	public ModelAndView addwallpaper() {

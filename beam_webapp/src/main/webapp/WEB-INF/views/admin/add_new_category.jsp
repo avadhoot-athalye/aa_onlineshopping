@@ -9,7 +9,7 @@
 
 		<div id="changepwd" class="form-group">
 			<div id="viewallcategories" class="text-right">
-				<a href="${contextRoot}/allcategories" >View All Categories</a>
+				<a href="${contextRoot}/admin/allcategories" >View All Categories</a>
 			</div>
 		</div>
 

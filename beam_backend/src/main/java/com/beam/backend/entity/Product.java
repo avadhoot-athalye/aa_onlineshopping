@@ -1,5 +1,6 @@
 package com.beam.backend.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,9 @@ public class Product {
 		private double product_price;
 		private int product_quantity;
 		private int category_id;
+		
+		@Column(name="Supplier_Id")
+		private int supplierId;
 
 		
 		public int getProduct_id() {
@@ -55,6 +59,12 @@ public class Product {
 		}
 		public void setCategory_id(int category_id) {
 			this.category_id = category_id;
+		}
+		public int getSupplierId() {
+			return supplierId;
+		}
+		public void setSupplierId(int supplierId) {
+			this.supplierId = supplierId;
 		}
 		
 		

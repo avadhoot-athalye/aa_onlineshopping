@@ -2,21 +2,29 @@
 	<thead>
 		<tr>
 			<th>PRODUCT NAME</th>
-			<th>PRODUCT DESCRIPTION</th>
+			<th>CATEGORY NAME</th>
+			<th>SUPPLIER NAME</th>
 			<th>PRICE</th>
 			<th>STOCK</th>
+			<th>DESCRIPTION</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>FALLOUT 4</td>
-			<td>This is a game</td>
-			<td>1200</td>
-			<td>50</td>
-			<td><a href="${contextRoot}/addproduct"><span
-					class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
-				href="${contextRoot}/"><span class="glyphicon glyphicon-trash"></span></a></td>
-		</tr>
+		<c:forEach items="${products}" var="product">
+			<tr>
+				<td>${product.product_name}</td>
+				<td>${product.category_id }</td>
+				<td>${product.supplierId}</td>
+				<td>${product.product_price}</td>
+				<td>${product.product_quantity}</td>
+				<td>${product.product_description}</td>
+				<td><a
+					href="${contextRoot}/admin/editproduct/${product.product_id}"><span
+						class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
+					href="${contextRoot}/admin/deleteproduct/${product.product_id}"><span
+						class="glyphicon glyphicon-trash"></span></a></td>
+			</tr>
+		</c:forEach>
 	</tbody>
 </table>

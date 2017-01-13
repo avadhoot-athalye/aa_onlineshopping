@@ -7,10 +7,14 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>Game Inc.</td>
-			<td>99999999</td>
-			<td><a href="${contextRoot}/addsupplier">Edit |</a> <a href="">Delete</a></td>
-		</tr>
+		<c:forEach items="${suppliers}" var="supplier">
+			<tr>
+				<td>${supplier.name}</td>
+				<td>${supplier.phoneNumber}</td>
+				<td><a href="${contextRoot}/admin/editsupplier/${supplier.id}">Edit
+						|</a> <a href="${contextRoot}/admin/deletesupplier/${supplier.id}">Delete</a></td>
+			</tr>
+		</c:forEach>
 	</tbody>
 </table>
+

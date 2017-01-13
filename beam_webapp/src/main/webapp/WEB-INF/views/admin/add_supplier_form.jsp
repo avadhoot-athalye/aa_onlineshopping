@@ -1,12 +1,14 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <div class="well">
-	<form class="form-horizontal sign-up-form">
+	<form:form class="form-horizontal sign-up-form" method="post"
+		action="${contextRoot}/admin/supplier/save" modelAttribute="supplier">
 
 		<!-- View all suppliers -->
 
 		<div id="changepwd" class="form-group">
 			<div id="viewallsuppliers" class="text-right">
-				<a href="${contextRoot}/allsuppliers">View All Suppliers</a>
+				<a href="${contextRoot}/admin/allsuppliers">View All Suppliers</a>
 			</div>
 		</div>
 
@@ -19,8 +21,10 @@
 			<label for="suppliername" class="col-sm-5 control-label">Supplier
 				Name:</label>
 			<div class="col-sm-3 input-group">
-				<input type="text" id="suppliername" name="suppliername"
-					placeholder="Add supplier's name" class="form-control" />
+				<form:input path="name" type="text" id="suppliername"
+					name="suppliername" placeholder="Add supplier's name"
+					class="form-control"></form:input>
+				<form:input path="id" type="hidden"/>
 			</div>
 		</div>
 
@@ -31,8 +35,8 @@
 		<div class="form-group">
 			<label class="col-sm-5 control-label">Phone</label>
 			<div class="col-sm-3 input-group">
-				<input name="phone" placeholder="Add a phone number"
-					class="form-control" type="text">
+				<form:input path="phoneNumber" name="phone"
+					placeholder="Add a phone number" class="form-control" type="text"></form:input>
 			</div>
 		</div>
 
@@ -46,5 +50,5 @@
 
 
 
-	</form>
+	</form:form>
 </div>

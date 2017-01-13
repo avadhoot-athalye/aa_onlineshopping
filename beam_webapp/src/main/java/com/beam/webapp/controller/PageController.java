@@ -14,12 +14,6 @@ import com.beam.backend.entity.Category;
 @Controller
 public class PageController {
 
-	@Autowired
-	CategoryDAO categoryDAO;
-
-	@Autowired
-	Category category;
-
 	@RequestMapping(value = { "/", "/home", "/index", "/default", "/store" })
 
 	public ModelAndView index(@RequestParam(value = "login", required = false) String msg) {
@@ -209,39 +203,6 @@ public class PageController {
 
 		mv.addObject("title", "authority");
 		mv.addObject("ifAdminClickedSettings", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/allproducts")
-
-	public ModelAndView allproducts() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "View all products");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedViewAllProducts", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/allcategories")
-
-	public ModelAndView allcategories() {
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("categories", categoryDAO.list());
-		mv.addObject("title", "View all categories");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedViewAllCategories", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/allsuppliers")
-
-	public ModelAndView allsuppliers() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "View all suppliers");
-		mv.addObject("ifAdminClickedSettings", true);
-		mv.addObject("ifAdminClickedViewAllSuppliers", true);
 		return mv;
 	}
 

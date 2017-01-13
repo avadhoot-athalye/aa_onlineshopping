@@ -6,6 +6,13 @@ category_name varchar2(30) not null unique,
 category_description varchar2(100) 
 )
 
+create table supplier
+(
+supplier_id identity,
+supplier_name varchar2(30) not null,
+supplier_contact_no varchar2(30) not null,
+)
+
 create table product
 (
 product_id identity,
@@ -15,7 +22,10 @@ product_price decimal(8,2) not null,
 product_quantity number(5) not null,
 category_id bigint(10) not null,
 constraint fk_category_id FOREIGN KEY(category_id)
-references category(category_id)
+references category(category_id),
+supplier_id bigint(10) not null,
+constraint fk_supplier_id FOREIGN KEY(supplier_id)
+references supplier(supplier_id)
 )
 
 create table user 
@@ -86,13 +96,6 @@ references order_history(order_history_id),
 product_id bigint(10) not null,
 constraint fk_ordered_product_id FOREIGN KEY(product_id)
 references product(product_id)
-)
-
-create table supplier
-(
-supplier_id identity,
-supplier_name varchar2(30) not null,
-supplier_contact_no varchar2(30) not null,
 )
 
 create table wishlist
