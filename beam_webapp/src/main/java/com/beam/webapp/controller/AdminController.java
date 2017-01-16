@@ -169,13 +169,12 @@ public class AdminController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/productlistmodel")
+	@RequestMapping
 	
 	public ModelAndView productListModel(@ModelAttribute Product product, String categoryName, String supplierName) {
 		ModelAndView mv = new ModelAndView("page");
 		
-		mv.addObject("categoryName", categoryDAO.getCategory(product.getCategory_id()));
-		
+		mv.addObject("products", categoryDAO.getCategory(product.getCategory_id()));
 		return mv;
 	}
 	

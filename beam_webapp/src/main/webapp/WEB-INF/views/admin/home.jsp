@@ -64,167 +64,80 @@
 </div>
 
 
-<!-- Bottom thumbnails starts here -->
+<!-- Thumbnail carousel starts here -->
 
 <div class="page-header thumbnail-adjust no-padding font-style ">
 	<h3 class="header-margin">Recommended</h3>
 </div>
 
-<div id="myContent" class="carousel slide" data-ride="carousel">
-	<!-- Indicators -->
-	<!-- 	<ol class="carousel-indicators"> -->
-	<!-- 		<li data-target="#myContent" data-slide-to="0" class="active"></li> -->
-	<!-- 		<li data-target="#myContent" data-slide-to="1"></li> -->
-	<!-- 	</ol> -->
-
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" role="listbox">
-		<div class="item active row font-style col-md-12 carousal-thumb">
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div class="well">
+				<div id="myCarousel" class="carousel fdi-Carousel slide">
+					<!-- Carousel items -->
+					<div class="carousel fdi-Carousel slide" id="eventCarousel"
+						data-interval="0">
+						<div class="carousel-inner onebyone-carosel">
+							<div class="item active">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">1</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">2</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">3</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">4</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">5</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-4">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">6</div>
+								</div>
+							</div>
+						</div>
+						<a class="left carousel-control" href="#eventCarousel"
+							data-slide="prev"></a> <a class="right carousel-control"
+							href="#eventCarousel" data-slide="next"></a>
+					</div>
+					<!--/carousel-inner-->
 				</div>
+				<!--/myCarousel-->
 			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-		</div>
-		<!-- First div of 3 ends here -->
-		<div class="item row col-md-12 carousal-thumb">
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
-
-			<div class="thumbnail thumbnail-setting col-md-3">
-				<img src="http://placehold.it/180x215" alt="">
-				<div class="caption">
-					<h4 class="">The Forest</h4>
-					<p class="text-center">
-						<a href="#" class="btn btn-primary" role="button">View</a> <a
-							href="#" class="btn btn-default" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add toCart
-						</a>
-					</p>
-				</div>
-			</div>
+			<!--/well-->
 		</div>
 	</div>
-
-
-	<!-- Left and right controls -->
-	<a class="left carousel-control" href="#myContent" role="button"
-		data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
-		aria-hidden="true"></span> <span class="sr-only">Previous</span>
-	</a> <a class="right carousel-control" href="#myContent" role="button"
-		data-slide="next"> <span class="glyphicon glyphicon-chevron-right"
-		aria-hidden="true"></span><span class="sr-only">Next</span>
-	</a>
 </div>
+
+
+
+
 <div class="page-header thumbnail-adjust no-padding font-style ">
 	<h3 class="header-margin">Best-seller</h3>
 </div>

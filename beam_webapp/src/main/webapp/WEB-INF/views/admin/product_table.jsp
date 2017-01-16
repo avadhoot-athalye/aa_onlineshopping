@@ -14,7 +14,7 @@
 		<c:forEach items="${products}" var="product">
 			<tr>
 				<td>${product.product_name}</td>
-				<td>${product.category_id }</td>
+				<td></td>
 				<td>${product.supplierId}</td>
 				<td>${product.product_price}</td>
 				<td>${product.product_quantity}</td>
