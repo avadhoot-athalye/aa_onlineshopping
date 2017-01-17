@@ -50,8 +50,9 @@
 
 <title>${title} | Beam</title>
 <!--Core css files -->
-<link href="${css}/bootstrap-theme.css" rel="stylesheet">
-<link href="${css}/bootstrap.css" rel="stylesheet">
+<link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
+<%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
+<%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
 <link href="${css}/style.css" rel="stylesheet">
 <link rel="stylesheet"

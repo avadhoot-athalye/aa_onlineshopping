@@ -21,12 +21,12 @@
 		<!-- Add a product name here -->
 
 
-		<div class="form-group">
-			<label for="categoryname" class="col-sm-5 control-label">Category
+		<div class="form-group has-success has-feedback">
+			<label for="categoryname" class="col-sm-5 control-label ">Category
 				Name:</label>
 			<div class="col-sm-3 input-group">
 				<form:input path="category_name" type="text"
-					placeholder="Add name of category" class="form-control" />
+					placeholder="Add name of category" class="form-control" for="input-success"/>
 				<form:input type="hidden" path="category_id"></form:input>
 			</div>
 		</div>

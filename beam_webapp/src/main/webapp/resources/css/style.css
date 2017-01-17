@@ -314,17 +314,3 @@ ul li a:hover {
 .onebyone-carosel .prev {
 	left: -33.33%;
 }
-
-.navbar-collapse {
-	background-color: #222;
-}
-
-.navbar-default .navbar-nav>li>a {
-	color: #fff
-}
-.navbar-default .navbar-nav>li>a:hover {
-	color: #fff
-}
-.navbar-default .navbar-nav>li:hover {
-	background-color: #444;
-}

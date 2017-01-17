@@ -9,8 +9,9 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand no-padding padding-left"
-				href="${contextRoot}/"><img src="${img}/Logo.png"></a>
+			<a class="navbar-brand"
+				href="${contextRoot}/">BEAM</a>
+				
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,19 +76,7 @@
 							<li><a href="#" class="text-center">LOG OUT</a></li>
 						</ul></li>
 						<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown text-center">ADMIN<span class="caret"
-							aria-haspopup="true" aria-expanded="true"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="${contextRoot}/admin/addproduct" class="text-center">ADD NEW PRODUCT</a></li>
-							<li><a href="${contextRoot}/admin/addcategory" class="text-center">CREAT NEW CATEGORY</a></li>
-							<li><a href="${contextRoot}/admin/addsupplier" class="text-center">ADD NEW SUPPLIER</a></li>
-							<li><a href="${contextRoot}/admin/addwallpaper" class="text-center">ADD NEW WALLPAPER</a></li>
-							<li><a href="${contextRoot}/admin/adminsettings" class="text-center">SETTINGS</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#" class="text-center">LOG OUT</a></li>
-						</ul></li>
-					<li><a id="user-nav" data-toggle="dropdown"
-						class="dropdown-toggle dropdown padding-right text-center">USER<span class="caret"
+						class="dropdown-toggle dropdown text-center">USER<span class="caret"
 							aria-haspopup="true" aria-expanded="true"></span></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 							<li><a href="${contextRoot}/profile" class="text-center">HELLO USER</a></li>
@@ -102,6 +91,8 @@
 	</div>
 	<!-- /.container-fluid -->
 </nav>
+
+
 
 
 

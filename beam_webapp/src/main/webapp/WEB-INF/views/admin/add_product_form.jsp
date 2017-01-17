@@ -1,4 +1,4 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 
 <div class="well">
 	<form:form class="form-horizontal sign-up-form" method="post" action="${contextRoot}/admin/product/save" modelAttribute="product">
@@ -35,7 +35,7 @@
 			<div class="col-sm-3 input-group">
 				<form:select path="category_id" class="form-control">
 				<c:forEach items="${categories}" var="category">
-					<form:option value="${category.category_id}">${category.category_name }</form:option>
+					<form:option value="${category.category_id}">${category.category_name}</form:option>
 				</c:forEach>
 				</form:select>
 			</div>

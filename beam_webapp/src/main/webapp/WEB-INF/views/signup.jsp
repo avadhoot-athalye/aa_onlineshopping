@@ -1,4 +1,3 @@
-
 <div class="well">
 	<form class="form-horizontal sign-up-form">
 
