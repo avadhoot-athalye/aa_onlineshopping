@@ -9,9 +9,8 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand"
-				href="${contextRoot}/">BEAM</a>
-				
+			<a class="navbar-brand" href="${contextRoot}/">BEAM</a>
+
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -26,21 +25,20 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">GAMES <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="${contextRoot}/games/all">ALL
-								GAMES</a></li>
+						<li><a href="${contextRoot}/games/all">ALL GAMES</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#" >NEW RELEASES</a></li>
-						<li><a href="#" >MOST POPULAR</a></li>
-						<li><a href="#" >EARLY ACCESS</a></li>
+						<li><a href="#">NEW RELEASES</a></li>
+						<li><a href="#">MOST POPULAR</a></li>
+						<li><a href="#">EARLY ACCESS</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#" >ACTION</a></li>
-						<li><a href="#" >ADVENTURE</a></li>
-						<li><a href="#" >CASUAL</a></li>
-						<li><a href="#" >INDIE</a></li>
-						<li><a href="#" >RACING</a></li>
+						<li><a href="#">ACTION</a></li>
+						<li><a href="#">ADVENTURE</a></li>
+						<li><a href="#">CASUAL</a></li>
+						<li><a href="#">INDIE</a></li>
+						<li><a href="#">RACING</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="#" >MAC OS X</a></li>
-						<li><a href="#" >WINDOWS</a></li>
+						<li><a href="#">MAC OS X</a></li>
+						<li><a href="#">WINDOWS</a></li>
 					</ul></li>
 			</ul>
 
@@ -56,35 +54,56 @@
 						</div>
 					</div>
 				</form>
-				<li role="presentation" class="text-center"><a href="${contextRoot}/cart"
-					><span
+				<sec:authorize access="hasAuthority('Role_User')">
+				<li role="presentation" class="text-center"><a
+					href="${contextRoot}/cart"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 						CART <span class="badge"></span></a></li>
-				<li><a href="${contextRoot}/login" class="text-center">LOG IN</a></li>
+				</sec:authorize>
+				
+				<sec:authorize access="isAnonymous()">
+				<li><a href="${contextRoot}/login" class="text-center">LOG
+						IN</a></li>
 				<li><a href="${contextRoot}/signup" class="text-center">SIGN
 						UP</a></li>
-									<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown text-center">ADMIN<span class="caret"
-							aria-haspopup="true" aria-expanded="true"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="${contextRoot}/admin/addproduct" class="text-center">ADD NEW PRODUCT</a></li>
-							<li><a href="${contextRoot}/admin/addcategory" class="text-center">CREAT NEW CATEGORY</a></li>
-							<li><a href="${contextRoot}/admin/addsupplier" class="text-center">ADD NEW SUPPLIER</a></li>
-							<li><a href="${contextRoot}/admin/addwallpaper" class="text-center">ADD NEW WALLPAPER</a></li>
-							<li><a href="${contextRoot}/admin/adminsettings" class="text-center">SETTINGS</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#" class="text-center">LOG OUT</a></li>
-						</ul></li>
-						<li><a href="#" data-toggle="dropdown"
-						class="dropdown-toggle dropdown text-center">USER<span class="caret"
-							aria-haspopup="true" aria-expanded="true"></span></a>
-						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-							<li><a href="${contextRoot}/profile" class="text-center">HELLO USER</a></li>
-							<li><a href="${contextRoot}/myorders" class="text-center">MY ORDERS</a></li>
-							<li><a href="${contextRoot}/mywishlist" class="text-center">MY WISHLIST</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#" class="text-center">LOG OUT</a></li>
-						</ul></li>
+				</sec:authorize>		
+						
+				<sec:authorize access="hasAuthority('Role_Admin')">
+				<li><a href="#" data-toggle="dropdown"
+					class="dropdown-toggle dropdown text-center"><sec:authentication property="name"/><span
+						class="caret" aria-haspopup="true" aria-expanded="true"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="${contextRoot}/admin/addproduct"
+							class="text-center">ADD NEW PRODUCT</a></li>
+						<li><a href="${contextRoot}/admin/addcategory"
+							class="text-center">CREAT NEW CATEGORY</a></li>
+						<li><a href="${contextRoot}/admin/addsupplier"
+							class="text-center">ADD NEW SUPPLIER</a></li>
+						<li><a href="${contextRoot}/admin/addwallpaper"
+							class="text-center">ADD NEW WALLPAPER</a></li>
+						<li><a href="${contextRoot}/admin/adminsettings"
+							class="text-center">SETTINGS</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="logout" class="text-center">LOG OUT</a></li>
+					</ul></li>
+				</sec:authorize>
+				
+				<sec:authorize access="hasAuthority('Role_User')">
+				<li><a href="#" data-toggle="dropdown"
+					class="dropdown-toggle dropdown text-center"><sec:authentication
+							property="name" /><span class="caret" aria-haspopup="true"
+						aria-expanded="true"></span></a>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="${contextRoot}/profile" class="text-center">HELLO
+								<sec:authentication property="name"/></a></li>
+						<li><a href="${contextRoot}/myorders" class="text-center">MY
+								ORDERS</a></li>
+						<li><a href="${contextRoot}/mywishlist" class="text-center">MY
+								WISHLIST</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="logout" class="text-center">LOG OUT</a></li>
+					</ul></li>
+				</sec:authorize>
 			</ul>
 		</div>
 		<!-- /.navbar-collapse -->

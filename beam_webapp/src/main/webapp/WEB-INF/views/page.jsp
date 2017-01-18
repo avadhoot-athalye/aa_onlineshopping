@@ -1,6 +1,7 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
@@ -132,7 +133,7 @@
 		</c:if>
 		
 		<%@include file="./share/footer.jsp"%>
-
+		
 		<!--End of the Footer -->
 	</div>
 	<!-- Script placed at the end -->
