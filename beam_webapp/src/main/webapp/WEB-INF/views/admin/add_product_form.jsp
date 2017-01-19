@@ -1,7 +1,8 @@
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
 <div class="well">
-	<form:form class="form-horizontal sign-up-form" method="post" action="${contextRoot}/admin/product/save" modelAttribute="product">
+	<form:form class="form-horizontal sign-up-form" method="post"
+		action="${contextRoot}/admin/product/save" modelAttribute="product" enctype="multipart/form-data">
 
 		<!-- View all products -->
 
@@ -21,7 +22,7 @@
 			<label for="productname" class="col-sm-5 control-label">Product
 				Name:</label>
 			<div class="col-sm-3 input-group">
-				<form:input path="product_name" type="text" 
+				<form:input path="product_name" type="text"
 					placeholder="Add a name of product" class="form-control" />
 				<form:input type="hidden" path="product_id"></form:input>
 			</div>
@@ -34,14 +35,14 @@
 				a category:</label>
 			<div class="col-sm-3 input-group">
 				<form:select path="category_id" class="form-control">
-				<c:forEach items="${categories}" var="category">
-					<form:option value="${category.category_id}">${category.category_name}</form:option>
-				</c:forEach>
+					<c:forEach items="${categories}" var="category">
+						<form:option value="${category.category_id}">${category.category_name}</form:option>
+					</c:forEach>
 				</form:select>
 			</div>
 		</div>
 
-	 		<!-- Choose supplier here --> 
+		<!-- Choose supplier here -->
 
 		<div class="form-group">
 			<label for="choosesupplier" class="col-sm-5 control-label">Choose
@@ -62,8 +63,8 @@
 			<label for="setprice" class="col-sm-5 control-label">Set a
 				price:</label>
 			<div class="col-sm-3 input-group">
-				<form:input path="product_price" type="number" id="setprice" name="setprice"
-					class="form-control" placeholder="Set a Price" />
+				<form:input path="product_price" type="number" id="setprice"
+					name="setprice" class="form-control" placeholder="Set a Price" />
 			</div>
 		</div>
 
@@ -73,8 +74,9 @@
 			<label for="quantity" class="col-sm-5 control-label">Available
 				Stock:</label>
 			<div class="col-sm-3 input-group">
-				<form:input path="product_quantity" type="number" id="quantity" name="quantity"
-					class="form-control" placeholder="Available in stock" />
+				<form:input path="product_quantity" type="number" id="quantity"
+					name="quantity" class="form-control"
+					placeholder="Available in stock" />
 			</div>
 		</div>
 
@@ -85,7 +87,8 @@
 			<label for="exampleTextarea" class="col-sm-5 control-label">Add
 				a product description</label>
 			<div class="col-sm-3 input-group">
-				<form:textarea path="product_description" class="form-control" id="exampleTextarea" rows="3"></form:textarea>
+				<form:textarea path="product_description" class="form-control"
+					id="exampleTextarea" rows="3"></form:textarea>
 			</div>
 		</div>
 
@@ -96,9 +99,9 @@
 				<label for="exampleInputFile" class="col-sm-5 control-label">Add
 					a cover photo</label>
 				<div class="col-sm-3 input-group">
-					<input path="cover" type="file" class="form-control-file" id="exampleInputFile"
-						aria-describedby="fileHelp"> <small id="fileHelp"
-						class="form-text text-muted"></small></input>
+					<form:input path="image" type="file" class="form-control-file"
+						id="uploadFile" aria-describedby="fileHelp"/> <small
+						id="fileHelp" class="form-text text-muted"></small>
 				</div>
 			</div>
 		</div>

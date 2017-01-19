@@ -1,12 +1,15 @@
 package com.beam.backend.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Component
@@ -19,9 +22,15 @@ public class Product {
 		private double product_price;
 		private int product_quantity;
 		private int category_id;
-		
+	
 		@Column(name="Supplier_Id")
 		private int supplierId;
+	
+		@Transient
+		private String imgurl;
+		
+		@Transient
+		private MultipartFile image;
 
 		
 		public int getProduct_id() {
@@ -65,6 +74,18 @@ public class Product {
 		}
 		public void setSupplierId(int supplierId) {
 			this.supplierId = supplierId;
+		}
+		public String getImgurl() {
+			return imgurl;
+		}
+		public void setImgurl(String imgurl) {
+			this.imgurl = imgurl;
+		}
+		public MultipartFile getImage() {
+			return image;
+		}
+		public void setImage(MultipartFile image) {
+			this.image = image;
 		}
 		
 		

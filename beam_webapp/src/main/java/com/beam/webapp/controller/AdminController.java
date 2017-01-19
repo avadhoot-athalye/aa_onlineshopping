@@ -1,7 +1,10 @@
 package com.beam.webapp.controller;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +12,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
+
 import com.beam.backend.dao.CategoryDAO;
 import com.beam.backend.dao.ProductDAO;
 import com.beam.backend.dao.SupplierDAO;
@@ -120,6 +126,11 @@ public class AdminController {
 
 	@Autowired
 	Product product;
+	
+	@Autowired
+	private HttpServletRequest request;
+
+	boolean flag = false;
 
 	/*
 	 * To add products
@@ -127,7 +138,9 @@ public class AdminController {
 
 	@RequestMapping(value = "/addproduct")
 
-	public ModelAndView addproduct() {
+	public ModelAndView addproduct(@RequestParam(value="op", required=false) String operation, 
+			@RequestParam(value = "status", required=false) String status,
+			@RequestParam(value = "id", required=false) String id) {
 		ModelAndView mv = new ModelAndView("page");
 
 		mv.addObject("title", "Add a product");
@@ -141,22 +154,55 @@ public class AdminController {
 
 	@RequestMapping(value = { "/product/save" }, method = RequestMethod.POST)
 
-	public String saveProduct(@ModelAttribute Product product) {
+	public String saveProduct(@ModelAttribute Product product, HttpServletRequest request) {
 
 		if (product.getProduct_id() == 0) {
-			productDAO.addProduct(product);
+			flag = productDAO.addProduct(product);
+			if (flag == true) {
+				if (!product.getImage().getOriginalFilename().equals("")) {
+					product.setImgurl(uploadImage(product));
+				}
+				return "redirect:/admin/addproduct?op=add&status=success";
+			} else {
+				return "redirect:/admin/addproduct?op=add&status=fail";
+			}
 		} else {
-			productDAO.updateProduct(product);
+			flag = productDAO.updateProduct(product);
+			if (flag == true) {
+				if (!product.getImage().getOriginalFilename().equals("")) {
+					product.setImgurl(uploadImage(product));
+				}
+				return "redirect:/admin/addproduct?op=update&status=success";
+			} else {
+				return "redirect:/admin/addproduct?op=update&status=fail";
+			}
 		}
-		return "redirect:/admin/addproduct";
-
 	}
 
+	protected String uploadImage(Product product) {
+		MultipartFile imageFile = product.getImage();
+		String folderToUpload = "/resources/img/products";
+		
+		String fileName = imageFile.getOriginalFilename();
+		String realPath = request.getServletContext().getRealPath(folderToUpload);
+		if (!new File(realPath).exists()) {
+			new File(realPath).mkdirs();
+		}
+		
+		String filePath = realPath + File.separator + product.getProduct_id() + ".png";
+		File destination = new File(filePath);
+		try {
+			imageFile.transferTo(destination);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return fileName;
+		
+	}
 	/*
 	 * To view list of all products
 	 */
-
-
 
 	@RequestMapping(value = "/allproducts")
 
@@ -166,13 +212,13 @@ public class AdminController {
 
 		ProductListModel productModel = null;
 
-		for(Product p:products){
+		for (Product p : products) {
 			productModel = new ProductListModel();
 			productModel.setProduct(p);
 			productModel.setCategoryName(categoryDAO.getCategory(p.getCategory_id()).getCategory_name());
 			productModel.setSupplierName(supplierDAO.getSupplier(p.getSupplierId()).getName());
 			productlist.add(productModel);
-			
+
 		}
 		ModelAndView mv = new ModelAndView("page");
 
@@ -189,7 +235,7 @@ public class AdminController {
 	@RequestMapping(value = "/editproduct/{product.product_id}")
 
 	public ModelAndView editProducts(@PathVariable("product.product_id") int productId) {
-	
+
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Edit product");
 		mv.addObject("product", productDAO.get(productId));
@@ -205,7 +251,7 @@ public class AdminController {
 	 */
 	@RequestMapping(value = { "/deleteproduct/{product.product_id}" }, method = RequestMethod.GET)
 
-	public String deleteProduct(@PathVariable(name = "product.product_id") int productId) {
+	public String deleteProduct(@PathVariable (name = "product.product_id") int productId) {
 
 		product = productDAO.get(productId);
 
