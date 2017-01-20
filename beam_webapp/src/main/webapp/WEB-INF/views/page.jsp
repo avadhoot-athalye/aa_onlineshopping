@@ -104,10 +104,6 @@
 			<%@include file="./login.jsp"%>
 		</c:if>
 
-		<c:if test="${ifUserClickedSignUp == true}">
-			<%@include file="./signup.jsp"%>
-		</c:if>
-
 		<c:if test="${ifUserClickedGameCatalogue == true}">
 			<%@include file="admin/gamecatalogue.jsp"%>
 		</c:if>

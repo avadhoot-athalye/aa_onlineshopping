@@ -64,13 +64,13 @@
 				<sec:authorize access="isAnonymous()">
 				<li><a href="${contextRoot}/login" class="text-center">LOG
 						IN</a></li>
-				<li><a href="${contextRoot}/signup" class="text-center">SIGN
+				<li><a href="memberShip" class="text-center">SIGN
 						UP</a></li>
 				</sec:authorize>		
 						
 				<sec:authorize access="hasAuthority('Role_Admin')">
 				<li><a href="#" data-toggle="dropdown"
-					class="dropdown-toggle dropdown text-center"><sec:authentication property="name"/><span
+					class="dropdown-toggle dropdown text-center"><sec:authentication property="name"/>(ADMIN)<span
 						class="caret" aria-haspopup="true" aria-expanded="true"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 						<li><a href="${contextRoot}/admin/addproduct"
