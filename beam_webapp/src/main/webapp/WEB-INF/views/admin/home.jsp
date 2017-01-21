@@ -15,7 +15,7 @@
 
 	<%@include file="../share/featured & Recommeded.jsp"%>
 
-	<div class="col-md-9 visible-lg visible-md visible-sm">
+	<div class="col-md-9">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -58,7 +58,7 @@
 		<!--Carousal ends -->
 
 	</div>
-	<div class="col-md-9 text-center special-banner img img-responsive">
+	<div class="col-md-9 text-center special-banner img img-responsive hidden-xs">
 		<img alt="" src="http://placehold.it/817x150">
 	</div>
 </div>

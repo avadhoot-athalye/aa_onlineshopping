@@ -287,7 +287,7 @@ ul li a:hover {
 
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand
 	{
-	margin-left: 0px;
+	margin-left: 15px;
 }
 
 .navbar, .navbar-default {

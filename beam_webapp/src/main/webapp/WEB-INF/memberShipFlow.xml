@@ -18,12 +18,12 @@
 
 	<action-state id="validate">
 		<evaluate expression="userHandler.validateDetails(userBean,messageContext)"></evaluate>
-		<transition on="success" to="toHome" />
+		<transition on="success" to="welcome" />
 		<transition on="failure" to="start" />
 	</action-state>
-
-<!-- 	<end-state id="toHome" view="page.jsp" /> -->
-	<end-state id="toHome" view="externalRedirect:contextRelative:page.jsp" />
+	
+	<end-state id="welcome" view="welcome" />
+	<end-state id="login" view="externalRedirect:contextRelative:login" />
 	<end-state id="toException"
 		view="externalRedirect:contextRelative:exception" />
 
