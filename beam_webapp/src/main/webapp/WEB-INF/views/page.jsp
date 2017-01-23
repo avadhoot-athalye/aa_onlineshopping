@@ -124,6 +124,10 @@
 			<%@include file="user/confirm_address.jsp"%>
 		</c:if>
 		
+<%-- 		<c:if test="${ifUserClickedSignUp == true}"> --%>
+<%-- 			<%@include file="signup.jsp"%> --%>
+<%-- 		</c:if> --%>
+		
 		<c:if test="${ifUserClickedUpdate == true}">
 			<%@include file="user/order summary.jsp"%>
 		</c:if>

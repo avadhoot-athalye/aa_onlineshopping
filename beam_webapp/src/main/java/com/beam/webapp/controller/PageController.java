@@ -92,15 +92,7 @@ public class PageController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/signup")
 
-	public ModelAndView signup() {
-
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "Sign up");
-		mv.addObject("ifUserClickedSignUp", true);
-		return mv;
-	}
 
 	/*
 	 * For loading the product pages
@@ -226,6 +218,7 @@ public class PageController {
 		return mv;
 	}
 
+	
 	
 
 }

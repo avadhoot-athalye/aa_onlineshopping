@@ -48,12 +48,12 @@ public class UserTestCase {
 	 * Test case to get all users
 	 */
 	
-	@Test
-	public void getAllUsersTestCase() {
-		
-		int size = userdao.list().size();
-		Assert.assertEquals	(1, size);
-	}
+//	@Test
+//	public void getAllUsersTestCase() {
+//		
+//		int size = userdao.list().size();
+//		Assert.assertEquals	(1, size);
+//	}
 //	
 	/*
 	 * test case to update all users
@@ -69,20 +69,14 @@ public class UserTestCase {
 	/*
 	 * Test case to add user
 	 */
-//	@Test
-//	public void addUserTest() {
-//		user.setId(1);
-//		user.setUsername("avadhoot2311");
-//		user.setFirstname("Avadhoot");
-//		user.setLastname("Athalye");
-//		user.setMobilenumber("9999999");
-//		user.setEmailid("ava@gmail.com");
-//		user.setEnabled(true);
-//		user.setRole("customer");
-//		user.setPassword("1234");
-//		user.setConfirm_password("1234");
-//		
-//		Assert.assertEquals(true, userdao.addUser(user));
-//	}
+	@Test
+	public void addUserTest() {
+		user.setId(1);
+		user.setUsername("avadhoot");
+		user.setEmailid("a@gmail.com");
+		user.setPassword("5656");
+		user.setRole("custmer");
+		Assert.assertEquals(true, userdao.addUser(user));
+	}
 
 }

@@ -1,5 +1,7 @@
 package com.beam.backend.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,9 +13,9 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Component
-public class User {
+public class User implements Serializable{
 	
-	@Id 
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="User_id")
 	private int id;
 	

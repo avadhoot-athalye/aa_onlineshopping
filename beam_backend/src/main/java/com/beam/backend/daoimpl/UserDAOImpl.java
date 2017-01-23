@@ -2,12 +2,14 @@ package com.beam.backend.daoimpl;
 
 import java.util.List;
 
-import javax.transaction.Transactional;
 
-import org.hibernate.Query;
+
+
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.beam.backend.dao.UserDAO;
 import com.beam.backend.entity.User;
@@ -62,7 +64,9 @@ public class UserDAOImpl implements UserDAO {
 	@Transactional
 	public boolean addUser(User user) {
 		try {
-			sessionfactory.getCurrentSession().save(user);
+			user.setRole("customer");
+			user.setEnabled(true);
+			sessionfactory.getCurrentSession().persist(user);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

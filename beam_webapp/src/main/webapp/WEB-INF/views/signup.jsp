@@ -1,7 +1,8 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
@@ -49,7 +50,7 @@
 	content="${img}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>${title} | Beam</title>
+<title>${title}|Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
@@ -58,13 +59,15 @@
 <link href="${css}/style.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans"
+	rel="stylesheet">
 <!-- Pace.css for loader -->
 <%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
 
 
 </HEAD>
 
+<!-- Body of the content starts here -->
 <body>
 	<div class="container margin-centered">
 		<div class="no-margin no-padding">
@@ -75,22 +78,24 @@
 
 		<%@include file="./share/navbar.jsp"%>
 		<div class="well">
-			<form:form class="form-horizontal sign-up-form" modelAttribute="userBean" method="post">
+			<form:form class="form-horizontal sign-up-form" modelAttribute="user"
+				method="post">
 
 				<h2 class="text-center header-sign-up">Sign up</h2>
 				<div class="form-group">
 					<label for="username" class="col-sm-5 control-label">Username:</label>
 					<div class="col-sm-3">
-						<form:input path="username" type="text" id="username" name="username"
-							placeholder="username" class="form-control" />
+						<form:input path="username" type="text" id="username"
+							name="username" placeholder="username" class="form-control" />
+						<form:input type="hidden" path="id" />
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="password" class="col-sm-5 control-label">Password:</label>
 					<div class="col-sm-3">
-						<form:input path="password" type="password" id="password" name="password"
-							class="form-control" placeholder="password" />
+						<form:input path="password" type="password" id="password"
+							name="password" class="form-control" placeholder="password" />
 					</div>
 				</div>
 
@@ -98,9 +103,9 @@
 					<label for="re-enter-password" class="col-sm-5 control-label">Re-enter
 						password:</label>
 					<div class="col-sm-3">
-						<form:input path="confirm_password" type="password" id="re-enter-password"
-							name="re-enter-password" class="form-control"
-							placeholder="re-enter password" />
+						<form:input path="confirm_password" type="password"
+							id="re-enter-password" name="re-enter-password"
+							class="form-control" placeholder="re-enter password" />
 					</div>
 				</div>
 
@@ -108,8 +113,8 @@
 					<label for="emailid" class="col-sm-5 control-label">Email
 						address:</label>
 					<div class="col-sm-3">
-						<form:input path="email" type="email" id="emailid" name="emailid"
-							class="form-control" placeholder="email id" />
+						<form:input path="emailid" type="email" id="emailid"
+							name="emailid" class="form-control" placeholder="email id" />
 					</div>
 				</div>
 
@@ -125,14 +130,14 @@
 					</div>
 				</div>
 			</form:form>
+			<%@include file="./share/footer.jsp"%>
+
+			<!--End of the Footer -->
 		</div>
-		<%@include file="./share/footer.jsp"%>
-		<!--End of the Footer -->
-	</div>
-	<!-- Script placed at the end -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/bootstrap.js"></script>
-	<script src="${js}/app.js"></script>
-	<%-- 		<script src="${js}/pace.js"></script> --%>
+		<!-- Script placed at the end -->
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/bootstrap.js"></script>
+		<script src="${js}/app.js"></script>
+		<%-- 		<script src="${js}/pace.js"></script> --%>
 </body>
 </HTML>

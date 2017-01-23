@@ -25,7 +25,7 @@
 	<webflow:flow-registry id="flowRegistry"
 		flow-builder-services="flowBuilderServices" base-path="/WEB-INF">
 
-		<!-- here the id is mapped to invoke this flow -->
+<!-- 		here the id is mapped to invoke this flow -->
 
 		<webflow:flow-location id="memberShip" path="/memberShipFlow.xml" />
 	</webflow:flow-registry>
@@ -63,13 +63,13 @@
 		</property>
 	</bean>
 
-	<!-- <bean id="urlBasedViewResolver"
+	<bean id="urlBasedViewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass"
 			value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix" value="/" />
 		<property name="suffix" value=".jsp" />
-	</bean> -->
+	</bean>
 
 	<bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
 		<property name="flowExecutor" ref="flowExecutor" />
