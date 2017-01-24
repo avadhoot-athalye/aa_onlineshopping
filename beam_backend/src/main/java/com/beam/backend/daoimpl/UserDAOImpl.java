@@ -66,7 +66,7 @@ public class UserDAOImpl implements UserDAO {
 		try {
 			user.setRole("customer");
 			user.setEnabled(true);
-			sessionfactory.getCurrentSession().persist(user);
+			sessionfactory.getCurrentSession().save(user);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());

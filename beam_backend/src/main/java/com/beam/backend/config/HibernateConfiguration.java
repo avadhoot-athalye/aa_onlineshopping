@@ -22,7 +22,7 @@ public class HibernateConfiguration {
 	 * Database Configuration
 	 */
 	
-	@Bean
+	@Bean(name = "dataSource")
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		//oracle.jdbc.driver.OracleDriver

@@ -8,10 +8,10 @@
 			<div class="thumbnail thumbnail-setting col-md-4">
 				<div class="wrapper">
 					<img src="http://placehold.it/180x215">
-					<sec:authorize access="hasAuthority('Role_Admin')">
+					<sec:authorize access="hasAuthority('admin')">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</sec:authorize>
-					<sec:authorize access="hasAuthority('Role_User')">
+					<sec:authorize access="hasAuthority('customer')">
 						<span class="glyphicon glyphicon-heart"></span>
 					</sec:authorize>
 				</div>
@@ -25,7 +25,7 @@
 								<small>&#8377 1200</small>
 							</H4>
 						</div>
-						<sec:authorize access="hasAuthority('Role_User')">
+						<sec:authorize access="hasAuthority('customer') or isAnonymous()">
 							<div class="col-md-offset-3 col-md-2">
 								<a href="#" class="btn btn-default" role="button"> <span
 									class="glyphicon glyphicon-shopping-cart"></span>

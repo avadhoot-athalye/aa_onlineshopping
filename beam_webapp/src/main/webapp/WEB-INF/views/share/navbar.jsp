@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				</form>
-				<sec:authorize access="hasAuthority('Role_User')">
+				<sec:authorize access="hasAuthority('customer')">
 				<li role="presentation" class="text-center"><a
 					href="${contextRoot}/cart"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
@@ -68,7 +68,7 @@
 						UP</a></li>
 				</sec:authorize>		
 						
-				<sec:authorize access="hasAuthority('Role_Admin')">
+				<sec:authorize access="hasAuthority('admin')">
 				<li><a href="#" data-toggle="dropdown"
 					class="dropdown-toggle dropdown text-center"><sec:authentication property="name"/>(ADMIN)<span
 						class="caret" aria-haspopup="true" aria-expanded="true"></span></a>
@@ -84,11 +84,11 @@
 						<li><a href="${contextRoot}/admin/adminsettings"
 							class="text-center">SETTINGS</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="logout" class="text-center">LOG OUT</a></li>
+						<li><a href="${contextRoot}/logout" class="text-center">LOG OUT</a></li>
 					</ul></li>
 				</sec:authorize>
 				
-				<sec:authorize access="hasAuthority('Role_User')">
+				<sec:authorize access="hasAuthority('customer')">
 				<li><a href="#" data-toggle="dropdown"
 					class="dropdown-toggle dropdown text-center"><sec:authentication
 							property="name" /><span class="caret" aria-haspopup="true"
@@ -101,7 +101,7 @@
 						<li><a href="${contextRoot}/mywishlist" class="text-center">MY
 								WISHLIST</a></li>
 						<li role="separator" class="divider"></li>
-						<li><a href="logout" class="text-center">LOG OUT</a></li>
+						<li><a href="${contextRoot}/logout" class="text-center">LOG OUT</a></li>
 					</ul></li>
 				</sec:authorize>
 			</ul>

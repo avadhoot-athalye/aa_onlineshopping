@@ -13,14 +13,14 @@
 
  	<!-- if not specified the first view state is the starting state -->
 	<view-state id="start" view="signup" model="flowScope.user">
-		<transition on="submit" to="welcome" />
+		<transition on="submit" to="storage" />
 	</view-state>	
 	
-<!-- 	<action-state id="storage"> -->
-<!-- 		<evaluate expression="userHandler.addUser(user)"></evaluate> -->
-<!-- 		<transition on="success" to="welcome" /> -->
-<!-- 		<transition on="failure" to="start" /> -->
-<!-- 	</action-state> -->
+	<action-state id="storage">
+		<evaluate expression="userHandler.addUser(user)"></evaluate>
+		<transition on="success" to="welcome" />
+		<transition on="failure" to="start" />
+	</action-state>
 	
 	<end-state id="welcome" view="welcome" />
 	<end-state id="login" view="externalRedirect:contextRelative:login" />

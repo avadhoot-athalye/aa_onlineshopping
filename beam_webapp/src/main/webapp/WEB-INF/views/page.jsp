@@ -140,6 +140,7 @@
 	<script src="${js}/jquery.js"></script>
 	<script src="${js}/bootstrap.js"></script>
 	<script src="${js}/app.js"></script>
+	<script src="${js}/angular.js"></script>
 	<%-- 		<script src="${js}/pace.js"></script> --%>
 </body>
 </HTML>

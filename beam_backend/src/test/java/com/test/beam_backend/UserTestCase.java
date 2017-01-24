@@ -74,8 +74,8 @@ public class UserTestCase {
 		user.setId(1);
 		user.setUsername("avadhoot");
 		user.setEmailid("a@gmail.com");
-		user.setPassword("5656");
-		user.setRole("custmer");
+		user.setPassword("2311");
+		user.setRole("admin");
 		Assert.assertEquals(true, userdao.addUser(user));
 	}
 
