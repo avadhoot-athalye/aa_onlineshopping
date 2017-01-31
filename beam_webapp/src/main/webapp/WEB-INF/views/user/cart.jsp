@@ -25,46 +25,52 @@
 					</div>
 				</div>
 				<!-- Panel Body starts here -->
-				<div class="panel-body">
-					<div class="row">
-						<div class="col-md-2 col-xs-12">
-							<img class="img-responsive" alt=""
-								src="http://placehold.it/100x100">
-						</div>
-						<div class="col-md-3 col-xs-12">
-							<strong>PRODUCT NAME</strong>
-						</div>
 
-						<!-- Quantity is added here -->
-						<div class="col-md-4 col-xs-12">
-							<div class="col-md-12">
+				<c:forEach items="${cartItem}" var="cartItems">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-md-2 col-xs-12">
+								<a href="${contextRoot}/game/${cartItems.product.product_id}"><img
+									class="img-responsive" alt=""
+									src="${img}/products/${cartItems.product.product_id}.png"></a>
+							</div>
+							<div class="col-md-3 col-xs-12">
+								<a href="${contextRoot}/game/${cartItems.product.product_id}"><strong>${cartItems.product.product_name}</strong></a>
+							</div>
 
-								<div class="row col-md-offset-4 col-md-2">
-									<span>QUANTITY &nbsp;</span>
-								</div>
+							<!-- Quantity is added here -->
+							<div class="col-md-4 col-xs-12">
+								<div class="col-md-12">
 
-								<div class="row col-md-offset-2 col-md-4">
-									<div class="input-group">
-										<input type="text" class="form-control cartQuant" value="1" id="quantity">
+									<div class="row col-md-offset-4 col-md-2">
+										<span>QUANTITY &nbsp;</span>
 									</div>
+
+									<div class="row col-md-offset-2 col-md-4">
+										<div class="input-group">
+											<input type="text" class="form-control cartQuant" value="1"
+												id="quantity">
+										</div>
+									</div>
+
 								</div>
+
 
 							</div>
-							
-							
-						</div>
 
 
-						<div class="col-md-1 col-xs-12">
-							<strong>&#8377 1200</strong>
-						</div>
-						<div class="col-md-2 col-xs-12">
-							<span class="glyphicon glyphicon-trash"> REMOVE</span>
-						</div>
+							<div class="col-md-1 col-xs-12">
+								<strong>&#8377 ${cartItems.product.product_price }</strong>
+							</div>
+							<div class="col-md-2 col-xs-12">
+								<span class="glyphicon glyphicon-trash"> REMOVE</span>
+							</div>
 
+						</div>
 					</div>
-				</div> <!-- Panel Body ends here -->
-				
+				</c:forEach>
+
+
 				<div class="panel-heading">
 					<div class="panel-title">
 						<div class="row">
@@ -83,15 +89,18 @@
 
 	<div class="row">
 		<div class="col-md-2">
-			<a class="btn btn-primary special-banner" href="${contextRoot}/" role="navigation">
-				<span class="glyphicon glyphicon-arrow-left "></span>&nbsp;Continue
+			<a class="btn btn-primary special-banner"
+				href="${contextRoot}/games/all" role="navigation"> <span
+				class="glyphicon glyphicon-arrow-left "></span>&nbsp;Continue
 				Shopping
 			</a>
 		</div>
 
 		<div class="col-md-offset-8 col-md-2">
-			<a class="btn btn-success special-banner" href="${contextRoot}/confirmaddress" role="button">Proceed To
-				Checkout&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></a>
+			<a class="btn btn-success special-banner"
+				href="${contextRoot}/confirmaddress" role="button">Proceed To
+				Checkout&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
+			</a>
 		</div>
 
 	</div>

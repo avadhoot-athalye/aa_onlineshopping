@@ -56,7 +56,7 @@
 				</form>
 				<sec:authorize access="hasAuthority('customer')">
 				<li role="presentation" class="text-center"><a
-					href="${contextRoot}/user/cart"><span
+					href="${contextRoot}/user/cart/"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 						CART <span class="badge"></span></a></li>
 				</sec:authorize>

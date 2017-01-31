@@ -21,8 +21,9 @@ public class CartItemDAOImpl implements CartItemDAO {
 	@Override
 	@Transactional
 	public List<CartItems> list(int id) {
-		String hql = "from Cart_Items";
+		String hql = "from CartItems where cart.id = :cartId";
 		Query query = sessionfactory.getCurrentSession().createQuery(hql);
+		query.setParameter("cartId", id);
 		return query.list();
 		
 	}
@@ -37,7 +38,7 @@ public class CartItemDAOImpl implements CartItemDAO {
 	@Transactional
 	public boolean addCartItems(CartItems cartItems) {
 		try {
-			sessionfactory.getCurrentSession().persist(cartItems);
+			sessionfactory.getCurrentSession().save(cartItems);
 			return true;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -73,15 +74,32 @@ public class CartItemDAOImpl implements CartItemDAO {
 	}
 
 	@Override
-	public CartItems getByProductId(int productId, int cartId) {
-		
+	@Transactional
+	public CartItems getByProductId(int productId, int cartId) {	
+		String hql = "from CartItems where product.product_id = :productId and cart.id = :cartId";
+		Query query = sessionfactory.getCurrentSession().createQuery(hql);
+		query.setParameter("productId", productId);
+		query.setParameter("cartId", cartId);
+		List<CartItems> cartItems = query.getResultList();
+		if(cartItems != null && !cartItems.isEmpty()) {
+			return cartItems.get(0);
+		}
 		return null;
 	}
 
 	@Override
+	@Transactional
 	public boolean existingCartItem(int productId, int cartId) {
-		// TODO Auto-generated method stub
-		return false;
+		String hql = "from CartItems where cart.id = :cartId and product.product_id = :productId";
+		Query query = sessionfactory.getCurrentSession().createQuery(hql);
+		query.setParameter("productId", productId);
+		query.setParameter("cartId", cartId);
+		if(query.list().isEmpty()) {
+			return false;
+		} else {
+			return true;
+		}
+		
 	}
 	
 

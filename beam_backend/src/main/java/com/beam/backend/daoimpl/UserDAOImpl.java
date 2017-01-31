@@ -38,7 +38,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	@Transactional
 	public User getbyUserName(String username) {
-		String hql = "from user where username = :username";
+		String hql = "FROM User WHERE USERNAME = :username";
 		Query query = sessionfactory.getCurrentSession().createQuery(hql);
 		query.setParameter("username", username);
 		List<User> listOfUser = query.getResultList();

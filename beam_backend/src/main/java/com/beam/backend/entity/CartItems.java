@@ -1,7 +1,5 @@
 package com.beam.backend.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,34 +8,34 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
 @Entity
+@Table(name = "Cart_Items")
 @Component
-public class CartItems implements Serializable{
+public class CartItems {
 
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 936926929683071430L;
-
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="item_id")
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "item_id")
 	private int id;
-	
+
 	@ManyToOne
-	@JoinColumn(name="cart_id")
+	@JoinColumn(name = "cart_id")
 	private Cart cart;
-	
+
 	@OneToOne
-	@JoinColumn(name="product_id")
+	@JoinColumn(name = "product_id")
 	private Product product;
-	
+
 	private int quantity;
-	
+
 	private double price;
+
+	@Column(name = "product_total_price")
+	private double totalPrice;
 
 	public int getId() {
 		return id;
@@ -78,6 +76,13 @@ public class CartItems implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
 }

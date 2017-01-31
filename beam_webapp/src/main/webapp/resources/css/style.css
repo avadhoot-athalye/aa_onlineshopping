@@ -174,9 +174,13 @@ ul li a:hover {
 	margin-bottom: -75%;
 }
 
-.thumbnail-setting-g {
-	width: 400px;
-	margin-right: 10px;
+.thumbnail > img {
+	margin: auto auto auto auto;
+}
+
+.game-image {
+	width: 380 px; 
+	height: 415 px;
 }
 
 .spinner {

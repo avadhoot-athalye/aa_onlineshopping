@@ -1,12 +1,19 @@
 package com.beam.webapp.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.beam.backend.dao.CartDAO;
+import com.beam.backend.dao.CartItemDAO;
 import com.beam.backend.dao.UserDAO;
+import com.beam.backend.entity.Cart;
+import com.beam.backend.entity.CartItems;
 import com.beam.backend.entity.Category;
 import com.beam.backend.entity.User;
 
@@ -19,6 +26,18 @@ public class UserController {
 	
 	@Autowired
 	UserDAO userDAO;
+	
+	@Autowired
+	Cart cart;
+
+	@Autowired
+	CartDAO cartDAO;
+
+	@Autowired
+	CartItems cartItems;
+
+	@Autowired
+	CartItemDAO cartItemDAO;
 	
 	
 	@RequestMapping(value = "/signup")
@@ -46,15 +65,5 @@ public class UserController {
 		}
 		return "redirect:/login";
 	}
-	
-	@RequestMapping(value = "/cart")
 
-	public ModelAndView cart() {
-
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "cart");
-		mv.addObject("ifUserClickedCart", true);
-		return mv;
-	}
-	
 }

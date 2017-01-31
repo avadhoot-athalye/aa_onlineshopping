@@ -46,7 +46,7 @@
 						</div>
 						<sec:authorize access="hasAuthority('customer') or isAnonymous()">
 							<div class="col-md-offset-4 col-md-2">
-								<a href="#" class="btn btn-default" role="button"> <span
+								<a href="${contextRoot}/user/cart/add/{{product.product_id}}" class="btn btn-default" role="button"> <span
 									class="glyphicon glyphicon-shopping-cart"></span>
 								</a>
 							</div>

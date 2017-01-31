@@ -25,7 +25,8 @@ constraint fk_category_id FOREIGN KEY(category_id)
 references category(category_id),
 supplier_id bigint(10) not null,
 constraint fk_supplier_id FOREIGN KEY(supplier_id)
-references supplier(supplier_id)
+references supplier(supplier_id),
+product_total_price decimal(8,2) not null
 )
 
 create table user 

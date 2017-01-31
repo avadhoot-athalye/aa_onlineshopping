@@ -35,6 +35,7 @@ public class Cart implements Serializable{
 	@JoinColumn(name="user_id")
 	private User user;
 	
+	
 	@OneToMany(mappedBy = "cart")
 	private Set<CartItems> cartItems;
 	
