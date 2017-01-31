@@ -25,13 +25,9 @@ import com.beam.backend.entity.Product;
 	private ProductDAO accessible;
 
 	@RequestMapping(value = "/list")
-	public @ResponseBody List<Product> productList() { // need to receive
-														// response
+	public @ResponseBody List<Product> productList() { // need to receive response
 		return accessible.list();
 	}
 
-	@RequestMapping(value = "/{id}")
-	public @ResponseBody List<Product> produc() { // need to receive response
-		return accessible.list();
-	}
+	
 }

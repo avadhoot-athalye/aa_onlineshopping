@@ -95,7 +95,7 @@ public class AdminController {
 	@RequestMapping(value = { "/category/save" }, method = RequestMethod.POST)
 
 	public String saveCategory(@ModelAttribute Category category) {
-
+		
 		if (category.getCategory_id() == 0) {
 			categoryDAO.addCategory(category);
 		} else {

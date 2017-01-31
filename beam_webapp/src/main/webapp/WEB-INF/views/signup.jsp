@@ -50,7 +50,7 @@
 	content="${img}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>${title}|Beam</title>
+<title>Sign up|Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>

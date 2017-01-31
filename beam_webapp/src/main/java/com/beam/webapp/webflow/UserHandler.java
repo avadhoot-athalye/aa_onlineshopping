@@ -10,14 +10,13 @@ import org.springframework.binding.message.MessageContext;
 import org.springframework.stereotype.Component;
 
 import com.beam.backend.dao.UserDAO;
+import com.beam.backend.entity.Cart;
 import com.beam.backend.entity.User;
 
 
 @Component
 public class UserHandler {
-	
-	@Autowired
-	private User user;
+
 	
 	@Autowired
 	UserDAO userDAO;
@@ -27,14 +26,10 @@ public class UserHandler {
 	}
 	
 	public String addUser(User user) {
+		Cart cart = new Cart();
 		
-		user.setUsername(user.getUsername());
-		user.setPassword(user.getPassword());
-		user.setConfirm_password(user.getConfirm_password());
-		user.setEmailid(user.getEmailid());
-		user.setEnabled(user.isEnabled());
-		user.setRole(user.getRole());
-		
+		cart.setUser(user);
+		user.setCart(cart);	
 		userDAO.addUser(user);
 		
 		return "success";

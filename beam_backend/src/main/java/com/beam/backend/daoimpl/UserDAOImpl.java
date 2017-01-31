@@ -37,6 +37,19 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	@Transactional
+	public User getbyUserName(String username) {
+		String hql = "from user where username = :username";
+		Query query = sessionfactory.getCurrentSession().createQuery(hql);
+		query.setParameter("username", username);
+		List<User> listOfUser = query.getResultList();
+		if(listOfUser != null && !listOfUser.isEmpty()) {
+			return listOfUser.get(0);
+		}
+		return null;
+	}
+	
+	@Override
+	@Transactional
 	public boolean deleteUser(User user) {
 		try {
 			sessionfactory.getCurrentSession().delete(user);
@@ -81,6 +94,8 @@ public class UserDAOImpl implements UserDAO {
 		}
 		return false;
 	}
+
+	
 
 
 }

@@ -8,6 +8,7 @@ public interface UserDAO {
 
 	List<User> list();
 	User getUser (int id);
+	User getbyUserName(String username);
 	boolean addUser(User user);
 	boolean deleteUser(User user);
 	boolean updateUser(User user);

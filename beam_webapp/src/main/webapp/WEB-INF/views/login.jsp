@@ -31,7 +31,7 @@
 
 		<div class="form-group margin-centered">
 			<div class="text-center">
-				<button type="submit" class="btn btn-primary  ">Log In</button>
+				<button id="login" type="submit" class="btn btn-primary  ">Log In</button>
 			</div>
 		</div>
 	</form>

@@ -2,12 +2,15 @@ package com.beam.backend.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Transient;
+
 
 import org.springframework.stereotype.Component;
 
@@ -15,6 +18,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class User implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7068214582318580460L;
+
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="User_id")
 	private int id;
@@ -45,6 +53,8 @@ public class User implements Serializable{
 	@Column(name="User_enable")
 	private boolean enabled;
 	
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+	private Cart cart;
 	
 	public int getId() {
 		return id;
@@ -107,17 +117,14 @@ public class User implements Serializable{
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
-	
-	/*
-	 * For debugging purpose
-	 * */
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", firstname=" + firstname + ", lastname=" + lastname
-				+ ", emailid=" + emailid + ", mobilenumber=" + mobilenumber + ", password=" + password
-				+ ", confirm_password=" + confirm_password + ", Role=" + Role + ", enabled=" + enabled + "]";
+
+	public Cart getCart() {
+		return cart;
 	}
 
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 	
 	
 }

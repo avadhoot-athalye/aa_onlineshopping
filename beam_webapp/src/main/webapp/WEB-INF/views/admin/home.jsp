@@ -1,13 +1,3 @@
-<c:if test="${not empty msg }">
-	<div class="alert alert-success alert-dismissible">
-		<button type="button" class="close" data-dismiss="alert"
-			aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-		${msg}
-	</div>
-</c:if>
-
 <div class=" font-style">
 	<h3 class="header-margin">Featured & Popular</h3>
 </div>
@@ -28,19 +18,19 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active img img-responsive">
-					<img src="${img}/gta5.jpg" alt="Grand Theft Auto V">
+					<a href="${contextRoot}/game"><img src="${img}/gta5.jpg" alt="Grand Theft Auto V"></a>
 				</div>
 
 				<div class="item">
-					<img src="${img}/GodOfWar3.jpg" alt="GodOfWar3">
+					<a href="${contextRoot}/game"><img src="${img}/GodOfWar3.jpg" alt="GodOfWar3"></a>
 				</div>
 
 				<div class="item">
-					<img src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3">
+					<a href="${contextRoot}/game"><img src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3"></a>
 				</div>
 
 				<div class="item">
-					<img src="${img}/Fallout4.png" alt="Fallout4">
+					<a href="${contextRoot}/game"><img src="${img}/Fallout4.png" alt="Fallout4"></a>
 				</div>
 			</div>
 
@@ -80,45 +70,59 @@
 						data-interval="0">
 						<div class="carousel-inner onebyone-carosel">
 							<div class="item active">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">1</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">2</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">3</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">4</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">5</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-4">
+								<div class="col-md-3 col-sm-3 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">6</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-3 col-sm-3 hidden-xs">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">7</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="col-md-3 col-sm-3 hidden-xs">
+									<a href="#"><img src="http://placehold.it/250x250"
+										class="img-responsive center-block"></a>
+									<div class="text-center">8</div>
 								</div>
 							</div>
 						</div>

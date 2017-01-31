@@ -2,17 +2,18 @@ package com.beam.webapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.beam.backend.dao.CategoryDAO;
-import com.beam.backend.entity.Category;
+import com.beam.backend.dao.ProductDAO;
 
 @Controller
 public class PageController {
+	
+	@Autowired
+	ProductDAO productDAO;
 
 	@RequestMapping(value = { "/", "/home", "/index", "/default", "/store" })
 
@@ -68,16 +69,6 @@ public class PageController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/cart")
-
-	public ModelAndView cart() {
-
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "cart");
-		mv.addObject("ifUserClickedCart", true);
-		return mv;
-	}
-
 	@RequestMapping(value = "/login")
 
 	public ModelAndView login(@RequestParam(value = "login", required = false) String msg) {
@@ -108,13 +99,14 @@ public class PageController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/game")
+	@RequestMapping(value = "/game/{id}")
 
-	public ModelAndView game() {
+	public ModelAndView game(@PathVariable (name="id", required=false) int id) {
 		ModelAndView mv = new ModelAndView("page");
 		/*
 		 * Code to feth the single product using id from the database
 		 */
+		mv.addObject("product", productDAO.get(id));
 
 		mv.addObject("title", "gamepage");
 		// mv.addObject("id", id);

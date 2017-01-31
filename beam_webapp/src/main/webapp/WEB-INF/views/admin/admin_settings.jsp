@@ -68,7 +68,7 @@
 
 		<div class="form-group">
 			<div id="changepwd" class="text-right">
-				<a href="${contextRoot}/adminpassword">Change password</a>
+				<a href="${contextRoot}/admin/adminpassword">Change password</a>
 			</div>
 		</div>
 		

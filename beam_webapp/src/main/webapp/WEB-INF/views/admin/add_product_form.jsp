@@ -1,8 +1,9 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 <div class="well">
 	<form:form class="form-horizontal sign-up-form" method="post"
-		action="${contextRoot}/admin/product/save" modelAttribute="product" enctype="multipart/form-data">
+		action="${contextRoot}/admin/product/save" modelAttribute="product"
+		enctype="multipart/form-data">
 
 		<!-- View all products -->
 
@@ -18,13 +19,16 @@
 		<h2 class="text-center header-sign-up">Add a Product</h2>
 
 		<!-- Add a product name here -->
-		<div class="form-group">
-			<label for="productname" class="col-sm-5 control-label">Product
-				Name:</label>
-			<div class="col-sm-3 input-group">
-				<form:input path="product_name" type="text"
-					placeholder="Add a name of product" class="form-control" />
-				<form:input type="hidden" path="product_id"></form:input>
+		<div class="col-md-offset-0 col-sm-offset-0 col-xs-offset-5">
+			<div class="form-group">
+				<label for="productname"
+					class="col-sm-5 control-label">Product
+					Name:</label>
+				<div class="col-sm-3 input-group">
+					<form:input path="product_name" type="text"
+						placeholder="Add a name of product" class="form-control" />
+					<form:input type="hidden" path="product_id"></form:input>
+				</div>
 			</div>
 		</div>
 
@@ -100,8 +104,8 @@
 					a cover photo</label>
 				<div class="col-sm-3 input-group">
 					<form:input path="image" type="file" class="form-control-file"
-						id="uploadFile" aria-describedby="fileHelp"/> <small
-						id="fileHelp" class="form-text text-muted"></small>
+						id="uploadFile" aria-describedby="fileHelp" />
+					<small id="fileHelp" class="form-text text-muted"></small>
 				</div>
 			</div>
 		</div>

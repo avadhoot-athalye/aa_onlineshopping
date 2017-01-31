@@ -11,6 +11,7 @@ import com.beam.backend.entity.Category;
 import com.beam.backend.entity.User;
 
 @Controller
+@RequestMapping(value = { "/user" })
 public class UserController {
 	
 	@Autowired
@@ -44,6 +45,16 @@ public class UserController {
 			userDAO.updateUser(user);
 		}
 		return "redirect:/login";
+	}
+	
+	@RequestMapping(value = "/cart")
+
+	public ModelAndView cart() {
+
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("title", "cart");
+		mv.addObject("ifUserClickedCart", true);
+		return mv;
 	}
 	
 }

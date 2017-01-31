@@ -7,8 +7,8 @@
 
 
 	<http use-expressions="true">
-		<intercept-url pattern="/admin/**" access="hasAuthority('Role_Admin')" />
-		<intercept-url pattern="/user/**" access="hasAuthority('Role_User')" />
+		<intercept-url pattern="/admin/**" access="hasAuthority('admin')" />
+		<intercept-url pattern="/user/**" access="hasAuthority('customer')" />
 
 		<form-login login-page='/login' default-target-url="/home"
 			authentication-failure-url="/login?error=true" />

@@ -18,7 +18,7 @@
 		<h2 class="text-center header-sign-up">${pageTitle}</h2>
 
 
-		<!-- Add a product name here -->
+		<!-- Add a category name here -->
 
 
 		<div class="form-group has-success has-feedback">

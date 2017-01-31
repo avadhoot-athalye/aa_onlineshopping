@@ -69,7 +69,7 @@
 <body>
 	<div class="container margin-centered">
 		<div class="no-margin no-padding">
-			<img src="${img}/page-header.jpg" class="img img-responsive hidden-xs">
+			<a href="${contextRoot}/game"><img src="${img}/page-header.jpg" class="img img-responsive hidden-xs"></a>
 		</div>
 		<!--Header image ends -->
 
@@ -140,7 +140,6 @@
 	<script src="${js}/jquery.js"></script>
 	<script src="${js}/bootstrap.js"></script>
 	<script src="${js}/app.js"></script>
-	<script src="${js}/angular.js"></script>
 	<%-- 		<script src="${js}/pace.js"></script> --%>
 </body>
 </HTML>

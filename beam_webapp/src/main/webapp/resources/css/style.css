@@ -314,3 +314,21 @@ ul li a:hover {
 .onebyone-carosel .prev {
 	left: -33.33%;
 }
+.product_images {
+	width: 180px;
+	height: 215px;
+}
+.cartQuant {
+	width: 25px;
+	height: 25px;
+}
+.gamelist {
+	padding-top: 15px;
+}
+a {
+	color: #444;
+}
+a:HOVER {
+	color: #444;
+	text-decoration: none;
+}
