@@ -33,6 +33,12 @@ public class ProductDAOImpl implements ProductDAO{
 
 	@Override
 	@Transactional
+	public Product get(String name) {
+		return sessionfactory.getCurrentSession().get(Product.class, name);
+	}
+	
+	@Override
+	@Transactional
 	public boolean addProduct(Product product) {
 		try {
 			sessionfactory.getCurrentSession().save(product);

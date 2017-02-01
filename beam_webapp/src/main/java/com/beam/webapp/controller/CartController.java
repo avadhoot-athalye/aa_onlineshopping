@@ -54,7 +54,7 @@ public class CartController {
 	/*
 	 * Method to access the cart page
 	 */
-	@RequestMapping(value={ "/" })
+	@RequestMapping(value = { "/" })
 	public ModelAndView cart(Principal principal) {
 
 		ModelAndView mv = new ModelAndView("page");
@@ -88,15 +88,15 @@ public class CartController {
 			if (flag != true) {
 				cartItems.setProduct(product);
 				cartItems.setQuantity(1); // default quantity
-				product.setProduct_quantity(product.getProduct_quantity() - 1); 
+				product.setProduct_quantity(product.getProduct_quantity() - 1);
 				cartItems.setPrice(product.getProduct_price());
 				cartItems.setTotalPrice(cartItems.getTotalPrice());
 				cartItems.setCart(cart);
 				cartItem.add(cartItems);
 				cartItemDAO.addCartItems(cartItems);
 				productDAO.updateProduct(product);
-				cart.setCartItems(cartItem);
-				cart.setUser(user);
+//				cart.setCartItems(cartItem);
+//				cart.setUser(user);
 				cartDAO.updateCart(cart);
 				url = "redirect:/user/cart/?op=add&status=success";
 			} else {
@@ -105,7 +105,7 @@ public class CartController {
 				cartItems.setQuantity(existItem.getQuantity() + 1);
 				product.setProduct_quantity(product.getProduct_quantity() - 1);
 				productDAO.updateProduct(product);
-				cartItems.setTotalPrice(existItem.getTotalPrice());
+				cartItems.setTotalPrice(existItem.getTotalPrice() * product.getProduct_price());
 				cartItemDAO.updateCartItems(cartItems);
 				cartDAO.updateCart(cart);
 				url = "redirect:/user/cart/?op=add&status=success";
@@ -116,4 +116,23 @@ public class CartController {
 		return url;
 	}
 
+	@RequestMapping(value = { "/delete/{id}" })
+
+	public String deleteCartItem(@PathVariable("id") int id, Principal principal) {
+
+		String url = null;
+		user = userDAO.getbyUserName(principal.getName());
+		if (id != 0) {
+			cart = cartDAO.getCart(user.getId());
+			cartItems = cartItemDAO.getCartItem(id);
+			product = productDAO.get(cartItems.getProduct().getProduct_id());
+			product.setProduct_quantity(product.getProduct_quantity() + cartItems.getQuantity());
+			productDAO.updateProduct(product);
+			cartItemDAO.deleteCartItems(cartItems);
+			cartDAO.updateCart(cart);
+			return url = "redirect:/user/cart/?op=delete&status=success";
+		} else {
+			return url = "redirect:/user/cart/?op=delete&status=failure";
+		}
+	}
 }

@@ -8,6 +8,7 @@ public interface ProductDAO {
 	
 	List<Product> list();
 	Product get (int id);
+	Product get (String name);
 	boolean addProduct (Product product);
 	boolean updateProduct (Product product);
 	boolean deleteProduct (Product product);

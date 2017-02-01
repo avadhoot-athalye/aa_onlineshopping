@@ -1,3 +1,4 @@
+<%-- <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
 
 <div class="page-header">
 	<div class="row">
@@ -60,10 +61,10 @@
 
 
 							<div class="col-md-1 col-xs-12">
-								<strong>&#8377 ${cartItems.product.product_price }</strong>
+								<strong>&#8377; ${cartItems.product.product_price }</strong>
 							</div>
 							<div class="col-md-2 col-xs-12">
-								<span class="glyphicon glyphicon-trash"> REMOVE</span>
+								<a href="${contextRoot}/user/cart/delete/${cartItems.id}"><span class="glyphicon glyphicon-trash"> REMOVE</span></a>
 							</div>
 
 						</div>

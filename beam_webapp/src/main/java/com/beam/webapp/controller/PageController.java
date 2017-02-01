@@ -107,7 +107,7 @@ public class PageController {
 		 * Code to feth the single product using id from the database
 		 */
 		mv.addObject("product", productDAO.get(id));
-
+//		mv.addObject(attributeName, attributeValue)
 		mv.addObject("title", "gamepage");
 		// mv.addObject("id", id);
 		mv.addObject("ifUserClickedGame", true);
