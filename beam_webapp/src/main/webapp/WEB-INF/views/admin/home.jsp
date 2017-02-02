@@ -5,6 +5,8 @@
 
 	<%@include file="../share/featured & Recommeded.jsp"%>
 
+	
+	
 	<div class="col-md-9">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->

@@ -1,7 +1,12 @@
 $(document).ready(function () {
+	
+	//To stop the main carousel
+	
     $('#myCarousel').carousel({
-        interval: 10000
+        interval: false
     })
+    
+    //for thumbnail carousel
     $('.fdi-Carousel .item').each(function () {
         var next = $(this).next();
         if (!next.length) {
@@ -16,8 +21,10 @@ $(document).ready(function () {
             $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
     });
-});
+    
+    
+//    $('#login').show('fade');
+    
 
-$(document).ready(function () {
-	$('#login').show('fade');
-})
+    
+});

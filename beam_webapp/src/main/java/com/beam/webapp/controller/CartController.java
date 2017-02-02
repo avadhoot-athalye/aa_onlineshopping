@@ -2,16 +2,16 @@ package com.beam.webapp.controller;
 
 import java.security.Principal;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-import javax.enterprise.inject.New;
+import javax.servlet.http.HttpSession;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.beam.backend.dao.CartDAO;
@@ -50,6 +50,9 @@ public class CartController {
 
 	@Autowired
 	CartItemDAO cartItemDAO;
+	
+	@Autowired
+	HttpSession httpSession;
 
 	/*
 	 * Method to access the cart page
@@ -59,7 +62,11 @@ public class CartController {
 
 		ModelAndView mv = new ModelAndView("page");
 		user = userDAO.getbyUserName(principal.getName());
-		mv.addObject("cartItem", cartItemDAO.list(user.getCart().getId()));
+		List<CartItems> cartItems = cartItemDAO.list(user.getCart().getId());
+		mv.addObject("cartItemsIsEmpty", cartItems.isEmpty());
+//		mv.addObject("noOfCartItems", cartItems.size());
+		httpSession.setAttribute("noOfCartItems", cartItems.size());
+		mv.addObject("cartItem", cartItems);
 		mv.addObject("cartItems", new CartItems());
 		mv.addObject("cart", cartDAO.getCart(user.getId()));
 		mv.addObject("title", "cart");
@@ -90,11 +97,13 @@ public class CartController {
 				cartItems.setQuantity(1); // default quantity
 				product.setProduct_quantity(product.getProduct_quantity() - 1);
 				cartItems.setPrice(product.getProduct_price());
-				cartItems.setTotalPrice(cartItems.getTotalPrice());
+				cartItems.setTotalPrice(cartItems.getPrice() * cartItems.getQuantity());
 				cartItems.setCart(cart);
 				cartItem.add(cartItems);
 				cartItemDAO.addCartItems(cartItems);
 				productDAO.updateProduct(product);
+				cart.setGrandTotal(cart.getGrandTotal() + product.getProduct_price());
+				cart.setNumberOfItems(cart.getNumberOfItems() + 1);
 //				cart.setCartItems(cartItem);
 //				cart.setUser(user);
 				cartDAO.updateCart(cart);
@@ -102,12 +111,14 @@ public class CartController {
 			} else {
 				// If product already exist increment quantity by 1
 				CartItems existItem = cartItemDAO.getByProductId(product.getProduct_id(), cart.getId());
-				cartItems.setQuantity(existItem.getQuantity() + 1);
+				existItem.setQuantity(existItem.getQuantity() + 1);
 				product.setProduct_quantity(product.getProduct_quantity() - 1);
 				productDAO.updateProduct(product);
-				cartItems.setTotalPrice(existItem.getTotalPrice() * product.getProduct_price());
-				cartItemDAO.updateCartItems(cartItems);
+				existItem.setTotalPrice(existItem.getTotalPrice() + product.getProduct_price());
+				cartItemDAO.updateCartItems(existItem);
+				cart.setGrandTotal(cart.getGrandTotal() + product.getProduct_price());				
 				cartDAO.updateCart(cart);
+				cartDAO.updateGrandTotal(cart);
 				url = "redirect:/user/cart/?op=add&status=success";
 			}
 		} else {

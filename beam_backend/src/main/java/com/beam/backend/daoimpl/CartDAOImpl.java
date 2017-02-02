@@ -38,7 +38,6 @@ public class CartDAOImpl implements CartDAO{
 		user = userDAO.getUser(userId);
 		int cartId = user.getCart().getId();
 		return sessionfactory.getCurrentSession().get(Cart.class, cartId);
-		
 	}
 
 	@Override
@@ -52,6 +51,18 @@ public class CartDAOImpl implements CartDAO{
 			return false;
 		}
 		
+	}
+
+	@Override
+	public void updateGrandTotal(Cart cart) {
+		double grandTotal = 0;
+		
+		List<CartItems> listOfCartItems = cartItemDAO.list(user.getCart().getId());
+		cart.setNumberOfItems(listOfCartItems.size());
+		for (CartItems cartItems : listOfCartItems) {
+			grandTotal = grandTotal + cartItems.getTotalPrice();
+		}
+		cart.setGrandTotal(grandTotal);
 	}
 
 }

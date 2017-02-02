@@ -29,7 +29,7 @@ public class Cart implements Serializable{
 	private int id;
 	
 	@Column(name="cart_grand_total")
-	private int grandTotal;
+	private double grandTotal;
 	
 	@OneToOne
 	@JoinColumn(name="user_id")
@@ -50,11 +50,11 @@ public class Cart implements Serializable{
 		this.id = id;
 	}
 
-	public int getGrandTotal() {
+	public double getGrandTotal() {
 		return grandTotal;
 	}
 
-	public void setGrandTotal(int grandTotal) {
+	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
 

@@ -174,12 +174,12 @@ ul li a:hover {
 	margin-bottom: -75%;
 }
 
-.thumbnail > img {
+.thumbnail>img {
 	margin: auto auto auto auto;
 }
 
 .game-image {
-	width: 380 px; 
+	width: 380 px;
 	height: 415 px;
 }
 
@@ -318,21 +318,41 @@ ul li a:hover {
 .onebyone-carosel .prev {
 	left: -33.33%;
 }
+
 .product_images {
 	width: 180px;
 	height: 215px;
 }
+
 .cartQuant {
 	width: 25px;
 	height: 25px;
 }
+
 .gamelist {
 	padding-top: 15px;
 }
+
 a {
 	color: #444;
 }
+
 a:HOVER {
 	color: #444;
 	text-decoration: none;
+}
+
+.badge {
+	color: #98978b;
+	background-color: #fff;
+}
+#updateQuant {
+	margin-left: 5px;
+}
+.cartImage {
+	width: 100px;
+	height: 100px;
+}
+#quantity {
+	width: 40px;
 }
