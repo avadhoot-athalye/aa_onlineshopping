@@ -54,6 +54,7 @@ public class CartDAOImpl implements CartDAO{
 	}
 
 	@Override
+	@Transactional
 	public void updateGrandTotal(Cart cart) {
 		double grandTotal = 0;
 		

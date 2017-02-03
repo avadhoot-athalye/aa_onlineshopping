@@ -5,13 +5,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.beam.backend.dao.CartDAO;
@@ -102,8 +104,7 @@ public class CartController {
 				cartItem.add(cartItems);
 				cartItemDAO.addCartItems(cartItems);
 				productDAO.updateProduct(product);
-				cart.setGrandTotal(cart.getGrandTotal() + product.getProduct_price());
-				cart.setNumberOfItems(cart.getNumberOfItems() + 1);
+				cartDAO.updateGrandTotal(cart);
 //				cart.setCartItems(cartItem);
 //				cart.setUser(user);
 				cartDAO.updateCart(cart);
@@ -112,13 +113,12 @@ public class CartController {
 				// If product already exist increment quantity by 1
 				CartItems existItem = cartItemDAO.getByProductId(product.getProduct_id(), cart.getId());
 				existItem.setQuantity(existItem.getQuantity() + 1);
-				product.setProduct_quantity(product.getProduct_quantity() - 1);
 				productDAO.updateProduct(product);
 				existItem.setTotalPrice(existItem.getTotalPrice() + product.getProduct_price());
 				cartItemDAO.updateCartItems(existItem);
-				cart.setGrandTotal(cart.getGrandTotal() + product.getProduct_price());				
+				cartDAO.updateGrandTotal(cart);			
 				cartDAO.updateCart(cart);
-				cartDAO.updateGrandTotal(cart);
+				
 				url = "redirect:/user/cart/?op=add&status=success";
 			}
 		} else {
@@ -137,13 +137,41 @@ public class CartController {
 			cart = cartDAO.getCart(user.getId());
 			cartItems = cartItemDAO.getCartItem(id);
 			product = productDAO.get(cartItems.getProduct().getProduct_id());
-			product.setProduct_quantity(product.getProduct_quantity() + cartItems.getQuantity());
+			product.setProduct_quantity(product.getProduct_quantity());
 			productDAO.updateProduct(product);
 			cartItemDAO.deleteCartItems(cartItems);
+			cartDAO.updateGrandTotal(cart);
 			cartDAO.updateCart(cart);
+			
 			return url = "redirect:/user/cart/?op=delete&status=success";
 		} else {
 			return url = "redirect:/user/cart/?op=delete&status=failure";
 		}
+	}
+	
+	@RequestMapping(value={"/update"}, method = RequestMethod.POST)
+	
+	public String updateCartItem(@ModelAttribute CartItems cartItems, HttpServletRequest request) {
+		
+		String url = null;
+		int quantity = cartItems.getQuantity();		//quantity demanded by user
+		cartItems = cartItemDAO.getCartItem(cartItems.getId());		//fetching the cart item that needs to be updated by its id
+		int existingQuantity = cartItems.getQuantity();		//number of quantities user already had
+		int changeQuantity = existingQuantity - quantity;	//difference between quantity user had and he demanded - answer is negative
+		product = productDAO.get(cartItems.getProduct().getProduct_id());	//fetching the product that needs to be updated
+		if(product.getProduct_quantity() > quantity) {	//if stock is more than demanded quantity
+			cartItems.setQuantity(quantity);			//updating cart item quantity
+			cartItems.setTotalPrice(cartItems.getPrice() * cartItems.getQuantity());	//changing total price of product
+			cartItemDAO.updateCartItems(cartItems);
+			product.setProduct_quantity(product.getProduct_quantity() + changeQuantity);	//changing product stock
+			productDAO.updateProduct(product);	
+			cart = user.getCart();
+			cartDAO.updateGrandTotal(cart);
+			cartDAO.updateCart(cart);
+			return url = "redirect:/user/cart/?op=success";
+		} else {
+			return url = "redirect:/user/cart/?op=fail";
+		}
+	
 	}
 }

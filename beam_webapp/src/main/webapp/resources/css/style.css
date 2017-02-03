@@ -353,6 +353,6 @@ a:HOVER {
 	width: 100px;
 	height: 100px;
 }
-#quantity {
+.cartQuant {
 	width: 40px;
 }

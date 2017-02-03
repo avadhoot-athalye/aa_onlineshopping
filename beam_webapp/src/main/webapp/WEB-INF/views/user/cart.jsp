@@ -1,5 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <c:choose>
 	<c:when test="${cartItemsIsEmpty == true}">
 		<h1>Cart is empty</h1>
@@ -54,9 +54,12 @@
 
 									<!-- Quantity is added here -->
 									<div class="col-md-2 col-xs-12">
-										<input id="quantity" type="number"
-											class="cartQuant" value="${cartItems.quantity}">
-										<button id="updateQuant" class="btn btn-default">Save</button>
+									<form:form action="${contextRoot}/user/cart/update" method="post" modelAttribute="cartItems">
+										<form:input path="quantity" id="${cartItems.id}" type="number"
+											class="cartQuant" value="${cartItems.quantity}" ></form:input>
+										<form:hidden path="id" value="${cartItems.id}"/>
+										<input type="submit" id="${cartItems.id}" class="btn btn-default" value="Save"/>
+									</form:form>
 									</div>
 
 									<!-- per unit price will come here -->
