@@ -94,11 +94,11 @@
 							property="name" /><span class="caret" aria-haspopup="true"
 						aria-expanded="true"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-						<li><a href="${contextRoot}/profile" class="text-center">HELLO
+						<li><a href="${contextRoot}/user/profile" class="text-center">HELLO
 								<sec:authentication property="name"/></a></li>
-						<li><a href="${contextRoot}/myorders" class="text-center">MY
+						<li><a href="${contextRoot}/user/myorders" class="text-center">MY
 								ORDERS</a></li>
-						<li><a href="${contextRoot}/mywishlist" class="text-center">MY
+						<li><a href="${contextRoot}/user/mywishlist" class="text-center">MY
 								WISHLIST</a></li>
 						<li role="separator" class="divider"></li>
 						<li><a href="${contextRoot}/logout" class="text-center">LOG OUT</a></li>

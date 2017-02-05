@@ -1,7 +1,5 @@
 package com.beam.webapp.controller;
 
-import java.security.Principal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,7 +12,6 @@ import com.beam.backend.dao.CartItemDAO;
 import com.beam.backend.dao.UserDAO;
 import com.beam.backend.entity.Cart;
 import com.beam.backend.entity.CartItems;
-import com.beam.backend.entity.Category;
 import com.beam.backend.entity.User;
 
 @Controller
@@ -65,5 +62,61 @@ public class UserController {
 		}
 		return "redirect:/login";
 	}
+	
+	@RequestMapping(value = "/profile")
 
+	public ModelAndView profile() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "profile");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedProfile", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/myorders")
+
+	public ModelAndView myorders() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "myorders");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedmyorders", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/mywishlist")
+
+	public ModelAndView mywishlist() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "myorders");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedmywishlist", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/userpassword")
+
+	public ModelAndView userpassword() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "change your password");
+		mv.addObject("ifUserClickedSettings", true);
+		mv.addObject("ifUserClickedChangePassword", true);
+		return mv;
+	}
+
+	
+
+	@RequestMapping(value = "/settings")
+
+	public ModelAndView settings() {
+		ModelAndView mv = new ModelAndView("page");
+
+		mv.addObject("title", "settings");
+		// mv.addObject("id", id);
+		mv.addObject("ifUserClickedSettings", true);
+		return mv;
+	}
 }

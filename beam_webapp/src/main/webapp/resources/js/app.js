@@ -25,6 +25,10 @@ $(document).ready(function () {
     
 //    $('#login').show('fade');
     
-
+    $('.cartQuant').on('focus', function(){
+    		//console.log($(this).attr('id'));
+    	var element = '#save_'+$(this).attr('id');
+    	$(element).css('display','inline');
+    });
     
 });

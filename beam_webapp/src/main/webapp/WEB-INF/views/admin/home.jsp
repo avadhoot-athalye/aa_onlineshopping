@@ -72,56 +72,56 @@
 						data-interval="0">
 						<div class="carousel-inner onebyone-carosel">
 							<div class="item active">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">1</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">2</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">3</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">4</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">5</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">6</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-3 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">7</div>
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-md-3 col-sm-3 hidden-xs">
+								<div class="col-md-4 col-sm-4 hidden-xs">
 									<a href="#"><img src="http://placehold.it/250x250"
 										class="img-responsive center-block"></a>
 									<div class="text-center">8</div>

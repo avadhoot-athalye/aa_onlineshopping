@@ -137,7 +137,7 @@ public class CartController {
 			cart = cartDAO.getCart(user.getId());
 			cartItems = cartItemDAO.getCartItem(id);
 			product = productDAO.get(cartItems.getProduct().getProduct_id());
-			product.setProduct_quantity(product.getProduct_quantity());
+			product.setProduct_quantity(product.getProduct_quantity() + cartItems.getQuantity());
 			productDAO.updateProduct(product);
 			cartItemDAO.deleteCartItems(cartItems);
 			cartDAO.updateGrandTotal(cart);

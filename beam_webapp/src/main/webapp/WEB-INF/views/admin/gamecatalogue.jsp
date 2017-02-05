@@ -22,7 +22,7 @@
 			<div class="thumbnail thumbnail-setting col-md-4"
 				ng-repeat="product in products">
 				<div class="wrapper">
-					<a href="${contextRoot}/game"><img
+					<a href="${contextRoot}/game/{{product.product_id}}"><img
 						src="${img}/products/{{product.product_id}}.png"
 						class="product_images"></a>
 					<sec:authorize access="hasAuthority('admin')">

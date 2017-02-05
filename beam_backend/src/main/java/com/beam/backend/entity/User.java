@@ -56,6 +56,8 @@ public class User implements Serializable{
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
 	private Cart cart;
 	
+
+	
 	public int getId() {
 		return id;
 	}

@@ -114,71 +114,10 @@ public class PageController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/settings")
 
-	public ModelAndView settings() {
-		ModelAndView mv = new ModelAndView("page");
+	
 
-		mv.addObject("title", "settings");
-		// mv.addObject("id", id);
-		mv.addObject("ifUserClickedSettings", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/profile")
-
-	public ModelAndView profile() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "profile");
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedProfile", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/myorders")
-
-	public ModelAndView myorders() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "myorders");
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedmyorders", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/mywishlist")
-
-	public ModelAndView mywishlist() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "myorders");
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedmywishlist", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/userpassword")
-
-	public ModelAndView userpassword() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "change your password");
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedChangePassword", true);
-		return mv;
-	}
-
-	@RequestMapping(value = "/updateaddress")
-
-	public ModelAndView updateaddress() {
-		ModelAndView mv = new ModelAndView("page");
-
-		mv.addObject("title", "Update the address");
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedAddress", true);
-		return mv;
-	}
+	
 
 	@RequestMapping(value = "/authority")
 

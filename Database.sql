@@ -45,12 +45,12 @@ user_role varchar(20) default 'customer',
 create table address
 (
 address_id identity,
-address_line_1 varchar2(30) not null,
-address_line_2 varchar2(30) not null,
-address_landmark varchar(15),
-address_city varchar(30) not null,
-address_state varchar(30) not null,
-address_country varchar(30) not null,
+address_line_1 varchar2(100) not null,
+address_line_2 varchar2(100) not null,
+address_landmark varchar(50),
+address_city varchar(50) not null,
+address_state varchar(50) not null,
+address_country varchar(50) not null,
 address_pincode varchar(15) not null,
 user_id bigint(10) not null,
 constraint fk_add_user_id FOREIGN KEY(user_id)
