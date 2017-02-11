@@ -1,5 +1,7 @@
 package com.beam.backend.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +17,12 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "Cart_Items")
 @Component
-public class CartItems {
+public class CartItems implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6348530362372112936L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

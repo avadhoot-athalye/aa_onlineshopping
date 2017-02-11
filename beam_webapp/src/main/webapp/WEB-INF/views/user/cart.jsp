@@ -5,7 +5,7 @@
 		<h1>Cart is empty</h1>
 	</c:when>
 	<c:otherwise>
-		<div class="page-header">
+		<div class="page-header" >
 			<div class="row">
 				<div class="text-center header-sign-up">
 					<h3>
@@ -112,11 +112,14 @@
 					</a>
 				</div>
 
-				<div class="col-md-offset-8 col-md-2">
-					<a class="btn btn-success special-banner"
-						href="${contextRoot}/confirmaddress" role="button">Proceed To
+
+				<div class="col-md-offset-8 col-md-2 ">
+					<div class="Text-container">
+						<a class="btn btn-success special-banner"
+						href="${contextRoot}/confirmDetails" role="button">Proceed To
 						Checkout&nbsp;<span class="glyphicon glyphicon-arrow-right"></span>
 					</a>
+					</div>
 				</div>
 
 			</div>

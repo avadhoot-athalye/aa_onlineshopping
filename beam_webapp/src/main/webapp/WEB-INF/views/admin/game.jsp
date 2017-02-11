@@ -15,16 +15,34 @@
 				<p>${product.product_description}</p>
 				<br>
 
-				<div class="row col-md-12">
-					<div class="col-md-5">
-						<a href="${contextRoot}/user/cart/add/${product.product_id}" class="btn btn-warning" role="button"> <span
-							class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-						</a> <a href="${contextRoot}/user/cart/add/${product.product_id}" class="btn btn-success" role="button">BUY NOW</a>
+				<sec:authorize access="hasAuthority('customer') or isAnonymous()">
+					<div class="row col-md-12">
+						<div class="col-md-5">
+							<a href="${contextRoot}/user/cart/add/${product.product_id}"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</a> <a href="${contextRoot}/user/cart/add/${product.product_id}"
+								class="btn btn-success" role="button">BUY NOW</a>
+						</div>
+						<div class="col-md-5 col-md-offset 2">
+							<h4>&#8377 ${product.product_price}</h4>
+						</div>
 					</div>
-					<div class="col-md-5 col-md-offset 2">
-						<h4>&#8377 ${product.product_price}</h4>
+				</sec:authorize>
+				<sec:authorize access="hasAuthority('admin')">
+					<div class="row col-md-12" items="${products}" var="product">
+						<div class="col-md-5">
+							<a href="${contextRoot}/admin/editproduct/${product.product_id}"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+							</a> <a href="${contextRoot}/admin/deleteproduct/${product.product_id}"
+								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+						</div>
+						<div class="col-md-5 col-md-offset 2">
+							<h4>&#8377 ${product.product_price}</h4>
+						</div>
 					</div>
-				</div>
+				</sec:authorize>
 			</div>
 
 		</div>

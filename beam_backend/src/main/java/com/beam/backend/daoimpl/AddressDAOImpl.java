@@ -1,8 +1,9 @@
 package com.beam.backend.daoimpl;
 
-import java.security.Principal;
+import javax.persistence.NoResultException;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,6 +23,9 @@ public class AddressDAOImpl implements AddressDAO {
 	UserDAO userDAO;
 	
 	@Autowired
+	Address address;
+	
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	
@@ -35,7 +39,7 @@ public class AddressDAOImpl implements AddressDAO {
 	@Transactional
 	public boolean addAddress(Address address) {
 		try {
-			sessionFactory.getCurrentSession().save(address);
+			sessionFactory.getCurrentSession().persist(address);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -68,5 +72,23 @@ public class AddressDAOImpl implements AddressDAO {
 		}
 		
 	}
+
+	@Override
+	@Transactional
+
+	public Address getByUserId(int userId) {
+		try {
+		String hql = "From Address where user.id =:userId";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setParameter("userId", userId);
+		
+		return (Address) query.getSingleResult();
+		} catch (NoResultException nre) {
+			nre.printStackTrace();
+		return null;
+		}
+		
+	}
+	 
 
 }

@@ -38,11 +38,18 @@ public class AddressController {
 	
 	@RequestMapping(value = "/")
 
-	public ModelAndView addAddress() {
+	public ModelAndView addAddress(Principal principal) {
 		ModelAndView mv = new ModelAndView("page");
-		
 		mv.addObject("title", "Update the address");
-		mv.addObject("address", new Address());
+		user = userDAO.getbyUserName(principal.getName());
+		address.setUser(user);
+		 Address flag = addressDAO.getByUserId(address.getUser().getId());
+		if(flag == null) {
+			mv.addObject("address", new Address());
+		} else {
+			mv.addObject("address", flag);
+		}
+		
 		mv.addObject("ifUserClickedSettings", true);
 		mv.addObject("ifUserClickedAddress", true);
 		return mv;
@@ -62,21 +69,6 @@ public class AddressController {
 			addressDAO.updateAddress(address);
 		}
 		return "redirect:/user/address/";
-	}
-
-	/*
-	 * To edit the address
-	 */
-	@RequestMapping(value = "/update")
-
-	public ModelAndView updateaddress() {
-		ModelAndView mv = new ModelAndView("page");
-		
-		mv.addObject("title", "Update the address");
-		mv.addObject("addressUpdate", addressDAO.getAddress(user.getId()));
-		mv.addObject("ifUserClickedSettings", true);
-		mv.addObject("ifUserClickedAddress", true);
-		return mv;
 	}
 
 

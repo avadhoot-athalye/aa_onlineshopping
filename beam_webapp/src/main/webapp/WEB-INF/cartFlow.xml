@@ -4,23 +4,32 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow
                            http://www.springframework.org/schema/webflow/spring-webflow-2.4.xsd">
 
-	<!-- Executed when webFlow is triggered --> 
+
+
+<!-- Executed when webFlow is triggered --> 
 	<on-start>
-<!--  		userhandler is java class available through annotated Userhandler.java  -->
+<!--  		CartHandler is java class available through annotated CartHandler.java  -->
 <!-- 			class.here we are calling it’s initFlow() method. -->
-		<evaluate expression="userHandler.initFlow()" result="flowScope.user" />
+		<evaluate expression="cartHandler.initFlow()" result="flowScope.orderBean" />
 	</on-start>
 
  	<!-- if not specified the first view state is the starting state -->
-	<view-state id="start" view="signup" model="flowScope.user">
-		<transition on="submit" to="storage" />
+	<view-state id="start" view="cart-webflow/confirmDetails" model="flowScope.orderBean">
+		<transition on="edit" to="address" />
+		<transition on="submit" to="start" />
 	</view-state>
 	
-	<action-state id="storage">
-		<evaluate expression="userHandler.addUser(user)"></evaluate>
-		<transition on="success" to="welcome" />
+	<action-state id="confirmation" >
+<!-- 		<evaluate expression="cartHandler.addUser(user)"></evaluate> -->
+		<transition on="success" to="address" />
 		<transition on="failure" to="start" />
 	</action-state>
+	
+	<view-state id="address" view="confirm_address" >
+<!-- 		<evaluate expression="userHandler.addUser(user)"></evaluate> -->
+		<transition on="success" to="address" />
+		<transition on="failure" to="start" />
+	</view-state>
 	
 	<end-state id="welcome" view="welcome" />
 	<end-state id="login" view="externalRedirect:contextRelative:login" />

@@ -77,17 +77,37 @@
 		<!--Header image ends -->
 
 		<%@include file="./share/navbar.jsp"%>
+
 		<div class="well">
 			<form:form class="form-horizontal sign-up-form" modelAttribute="user"
 				method="post">
 
 				<h2 class="text-center header-sign-up">Sign up</h2>
+				
 				<div class="form-group">
 					<label for="username" class="col-sm-5 control-label">Username:</label>
 					<div class="col-sm-3">
 						<form:input path="username" type="text" id="username"
 							name="username" placeholder="username" class="form-control" />
 						<form:input type="hidden" path="id" />
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="firstName" class="col-sm-5 control-label">First Name:</label>
+					<div class="col-sm-3">
+						<form:input path="firstname" type="text" id="firstname"
+							name="firstname" placeholder="firstname" class="form-control" />
+						
+					</div>
+				</div>
+								
+				<div class="form-group">
+					<label for="lastname" class="col-sm-5 control-label">Last Name:</label>
+					<div class="col-sm-3">
+						<form:input path="lastname" type="text" id="lastname"
+							name="lastname" placeholder="lastname" class="form-control" />
+						
 					</div>
 				</div>
 
@@ -133,6 +153,7 @@
 			<%@include file="./share/footer.jsp"%>
 
 			<!--End of the Footer -->
+		</div>
 		</div>
 		<!-- Script placed at the end -->
 		<script src="${js}/jquery.js"></script>

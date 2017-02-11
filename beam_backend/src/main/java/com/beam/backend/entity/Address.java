@@ -1,5 +1,7 @@
 package com.beam.backend.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +14,12 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Component
-public class Address {
+public class Address implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7722147743487456234L;
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Address_Id")

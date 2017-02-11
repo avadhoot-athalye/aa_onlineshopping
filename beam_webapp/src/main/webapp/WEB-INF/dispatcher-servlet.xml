@@ -26,6 +26,7 @@
 <!-- 		here the id is mapped to invoke this flow -->
 
 		<webflow:flow-location id="memberShip" path="/memberShipFlow.xml" />
+		<webflow:flow-location id="confirmDetails" path="/cartFlow.xml" />
 	</webflow:flow-registry>
 
 	<webflow:flow-builder-services id="flowBuilderServices"

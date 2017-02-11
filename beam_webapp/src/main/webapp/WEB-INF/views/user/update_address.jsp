@@ -1,6 +1,8 @@
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div class="well">
-	<form:form class="form-horizontal sign-up-form" modelAttribute="address" action="${contextRoot}/user/address/save" method="POST">
+	<form:form class="form-horizontal sign-up-form"
+		modelAttribute="address" action="${contextRoot}/user/address/save"
+		method="POST">
 
 		<!-- Change your address here -->
 
@@ -11,10 +13,11 @@
 			<label for="address_line_1" class="col-sm-5 control-label">Address
 				Line 1</label>
 			<div class="col-sm-3 input-group">
-				<form:input path="addressLine1" placeholder="Room no, Street name" class="form-control"/>
-				<form:input type="hidden" path="id"/>
-				
-				
+				<form:input path="addressLine1" placeholder="Room no, Street name"
+					class="form-control" value="${address.addressLine1}" />
+				<form:hidden path="id" value="${address.id}" />
+
+
 			</div>
 		</div>
 
@@ -38,22 +41,19 @@
 			</div>
 		</div>
 
-		<!-- Choose country here -->
-
+		<!-- Choose city here -->
 		<div class="form-group">
-			<label for="ccountry" class="col-sm-5 control-label">Choose a
-				Country: </label>
+			<label for="city" class="col-sm-5 control-label">Choose a
+				City:</label>
 			<div class="col-sm-3 input-group">
-				<form:select path="country" class="form-control">
-					<option>USA</option>
-					<option>UK</option>
-					<option>China</option>
-					<option>India</option>
+				<form:select path="city" class="form-control">
+					<form:option value="Mumbai">Mumbai</form:option>
+					<form:option value="Nagpur">Nagpur</form:option>
+					<form:option value="Pune">Pune</form:option>
 				</form:select>
-				
 			</div>
 		</div>
-
+		
 		<!-- Choose state here -->
 
 		<div class="form-group">
@@ -61,28 +61,25 @@
 				State:</label>
 			<div class="col-sm-3 input-group">
 				<form:select path="state" class="form-control">
-					<option>Andhra Pradesh</option>
-					<option>Gujarat</option>
-					<option>Maharashtra</option>
-					<option>Kerala</option>
+					<form:option value="Maharashtra">Maharashtra</form:option>
+					
 				</form:select>
 			</div>
 		</div>
 
-		<!-- Choose state here -->
+		<!-- Choose country here -->
 
 		<div class="form-group">
-			<label for="city" class="col-sm-5 control-label">Choose a
-				City:</label>
+			<label for="country" class="col-sm-5 control-label">Choose a
+				Country: </label>
 			<div class="col-sm-3 input-group">
-				<form:select path="city" class="form-control">
-					<option>Mumbai</option>
-					<option>Nagpur</option>
-					<option>Pune</option>
+				<form:select path="country" class="form-control">
+					<form:option value="INDIA">India</form:option>
 				</form:select>
+
 			</div>
 		</div>
-
+		
 		<!-- Update pincode here -->
 
 		<div class="form-group">
@@ -93,6 +90,7 @@
 			</div>
 		</div>
 
+		
 		<!-- Submit Button -->
 
 		<div class="form-group">

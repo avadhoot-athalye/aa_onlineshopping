@@ -1,4 +1,4 @@
-
+	
 
 <div class="well">
 	<form:form class="form-horizontal sign-up-form"

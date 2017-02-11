@@ -1,14 +1,8 @@
 package com.beam.webapp.webflow;
 
 
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.binding.message.MessageBuilder;
-import org.springframework.binding.message.MessageContext;
 import org.springframework.stereotype.Component;
-
 import com.beam.backend.dao.UserDAO;
 import com.beam.backend.entity.Cart;
 import com.beam.backend.entity.User;
@@ -25,6 +19,7 @@ public class UserHandler {
 		return new User();
 	}
 	
+	//Setting the cart while registering user
 	public String addUser(User user) {
 		Cart cart = new Cart();
 		

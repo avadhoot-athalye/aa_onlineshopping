@@ -21,6 +21,10 @@ ul li a:hover {
 	text-decoration: none;
 }
 
+.require {
+	color: red;
+}
+
 .link {
 	margin-bottom: 100px;
 }
@@ -355,4 +359,7 @@ a:HOVER {
 }
 .cartQuant {
 	width: 40px;
+}
+.form-horizontal .labelPadding{
+	padding-top: 0px;
 }
