@@ -79,35 +79,42 @@
 		<%@include file="./share/navbar.jsp"%>
 
 		<div class="well">
-			<form:form class="form-horizontal sign-up-form" modelAttribute="user"
-				method="post">
+			<form:form id="sign-up" class="form-horizontal sign-up-form"
+				modelAttribute="user" method="post">
 
 				<h2 class="text-center header-sign-up">Sign up</h2>
-				
+
 				<div class="form-group">
 					<label for="username" class="col-sm-5 control-label">Username:</label>
 					<div class="col-sm-3">
-						<form:input path="username" type="text" id="username"
-							name="username" placeholder="username" class="form-control" />
+							<form:input path="username" type="text" id="username"
+								name="username" placeholder="username" class="form-control" />
 						<form:input type="hidden" path="id" />
 					</div>
+					<div class="col-sm-4 error-msg">
+					<span id="username_err"></span>
+					</div>
 				</div>
-				
+
 				<div class="form-group">
-					<label for="firstName" class="col-sm-5 control-label">First Name:</label>
+					<label for="firstName" class="col-sm-5 control-label">First
+						Name:</label>
 					<div class="col-sm-3">
 						<form:input path="firstname" type="text" id="firstname"
 							name="firstname" placeholder="firstname" class="form-control" />
-						
+					</div>
+					<div class="col-sm-4 error-msg">
+					<span id="firstname_err"></span>
 					</div>
 				</div>
-								
+
 				<div class="form-group">
-					<label for="lastname" class="col-sm-5 control-label">Last Name:</label>
+					<label for="lastname" class="col-sm-5 control-label">Last
+						Name:</label>
 					<div class="col-sm-3">
 						<form:input path="lastname" type="text" id="lastname"
 							name="lastname" placeholder="lastname" class="form-control" />
-						
+
 					</div>
 				</div>
 
@@ -120,17 +127,17 @@
 				</div>
 
 				<div class="form-group">
-					<label for="re-enter-password" class="col-sm-5 control-label">Re-enter
+					<label for="reEnterPassword" class="col-sm-5 control-label">Re-enter
 						password:</label>
 					<div class="col-sm-3">
 						<form:input path="confirm_password" type="password"
-							id="re-enter-password" name="re-enter-password"
-							class="form-control" placeholder="re-enter password" />
+							id="confirm_password" name="confirmPassword" class="form-control"
+							placeholder="re-enter password" />
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label for="emailid" class="col-sm-5 control-label">Email
+					<label for="emailId" class="col-sm-5 control-label">Email
 						address:</label>
 					<div class="col-sm-3">
 						<form:input path="emailid" type="email" id="emailid"
@@ -140,13 +147,14 @@
 
 				<div class="form-group">
 					<div class="col-sm-offset-5 col-sm-3">
-						<input type="checkbox"> I agree with terms and conditions
+						<input type="checkbox" name="agree" id="agree"> I agree
+						with terms and conditions
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="text-center">
 						<input type="submit" class="btn btn-primary"
-							name="_eventId_submit" value="SUBMIT"/>
+							name="_eventId_submit" value="SUBMIT" />
 					</div>
 				</div>
 			</form:form>
@@ -154,11 +162,13 @@
 
 			<!--End of the Footer -->
 		</div>
-		</div>
-		<!-- Script placed at the end -->
-		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.js"></script>
-		<script src="${js}/app.js"></script>
-		<%-- 		<script src="${js}/pace.js"></script> --%>
+	</div>
+	<!-- Script placed at the end -->
+	<script src="${js}/jquery.js"></script>
+	<script src="${js}/jquery.validate.js"></script>
+	<script src="${js}/validation.js"></script>
+	<script src="${js}/bootstrap.js"></script>
+	<script src="${js}/app.js"></script>
+	<%-- 		<script src="${js}/pace.js"></script> --%>
 </body>
 </HTML>

@@ -1,7 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 
 <s:url value="/resources/css" var="css" />
 <s:url value="/resources/js" var="js" />
@@ -49,7 +54,7 @@
 	content="${img}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>${title} | Beam</title>
+<title>${title}|Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
@@ -58,76 +63,67 @@
 <link href="${css}/style.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans"
+	rel="stylesheet">
 <!-- Pace.css for loader -->
 <%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
 
 
 </HEAD>
 
-<!-- Body of the content starts here -->
+
+
 <body>
 	<div class="container margin-centered">
 		<div class="no-margin no-padding">
-			<a href="${contextRoot}/game/239"><img src="${img}/page-header.jpg" class="img img-responsive hidden-xs"></a>
+			<img src="${img}/page-header.jpg"
+				class="img img-responsive hidden-xs">
 		</div>
 		<!--Header image ends -->
 
-		<%@include file="./share/navbar.jsp"%>
+		<%@include file="../share/navbar.jsp"%>
 
 
-		<c:if test="${ifUserClickedHome == true}">
-			<%@include file="admin/home.jsp"%>
-		</c:if>
+		<div class="well">
+			<form class="text-center" method="POST">
+				<h1>
+					<center>Choose Payment Method</center>
+				</h1>
 
-		<c:if test="${ifUserClickedAbout == true}">
-			<%@include file="admin/about.jsp"%>
-		</c:if>
+				<div style="margin-top: 50px">
+					<div class="row col-md-12">
+						<div class="col-md-6">
+							<input type="radio" name="payOnline" value="CCDC"
+								checked="checked">&nbsp;<label for="Pay Online"
+								class="radio-opt "><h3>
+									Pay Online<small>&nbsp; Credit/Debit Card</small>
+								</h3></label>
+						</div>
+						<div class="col-md-6">
+							<input type="radio" name="payOnline" value="COD">&nbsp;<label
+								for="Pay Online" class="radio-opt"><h3>
+									COD<small>&nbsp; Cash On Delivery</small>
+								</h3></label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="text-center">
+						<input name="_eventId_continue" type="submit" class="btn btn-primary" value="Continue"></input>
+							
+					</div>
+				</div>
+			</form>
 
-		<c:if test="${ifUserClickedContact == true}">
-			<%@include file="admin/contact.jsp"%>
-		</c:if>
 
-		<c:if test="${ifUserClickedSupport == true}">
-			<%@include file="admin/support.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedWallpapers == true}">
-			<%@include file="admin/wallpapers.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedCart == true}">
-			<%@include file="user/cart.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedLogIn == true}">
-			<%@include file="./login.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedGameCatalogue == true}">
-			<%@include file="admin/gamecatalogue.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedGame == true}">
-			<%@include file="admin/game.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedSettings == true}">
-			<%@include file="user/profilesettings.jsp"%>
-		</c:if>
-		
-		<c:if test="${ifAdminClickedSettings == true}">
-			<%@include file="admin/authority.jsp"%>
-		</c:if>
-		
-		<%@include file="./share/footer.jsp"%>
-		
-		<!--End of the Footer -->
+		</div>
+		<%@include file="../share/footer.jsp"%>
 	</div>
+
+
 	<!-- Script placed at the end -->
 	<script src="${js}/jquery.js"></script>
-	<script src="${js}/jquery.validate.js"></script>
-	<script src="${js}/validation.js"></script>
 	<script src="${js}/bootstrap.js"></script>
 	<script src="${js}/app.js"></script>
 	<%-- 		<script src="${js}/pace.js"></script> --%>

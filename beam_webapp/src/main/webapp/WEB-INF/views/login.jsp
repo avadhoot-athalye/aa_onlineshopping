@@ -28,9 +28,10 @@
 					class="form-control" placeholder="password" />
 			</div>
 		</div>
-
+		
+		<small style="margin-left: 550px;">First time here? <a href="memberShip" style="color: blue;">Register</a> right here!</small>
 		<div class="form-group margin-centered">
-			<div class="text-center">
+			<div class="text-center" style="margin-top: 10px">
 				<button id="login" type="submit" class="btn btn-primary  ">Log In</button>
 			</div>
 		</div>

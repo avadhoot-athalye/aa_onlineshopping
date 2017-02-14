@@ -363,3 +363,34 @@ a:HOVER {
 .form-horizontal .labelPadding{
 	padding-top: 0px;
 }
+.payment-page {
+	margin-top: 50px;
+}
+.radio-opt {
+	padding-left: 10px;
+}
+.error-msg {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: red;
+	font-style: italic;
+}
+.thubnail-feat {
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 242px;
+	height: 200px;
+}
+.thumbnail-set {
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.thumb-pad {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.best-sell {
+	width: 150px;
+	height: 150px;
+}

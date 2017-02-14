@@ -1,28 +1,65 @@
 package com.beam.webapp.controller;
 
+import java.security.Principal;
+import java.util.List;
+import java.util.Set;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.beam.backend.dao.CartDAO;
+import com.beam.backend.dao.CartItemDAO;
 import com.beam.backend.dao.ProductDAO;
+import com.beam.backend.dao.UserDAO;
+import com.beam.backend.entity.Cart;
+import com.beam.backend.entity.CartItems;
+import com.beam.backend.entity.User;
 
 @Controller
 public class PageController {
-	
+
 	@Autowired
 	ProductDAO productDAO;
 
+	@Autowired
+	Cart cart;
+
+	@Autowired
+	User user;
+
+	@Autowired
+	UserDAO userDAO;
+
+	@Autowired
+	CartItemDAO cartItemDAO;
+
+	@Autowired
+	HttpSession httpSession;
+
 	@RequestMapping(value = { "/", "/home", "/index", "/default", "/store" })
 
-	public ModelAndView index(@RequestParam(value = "login", required = false) String msg) {
+	public ModelAndView index(@RequestParam(value = "login", required = false) String msg, Principal principal) {
 
 		ModelAndView mv = new ModelAndView("page");
 
 		if (msg != null) {
 			mv.addObject("msg", msg);
+		}
+		if (principal != null) {
+			user = userDAO.getbyUserName(principal.getName());
+			if (user.getCart() != null) {
+				List<CartItems> cartItems = cartItemDAO.list(user.getCart().getId());
+				if (cartItems != null) {
+					httpSession.setAttribute("noOfCartItems", cartItems.size());
+				}
+			}
 		}
 		mv.addObject("title", "Welcome to Beam");
 		mv.addObject("ifUserClickedHome", true);
@@ -83,8 +120,6 @@ public class PageController {
 		return mv;
 	}
 
-
-
 	/*
 	 * For loading the product pages
 	 */
@@ -101,23 +136,18 @@ public class PageController {
 
 	@RequestMapping(value = "/game/{id}")
 
-	public ModelAndView game(@PathVariable (name="id", required=false) int id) {
+	public ModelAndView game(@PathVariable(name = "id", required = false) int id) {
 		ModelAndView mv = new ModelAndView("page");
 		/*
 		 * Code to feth the single product using id from the database
 		 */
 		mv.addObject("product", productDAO.get(id));
-//		mv.addObject(attributeName, attributeValue)
+		// mv.addObject(attributeName, attributeValue)
 		mv.addObject("title", "gamepage");
 		// mv.addObject("id", id);
 		mv.addObject("ifUserClickedGame", true);
 		return mv;
 	}
-
-
-	
-
-	
 
 	@RequestMapping(value = "/authority")
 
@@ -148,8 +178,5 @@ public class PageController {
 		mv.addObject("ifUserClickedUpdate", true);
 		return mv;
 	}
-
-	
-	
 
 }

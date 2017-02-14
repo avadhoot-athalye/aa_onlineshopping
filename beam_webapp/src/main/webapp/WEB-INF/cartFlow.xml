@@ -6,39 +6,58 @@
 
 
 
-<!-- Executed when webFlow is triggered --> 
+	<!-- webFlow is triggered when proceed to checkout is clicked -->
 	<on-start>
-<!--  		CartHandler is java class available through annotated CartHandler.java  -->
-<!-- 			class.here we are calling it’s initFlow() method. -->
+		<!-- CartHandler is java class available through annotated CartHandler.java -->
+		<!-- class.here we are calling it’s initFlow() method. -->
 		<evaluate expression="cartHandler.initFlow()" result="flowScope.orderBean" />
 	</on-start>
 
- 	<!-- if not specified the first view state is the starting state -->
-	<view-state id="start" view="cart-webflow/confirmDetails" model="flowScope.orderBean">
-		<transition on="edit" to="address" />
-		<transition on="submit" to="start" />
+	<!-- confirming biller name, address and contact number is the first view 
+		state -->
+	<view-state id="start" view="cart-webflow/confirmDetails"
+		model="flowScope.orderBean">
+		<transition on="edit" to="updateAddress" />
+		<transition on="confirm" to="payment" />
 	</view-state>
 	
-	<action-state id="confirmation" >
-<!-- 		<evaluate expression="cartHandler.addUser(user)"></evaluate> -->
-		<transition on="success" to="address" />
-		<transition on="failure" to="start" />
+	<!-- View to update billing details will come here -->
+	<view-state id="updateAddress" view="cart-webflow/updateDetails" model="flowScope.orderBean">
+		<transition on="update" to="changeAddress" />
+	</view-state>
+	
+	<action-state id="changeAddress">
+		<evaluate expression="cartHandler.updateAddress(flowScope.orderBean)"></evaluate>
+		<transition on="success" to="start" />
+	</action-state>
+
+	<!-- Mode of payment is confirm here -->
+	<view-state id="payment" view="cart-webflow/payment" model="flowScope.orderBean">
+		<transition on="continue" to="gateway"></transition>
+	</view-state>
+
+	<!-- Order Summary is display here -->
+	<view-state id="gateway" view="cart-webflow/orderSummary" model="flowScope.orderBean">
+		<transition on="confirm" to="updateCart"></transition>
+	</view-state>
+	
+	<action-state id="updateCart">
+		<evaluate expression="cartHandler.updateCart(flowScope.orderBean)"></evaluate>
+		<transition on="success" to="thankYou" />
 	</action-state>
 	
-	<view-state id="address" view="confirm_address" >
-<!-- 		<evaluate expression="userHandler.addUser(user)"></evaluate> -->
-		<transition on="success" to="address" />
-		<transition on="failure" to="start" />
+	<!-- Order confirmation and thank you page -->
+	<view-state id="thankYou" view="cart-webflow/thankYou">
+		<transition on="backToShopping" to="toHome"></transition>
 	</view-state>
-	
-	<end-state id="welcome" view="welcome" />
-	<end-state id="login" view="externalRedirect:contextRelative:login" />
-	<end-state id="toException"
-		view="externalRedirect:contextRelative:exception" />
 
- 	<!-- these events are available in every state -->
+	<end-state id="toHome" view="externalRedirect:contextRelative:home" />
+	<end-state id="toException" view="externalRedirect:contextRelative:exception" />
+
+	<!-- these events are available in every state -->
 	<global-transitions>
 		<transition on="home" to="toHome" />
 		<transition on="error" to="toException" />
 	</global-transitions>
+	
 </flow>

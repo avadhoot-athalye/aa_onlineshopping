@@ -5,8 +5,8 @@
 
 	<%@include file="../share/featured & Recommeded.jsp"%>
 
-	
-	
+
+
 	<div class="col-md-9">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
@@ -20,19 +20,23 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active img img-responsive">
-					<a href="${contextRoot}/game"><img src="${img}/gta5.jpg" alt="Grand Theft Auto V"></a>
+					<a href="${contextRoot}/game/232"><img src="${img}/gta5.jpg"
+						alt="Grand Theft Auto V"></a>
 				</div>
 
 				<div class="item">
-					<a href="${contextRoot}/game"><img src="${img}/GodOfWar3.jpg" alt="GodOfWar3"></a>
+					<a href="${contextRoot}/game/238"><img
+						src="${img}/GodOfWar3.jpg" alt="GodOfWar3"></a>
 				</div>
 
 				<div class="item">
-					<a href="${contextRoot}/game"><img src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3"></a>
+					<a href="${contextRoot}/game/235"><img
+						src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3"></a>
 				</div>
 
 				<div class="item">
-					<a href="${contextRoot}/game"><img src="${img}/Fallout4.png" alt="Fallout4"></a>
+					<a href="${contextRoot}/game/236"><img
+						src="${img}/Fallout4.png" alt="Fallout4"></a>
 				</div>
 			</div>
 
@@ -50,8 +54,9 @@
 		<!--Carousal ends -->
 
 	</div>
-	<div class="col-md-9 text-center special-banner img img-responsive hidden-xs">
-		<img alt="" src="http://placehold.it/817x150">
+	<div
+		class="col-md-9 text-center special-banner img img-responsive hidden-xs">
+		<img alt="" src="${img}/Banner.jpg">
 	</div>
 </div>
 
@@ -63,155 +68,201 @@
 </div>
 
 <div class="container">
-	<div class="row">
-		<div class="span12">
-			<div class="well">
-				<div id="myCarousel" class="carousel fdi-Carousel slide">
-					<!-- Carousel items -->
-					<div class="carousel fdi-Carousel slide" id="eventCarousel"
-						data-interval="0">
-						<div class="carousel-inner onebyone-carosel">
-							<div class="item active">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">1</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">2</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">3</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">4</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">5</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">6</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-3 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">7</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="col-md-4 col-sm-4 hidden-xs">
-									<a href="#"><img src="http://placehold.it/250x250"
-										class="img-responsive center-block"></a>
-									<div class="text-center">8</div>
-								</div>
-							</div>
-						</div>
-						<a class="left carousel-control" href="#eventCarousel"
-							data-slide="prev"></a> <a class="right carousel-control"
-							href="#eventCarousel" data-slide="next"></a>
+	<div class="panel">
+		<div class="row">
+
+			<div class="col-sm-6 col-md-3">
+				<div class="thumbnail thumbnail-set" style="width: 270px">
+					<a href="${contextRoot}/game/240"><img
+						src="${img}/products/240.png" alt="..." class="thubnail-feat "></a>
+					<div class="caption text-center">
+						<a href="${contextRoot}/game/240"><h3>Resident Evil 7</h3></a>
+						<p>
+							<sec:authorize access="hasAuthority('admin')">
+							<a href="${contextRoot}/admin/editproduct/240"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+							</a> <a href="${contextRoot}/admin/deleteproduct/240"
+								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+							</sec:authorize>
+							
+							<!-- For user Add to cart button should be displayed -->
+							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
+							<a href="${contextRoot}/user/cart/add/240"
+								class="btn btn-primary" role="button"> <span
+								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</a> <a href="${contextRoot}/user/cart/add/240"
+								class="btn btn-default" role="button">BUY NOW</a>
+							</sec:authorize>
+						</p>
 					</div>
-					<!--/carousel-inner-->
 				</div>
-				<!--/myCarousel-->
 			</div>
-			<!--/well-->
+
+			<div class="col-sm-6 col-md-3 thumb-pad">
+				<div class="thumbnail thumbnail-set" style="width: 270px">
+					<a href="${contextRoot}/game/241"><img
+						src="${img}/products/241.png" alt="..." class="thubnail-feat "></a>
+					<div class="caption text-center">
+						<a href="${contextRoot}/game/241"><h3>PREY</h3></a>
+						<p>
+							<sec:authorize access="hasAuthority('admin')">
+							<a href="${contextRoot}/admin/editproduct/241"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+							</a> <a href="${contextRoot}/admin/deleteproduct/241"
+								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+							</sec:authorize>
+							
+							<!-- For user Add to cart button should be displayed -->
+							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
+							<a href="${contextRoot}/user/cart/add/241"
+								class="btn btn-primary" role="button"> <span
+								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</a> <a href="${contextRoot}/user/cart/add/241"
+								class="btn btn-default" role="button">BUY NOW</a>
+							</sec:authorize>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-3 thumb-pad">
+				<div class="thumbnail thumbnail-set" style="width: 270px">
+					<a href="${contextRoot}/game/242"><img
+						src="${img}/products/242.png" alt="..." class="thubnail-feat "></a>
+					<div class="caption text-center">
+						<a href="${contextRoot}/game/242"><h3>Hitman</h3></a>
+						<p>
+							<sec:authorize access="hasAuthority('admin')">
+							<a href="${contextRoot}/admin/editproduct/242"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+							</a> <a href="${contextRoot}/admin/deleteproduct/242"
+								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+							</sec:authorize>
+							
+							<!-- For user Add to cart button should be displayed -->
+							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
+							<a href="${contextRoot}/user/cart/add/242"
+								class="btn btn-primary" role="button"> <span
+								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</a> <a href="${contextRoot}/user/cart/add/243"
+								class="btn btn-default" role="button">BUY NOW</a>
+							</sec:authorize>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-md-3 thumb-pad">
+				<div class="thumbnail"
+					style="width: 270px; margin: 10px 5px 10px 0px;">
+					<a href="${contextRoot}/game/243"><img
+						src="${img}/products/243.png" alt="..." class="thubnail-feat "></a>
+					<div class="caption text-center">
+						<a href="${contextRoot}/game/243"><h3>Watch Dogs 2</h3></a>
+						<p>
+							<!-- For admin both edit and delete button should be displayed -->
+							
+							<sec:authorize access="hasAuthority('admin')">
+							<a href="${contextRoot}/admin/editproduct/243"
+								class="btn btn-warning" role="button"> <span
+								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+							</a> <a href="${contextRoot}/admin/deleteproduct/243"
+								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+							</sec:authorize>
+							
+							<!-- For user Add to cart button should be displayed -->
+							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
+							<a href="${contextRoot}/user/cart/add/243"
+								class="btn btn-primary" role="button"> <span
+								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+							</a> <a href="${contextRoot}/user/cart/add/243"
+								class="btn btn-default" role="button">BUY NOW</a>
+							</sec:authorize>
+						</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
-</div>
 
 
 
 
-<div class="page-header thumbnail-adjust no-padding font-style ">
-	<h3 class="header-margin">Best-seller</h3>
-</div>
-<div class="row bottom-featured-game">
-	<!-- Left side featured games -->
-	<div class="col-md-6">
-		<div class="media panel">
-			<div class="media-left">
-				<a href="#"> <img class="media-object"
-					src="http://placehold.it/150x150" alt="...">
-				</a>
-			</div>
-			<div class="media-body">
-				<h4 class="media-heading header-margin">GAME TITLE</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem.</p>
-			</div>
-		</div>
-		<div class="media panel">
-			<div class="media-left">
-				<a href="#"> <img class="media-object"
-					src="http://placehold.it/150x150" alt="...">
-				</a>
-			</div>
-			<div class="media-body">
-				<h4 class="media-heading header-margin">GAME TITLE</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem.</p>
-			</div>
-		</div>
+	<div class="page-header thumbnail-adjust no-padding font-style ">
+		<h3 class="header-margin">Best-seller</h3>
 	</div>
-
-	<!-- Right side featured games -->
-	<div class="col-md-6">
-		<div class="media panel">
-			<div class="media-left">
-				<a href="#"> <img class="media-object"
-					src="http://placehold.it/150x150" alt="...">
-				</a>
+	<div class="row bottom-featured-game">
+		<!-- Left side featured games -->
+		<div class="col-md-6">
+			<div class="media panel">
+				<div class="media-left">
+					<a href="${contextRoot}/game/244"><img
+						src="${img}/products/244.png" alt="..." class="best-sell"></a>
+				</div>
+				<div class="media-body">
+					<a href="${contextRoot}/game/244"><h4
+							class="media-heading header-margin">Final Fantasy XV</h4></a>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+						sem.</p>
+				</div>
 			</div>
-			<div class="media-body">
-				<h4 class="media-heading header-margin">GAME TITLE</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem.</p>
+			<div class="media panel">
+				<div class="media-left">
+					<a href="${contextRoot}/game/245"><img
+						src="${img}/products/245.png" alt="..." class="best-sell"></a>
+				</div>
+				<div class="media-body">
+					<a href="${contextRoot}/game/245"><h4
+							class="media-heading header-margin">Call Of Duty: Infinite
+							Warfare</h4></a>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+						sem.</p>
+				</div>
 			</div>
 		</div>
-		<div class="media panel">
-			<div class="media-left">
-				<a href="#"> <img class="media-object"
-					src="http://placehold.it/150x150" alt="...">
-				</a>
+
+		<!-- Right side featured games -->
+		<div class="col-md-6">
+			<div class="media panel">
+				<div class="media-left">
+					<a href="${contextRoot}/game/246"><img
+						src="${img}/products/246.png" alt="..." class="best-sell"></a>
+				</div>
+				<div class="media-body">
+					<a href="${contextRoot}/game/246"><h4
+							class="media-heading header-margin">Dishonored 2</h4></a>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+						sem.</p>
+				</div>
 			</div>
-			<div class="media-body">
-				<h4 class="media-heading header-margin">GAME TITLE</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-					Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-					penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-					Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-					sem.</p>
+			<div class="media panel">
+				<div class="media-left">
+					<a href="${contextRoot}/game/247"><img
+						src="${img}/products/247.png" alt="..." class="best-sell"></a> </a>
+				</div>
+				<div class="media-body">
+					<a href="${contextRoot}/game/247"><h4
+							class="media-heading header-margin">Dragon Ball Xenoverse</h4></a>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+						Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+						sem.</p>
+				</div>
 			</div>
 		</div>
 	</div>

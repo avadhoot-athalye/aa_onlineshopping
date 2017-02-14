@@ -88,8 +88,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12">
 
 					<form:form class="form-horizontal sign-up-form"
-						modelAttribute="orderBean"
-						action="${contextRoot}/user/address/save" method="POST">
+						modelAttribute="orderBean" method="POST">
 
 						<!-- Change your address here -->
 
@@ -122,7 +121,7 @@
 								class="labelPadding control-label col-sm-5">Address Line
 								1</label>
 							<div class="col-sm-3">
-							<c:choose>
+								<c:choose>
 									<c:when test="${orderBean.address.addressLine1 == null}">
 										<i class="require">please provide address here</i>
 									</c:when>
@@ -139,7 +138,7 @@
 								class=" labelPadding col-sm-5 control-label">Address
 								Line 2</label>
 							<div class="col-sm-5 ">
-							<c:choose>
+								<c:choose>
 									<c:when test="${orderBean.address.addressLine2 == null}">
 										<i class="require">please provide address here</i>
 									</c:when>
@@ -152,16 +151,17 @@
 
 						<!-- Update landmark here -->
 						<div class="form-group">
-							<label for="landmark" class="labelPadding col-sm-5 control-label">Landmark</label>
+							<label for="landmark" class="labelPadding col-sm-5 control-label">Landmark
+								(Optional)</label>
 							<div class="col-sm-5 ">
-								<c:choose>
-									<c:when test="${orderBean.address.city == null}">
-										<i class="require">please provide city</i>
+							<c:choose>
+									<c:when test="${orderBean.address.landMark == null}">
+										<i class="require">please provide Landmark</i>
 									</c:when>
 									<c:otherwise>
 							${orderBean.address.landMark}
 							</c:otherwise>
-								</c:choose>
+								</c:choose>	
 							</div>
 						</div>
 
@@ -222,7 +222,7 @@
 							<label for="pincode" class="labelPadding col-sm-5 control-label">Pincode:</label>
 							<div class="col-sm-5 ">
 								<c:choose>
-									<c:when test="${orderBean.user.mobilenumber == null}">
+									<c:when test="${orderBean.address.pincode == null}">
 										<i class="require">please provide pincode</i>
 									</c:when>
 									<c:otherwise>
@@ -249,36 +249,42 @@
 							</div>
 						</div>
 
-						<!-- Update Mobile number here -->
-
-						<!-- 						<div class="form-group"> -->
-						<!-- 							<label for="mobile" class="labelPadding col-sm-5 control-label">Mobile:</label> -->
-						<%-- 							<div class="col-sm-5 ">${orderBean.address.mobile}</div> --%>
-						<!-- 						</div> -->
-
-
 						<div class="row">
 							<!-- Edit Button -->
 							<div class="col-md-12 text-center">
 								<div class="col-md-offset-5 col-md-1">
-									<button type="submit" class="btn btn-primary ">Edit</button>
+									<input type="submit" class="btn btn-primary"
+										name="_eventId_edit" value="Edit" />
 								</div>
 
 								<!--  Continue Button -->
 
 								<div class="col-md-1">
-									<button type="submit" class="btn btn-success" >Confirm
-										Details</button>
+									<c:choose>
+										<c:when test="${orderBean.user.firstname == null || orderBean.user.lastname == null || 
+											orderBean.address.addressLine1 == null || orderBean.address.addressLine2 == null ||
+											orderBean.address.city == null || orderBean.address.state == null || 
+											orderBean.address.country == null || orderBean.address.pincode == null ||
+											orderBean.user.mobilenumber == null}">
+											<button type="submit" class="btn btn-success"
+												disabled="disabled">Confirm Details</button>
+										</c:when>
+										<c:otherwise>
+											<input name="_eventId_confirm" type="submit"
+												class="btn btn-success" value="Confirm Details"></input>
+										</c:otherwise>
+									</c:choose>
 								</div>
 							</div>
 						</div>
 						&nbsp;
 					</form:form>
 
-					<%@include file="../share/footer.jsp"%>
+
 				</div>
 			</div>
 		</div>
+		<%@include file="../share/footer.jsp"%>
 	</div>
 
 	<!-- Script placed at the end -->

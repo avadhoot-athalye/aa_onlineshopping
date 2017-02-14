@@ -1,6 +1,8 @@
 package com.beam.backend.entity;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,8 +15,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Component
-public class Product {
+public class Product implements Serializable{
+	
+	
 
+		/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6259010860397999328L;
 		@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 		private int product_id;
 		private String product_name;

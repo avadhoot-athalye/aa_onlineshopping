@@ -4,17 +4,17 @@
 
 	<%@include file="../share/featured & Recommeded.jsp"%>
 
-	<form>
-		<div class="input-group">
-			<input type="text" class="form-control"
-				placeholder="Search for a product">
-			<div class="input-group-btn">
-				<button class="btn btn-default" type="submit">
-					<i class="glyphicon glyphicon-search"></i>
-				</button>
-			</div>
-		</div>
-	</form>
+<!-- 	<form> -->
+<!-- 		<div class="input-group"> -->
+<!-- 			<input type="text" class="form-control" -->
+<!-- 				placeholder="Search for a product"> -->
+<!-- 			<div class="input-group-btn"> -->
+<!-- 				<button class="btn btn-default" type="submit"> -->
+<!-- 					<i class="glyphicon glyphicon-search"></i> -->
+<!-- 				</button> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</form> -->
 	<br />
 	<div class="panel col-md-9 gamelist" ng-app="productList">
 
@@ -41,7 +41,7 @@
 					<div class="row">
 						<div class="col-md-4">
 							<H4>
-								<small>&#8377{{product.product_price}}</small>
+								<small>&#8377; {{product.product_price}}</small>
 							</H4>
 						</div>
 						<sec:authorize access="hasAuthority('customer') or isAnonymous()">

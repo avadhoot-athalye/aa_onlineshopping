@@ -55,7 +55,7 @@
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
 <%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
-<link href="${css}/style.css" rel="stylesheet">
+<link href="${css}/extra.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -64,72 +64,14 @@
 
 
 </HEAD>
-
-<!-- Body of the content starts here -->
 <body>
-	<div class="container margin-centered">
-		<div class="no-margin no-padding">
-			<a href="${contextRoot}/game/239"><img src="${img}/page-header.jpg" class="img img-responsive hidden-xs"></a>
+	<form method="post">
+		<div class="page-wrap">
+		<h3>Your order has been confirm successfully. Thank you for your
+			purchase.</h3>
+		<input type="submit" class="btn btn-primary" style="margin-left: 270px"
+			name="_eventId_backToShopping" value="Continue shopping" />
 		</div>
-		<!--Header image ends -->
-
-		<%@include file="./share/navbar.jsp"%>
-
-
-		<c:if test="${ifUserClickedHome == true}">
-			<%@include file="admin/home.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedAbout == true}">
-			<%@include file="admin/about.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedContact == true}">
-			<%@include file="admin/contact.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedSupport == true}">
-			<%@include file="admin/support.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedWallpapers == true}">
-			<%@include file="admin/wallpapers.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedCart == true}">
-			<%@include file="user/cart.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedLogIn == true}">
-			<%@include file="./login.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedGameCatalogue == true}">
-			<%@include file="admin/gamecatalogue.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedGame == true}">
-			<%@include file="admin/game.jsp"%>
-		</c:if>
-
-		<c:if test="${ifUserClickedSettings == true}">
-			<%@include file="user/profilesettings.jsp"%>
-		</c:if>
-		
-		<c:if test="${ifAdminClickedSettings == true}">
-			<%@include file="admin/authority.jsp"%>
-		</c:if>
-		
-		<%@include file="./share/footer.jsp"%>
-		
-		<!--End of the Footer -->
-	</div>
-	<!-- Script placed at the end -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/jquery.validate.js"></script>
-	<script src="${js}/validation.js"></script>
-	<script src="${js}/bootstrap.js"></script>
-	<script src="${js}/app.js"></script>
-	<%-- 		<script src="${js}/pace.js"></script> --%>
+	</form>
 </body>
-</HTML>
+</html>

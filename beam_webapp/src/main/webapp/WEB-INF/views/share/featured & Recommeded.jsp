@@ -2,8 +2,8 @@
 	<div class="col-md-3 font-style featured-content visible-lg visible-md">
 		<ul>
 			<li><a href="${contextRoot}/games/all">ALL GAMES</a></li>
-			<li><a href="#">NEW RELEASES</a></li>
-			<li><a href="#">MOST POPULAR</a></li>
+			<li><a href="${contextRoot}/games/all">NEW RELEASES</a></li>
+			<li><a href="${contextRoot}/games/all">MOST POPULAR</a></li>
 			<li><a href="#">EARLY ACCESS</a></li>
 			<li><a href="#">DEMOS</a></li>
 			<li><a href="#">PRE-ORDER</a></li>
