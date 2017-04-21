@@ -31,6 +31,10 @@ $(document).ready(function () {
     	$(element).css('display','inline');
     });
     
+    $(function () {
+    	  $('[data-toggle="tooltip"]').tooltip()
+    	})
+    
   
     
 });

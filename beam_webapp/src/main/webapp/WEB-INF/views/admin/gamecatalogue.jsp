@@ -1,33 +1,24 @@
 <script src="${js}/angular.js"></script>
 <script src="${js}/product.js"></script>
-<div class="row basic-setting">
 
-	<%@include file="../share/featured & Recommeded.jsp"%>
-
-<!-- 	<form> -->
-<!-- 		<div class="input-group"> -->
-<!-- 			<input type="text" class="form-control" -->
-<!-- 				placeholder="Search for a product"> -->
-<!-- 			<div class="input-group-btn"> -->
-<!-- 				<button class="btn btn-default" type="submit"> -->
-<!-- 					<i class="glyphicon glyphicon-search"></i> -->
-<!-- 				</button> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</form> -->
+<div class="container">
+	<div ng-app="productList" >
+		<form>
+		<div class="input-group col-md-10" >
+			<input type="text" class="form-control" placeholder="Search for a game" ng-model="searchGame"/>
+		</div>
+	</form>
 	<br />
-	<div class="panel col-md-9 gamelist" ng-app="productList">
-
-		<div ng-controller="productDetails" items="${products}" var="product">
-			<div class="thumbnail thumbnail-setting col-md-4"
-				ng-repeat="product in products">
+	
+		<div ng-controller="productDetails" items="${products}" var="product" >
+			<div class="thumbnail thumbnail-setting col-md-2"
+				ng-repeat="product in products | filter:searchGame">
 				<div class="wrapper">
 					<a href="${contextRoot}/game/{{product.product_id}}"><img
 						src="${img}/products/{{product.product_id}}.png"
-						class="product_images"></a>
+						class="product_images" style="width: 180px; height: 225px;"></a>
 					<sec:authorize access="hasAuthority('admin')">
-						<a
-							href="${contextRoot}/admin/editproduct/{{product.product_id}}"><span
+						<a href="${contextRoot}/admin/editproduct/{{product.product_id}}"><span
 							class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
 					</sec:authorize>
 					<sec:authorize access="hasAuthority('customer')">
@@ -45,9 +36,9 @@
 							</H4>
 						</div>
 						<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<div class="col-md-offset-4 col-md-2">
-								<a href="${contextRoot}/user/cart/add/{{product.product_id}}" class="btn btn-default" role="button"> <span
-									class="glyphicon glyphicon-shopping-cart"></span>
+							<div class="col-md-offset-4 col-md-2" data-toggle="tooltip" data-placement="bottom" title="Add to cart">
+								<a href="${contextRoot}/user/cart/add/{{product.product_id}}" class="btn btn-default" role="button" > <span
+									class="glyphicon glyphicon-shopping-cart" ></span>
 								</a>
 							</div>
 						</sec:authorize>
@@ -56,6 +47,4 @@
 			</div>
 		</div>
 	</div>
-	<!-- Row 3 ended here -->
-</div>
 </div>

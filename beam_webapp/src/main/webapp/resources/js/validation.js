@@ -1,7 +1,26 @@
+$.validator.setDefaults({
+    errorElement: 'span',
+    errorClass: 'help-block',
+    errorPlacement: function(error, element) {
+        if(element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
+});
+
 $().ready(function() {
 	
-	$("#username_err").hide();
-	$("#firstname_err").hide();
+	
+	
+	$("#err_username").hide();
+	$("#err_firstname").hide();
+	$("#err_lastname").hide();
+	$("#err_password").hide();
+	$("#err_rePassword").hide();
+	$("#err_emailid").hide();
+	$("#err_check").hide();
 	// validate sign-up form on key-up and submit
 
 	var validator = $("#sign-up").validate({
@@ -57,10 +76,7 @@ $().ready(function() {
 			},
 			
 			agree : "Please accept our terms and conditions"
-		},
-		
-		
-// errorLabelContainer: '#username_err'
+		},	
 	});
 	
 });

@@ -15,6 +15,9 @@ import javax.persistence.OneToOne;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Component
 public class Cart implements Serializable{
@@ -27,6 +30,7 @@ public class Cart implements Serializable{
 	
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="cart_id")
+	@JsonIgnore
 	private int id;
 	
 	@Column(name="cart_grand_total")
@@ -34,10 +38,12 @@ public class Cart implements Serializable{
 	
 	@OneToOne
 	@JoinColumn(name="user_id")
+	@JsonIgnore
 	private User user;
 	
 	
 	@OneToMany(mappedBy = "cart", fetch = FetchType.EAGER)
+	@JsonBackReference
 	private Set<CartItems> cartItems;
 	
 	@Column(name="Number_Of_Items")

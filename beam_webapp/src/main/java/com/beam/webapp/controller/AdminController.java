@@ -95,7 +95,7 @@ public class AdminController {
 	@RequestMapping(value = { "/category/save" }, method = RequestMethod.POST)
 
 	public String saveCategory(@ModelAttribute Category category) {
-		
+
 		if (category.getCategory_id() == 0) {
 			categoryDAO.addCategory(category);
 		} else {
@@ -126,7 +126,7 @@ public class AdminController {
 
 	@Autowired
 	Product product;
-	
+
 	@Autowired
 	private HttpServletRequest request;
 
@@ -138,10 +138,26 @@ public class AdminController {
 
 	@RequestMapping(value = "/addproduct")
 
-	public ModelAndView addproduct(@RequestParam(value="op", required=false) String operation, 
-			@RequestParam(value = "status", required=false) String status,
-			@RequestParam(value = "id", required=false) String id) {
+	public ModelAndView addproduct(@RequestParam(value = "op", required = false) String operation,
+			@RequestParam(value = "status", required = false) String status,
+			@RequestParam(value = "id", required = false) String id) {
 		ModelAndView mv = new ModelAndView("page");
+
+		if (operation != null) {
+			if ((operation.equals("update")) && status.equals("success")) {
+				mv.addObject("msg", "Success! Product Updated Successfully");
+			} else if ((operation.equals("update")) && status.equals("fail")) {
+				mv.addObject("msg", "Failed To Update Product");
+			} else if ((operation.equals("add")) && status.equals("success")) {
+				mv.addObject("msg", "Success! Product added Successfully");
+			} else if ((operation.equals("add")) && status.equals("fail")) {
+				mv.addObject("msg", "Failed To add the Product");
+			} else if ((operation.equals("delete")) && status.equals("success")) {
+				mv.addObject("msg", "Success! Product deleted Successfully");
+			} else if ((operation.equals("delete")) && status.equals("fail")) {
+				mv.addObject("msg", "Failed To delete the Product");
+			} 
+		} 
 
 		mv.addObject("title", "Add a product");
 		mv.addObject("product", new Product());
@@ -150,6 +166,7 @@ public class AdminController {
 		mv.addObject("ifAdminClickedSettings", true);
 		mv.addObject("ifAdminClickedAddNewProduct", true);
 		return mv;
+
 	}
 
 	@RequestMapping(value = { "/product/save" }, method = RequestMethod.POST)
@@ -182,13 +199,13 @@ public class AdminController {
 	protected String uploadImage(Product product) {
 		MultipartFile imageFile = product.getImage();
 		String folderToUpload = "/resources/img/products";
-		
+
 		String fileName = imageFile.getOriginalFilename();
 		String realPath = request.getServletContext().getRealPath(folderToUpload);
 		if (!new File(realPath).exists()) {
 			new File(realPath).mkdirs();
 		}
-		
+
 		String filePath = realPath + File.separator + product.getProduct_id() + ".png";
 		File destination = new File(filePath);
 		try {
@@ -196,9 +213,9 @@ public class AdminController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return fileName;
-		
+
 	}
 	/*
 	 * To view list of all products
@@ -251,7 +268,7 @@ public class AdminController {
 	 */
 	@RequestMapping(value = { "/deleteproduct/{product.product_id}" }, method = RequestMethod.GET)
 
-	public String deleteProduct(@PathVariable (name = "product.product_id") int productId) {
+	public String deleteProduct(@PathVariable(name = "product.product_id") int productId) {
 
 		product = productDAO.get(productId);
 

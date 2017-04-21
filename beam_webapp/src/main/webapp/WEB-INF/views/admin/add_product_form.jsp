@@ -5,6 +5,13 @@
 		action="${contextRoot}/admin/product/save" modelAttribute="product"
 		enctype="multipart/form-data">
 
+		<c:if test="${!empty msg}">
+			<div class="alert-msg">
+				<div id="success-alert" class="alert alert-success" role="alert">
+					<strong>${msg}</strong>
+				</div>
+			</div>
+		</c:if>
 		<!-- View all products -->
 
 		<div id="changepwd" class="form-group">
@@ -21,8 +28,7 @@
 		<!-- Add a product name here -->
 		<div class="col-md-offset-0 col-sm-offset-0 col-xs-offset-5">
 			<div class="form-group">
-				<label for="productname"
-					class="col-sm-5 control-label">Product
+				<label for="productname" class="col-sm-5 control-label">Product
 					Name:</label>
 				<div class="col-sm-3 input-group">
 					<form:input path="product_name" type="text"

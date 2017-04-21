@@ -87,12 +87,8 @@
 				<div class="form-group">
 					<label for="username" class="col-sm-5 control-label">Username:</label>
 					<div class="col-sm-3">
-							<form:input path="username" type="text" id="username"
-								name="username" placeholder="username" class="form-control" />
+							<form:input path="username" type="text" placeholder="username" class="form-control" />
 						<form:input type="hidden" path="id" />
-					</div>
-					<div class="col-sm-4 error-msg">
-					<span id="username_err"></span>
 					</div>
 				</div>
 
@@ -100,11 +96,7 @@
 					<label for="firstName" class="col-sm-5 control-label">First
 						Name:</label>
 					<div class="col-sm-3">
-						<form:input path="firstname" type="text" id="firstname"
-							name="firstname" placeholder="firstname" class="form-control" />
-					</div>
-					<div class="col-sm-4 error-msg">
-					<span id="firstname_err"></span>
+						<form:input path="firstname" type="text" placeholder="firstname" class="form-control" />
 					</div>
 				</div>
 
@@ -112,8 +104,7 @@
 					<label for="lastname" class="col-sm-5 control-label">Last
 						Name:</label>
 					<div class="col-sm-3">
-						<form:input path="lastname" type="text" id="lastname"
-							name="lastname" placeholder="lastname" class="form-control" />
+						<form:input path="lastname" type="text" placeholder="lastname" class="form-control" />
 
 					</div>
 				</div>
@@ -121,8 +112,7 @@
 				<div class="form-group">
 					<label for="password" class="col-sm-5 control-label">Password:</label>
 					<div class="col-sm-3">
-						<form:input path="password" type="password" id="password"
-							name="password" class="form-control" placeholder="password" />
+						<form:input path="password" type="password" class="form-control" placeholder="password" />
 					</div>
 				</div>
 
@@ -130,8 +120,7 @@
 					<label for="reEnterPassword" class="col-sm-5 control-label">Re-enter
 						password:</label>
 					<div class="col-sm-3">
-						<form:input path="confirm_password" type="password"
-							id="confirm_password" name="confirmPassword" class="form-control"
+						<form:input path="confirm_password" type="password" class="form-control"
 							placeholder="re-enter password" />
 					</div>
 				</div>
@@ -140,16 +129,17 @@
 					<label for="emailId" class="col-sm-5 control-label">Email
 						address:</label>
 					<div class="col-sm-3">
-						<form:input path="emailid" type="email" id="emailid"
-							name="emailid" class="form-control" placeholder="email id" />
+						<form:input path="emailid" type="email" class="form-control" placeholder="email id" />
 					</div>
 				</div>
 
 				<div class="form-group">
 					<div class="col-sm-offset-5 col-sm-3">
-						<input type="checkbox" name="agree" id="agree"> I agree
+						<input type="checkbox" name="agree" id="agree" name="agree"/> I agree
 						with terms and conditions
+						<div>test</div>
 					</div>
+					
 				</div>
 				<div class="form-group">
 					<div class="text-center">

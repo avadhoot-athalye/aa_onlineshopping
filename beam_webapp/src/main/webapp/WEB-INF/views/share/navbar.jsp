@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default " style="border-radius: 0 !important;">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -9,7 +9,7 @@
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="${contextRoot}/">BEAM</a>
+			<a class="navbar-brand" href="${contextRoot}/" style="font-size: 25px;">BEAM</a>
 
 		</div>
 
@@ -17,9 +17,6 @@
 		<div class="collapse navbar-collapse"
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="${contextRoot}/store" class="text-center">STORE
-						<span class="sr-only">(current)</span>
-				</a></li>
 
 				<li class="dropdown text-center"><a class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -44,7 +41,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<form class="navbar-form navbar-left visible-lg" role="search">
-					<div class="input-group">
+					<div class="input-group" style="width: 400px;">
 						<input type="text" class="form-control"
 							placeholder="Search for a game">
 						<div class="input-group-btn">
@@ -54,18 +51,18 @@
 						</div>
 					</div>
 				</form>
+				<li data-toggle="tooltip" data-placement="bottom" title="Home"><a href="${contextRoot}/store" class="text-center">
+						<span class="glyphicon glyphicon-home" aria-hidden="true" ></span>
+				</a></li>
 				<sec:authorize access="hasAuthority('customer')">
 				<li role="presentation" class="text-center"><a
 					href="${contextRoot}/user/cart/"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 						CART <span class="badge">${noOfCartItems}</span></a></li>
 				</sec:authorize>
-				
 				<sec:authorize access="isAnonymous()">
-				<li><a href="${contextRoot}/login" class="text-center">LOG
-						IN</a></li>
-				<li><a href="memberShip" class="text-center">SIGN
-						UP</a></li>
+				<li data-toggle="tooltip" data-placement="bottom" title="LogIn"><a href="${contextRoot}/login" class="text-center"><span class="glyphicon glyphicon-log-in" aria-hidden="true" ></span></a></li>
+				<li data-toggle="tooltip" data-placement="bottom" title="SignUp"><a href="memberShip" class="text-center"><i class="fa fa-user-plus" ></i></a></li>
 				</sec:authorize>		
 						
 				<sec:authorize access="hasAuthority('admin')">

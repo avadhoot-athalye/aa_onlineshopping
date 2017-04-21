@@ -13,6 +13,8 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+
 @Configuration
 @ComponentScan(basePackages = "com.beam.backend")
 @EnableTransactionManagement

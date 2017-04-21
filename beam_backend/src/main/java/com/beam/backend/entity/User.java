@@ -14,6 +14,8 @@ import javax.persistence.Transient;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Component
 public class User implements Serializable{
@@ -25,32 +27,42 @@ public class User implements Serializable{
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="User_id")
+	@JsonIgnore
 	private int id;
 	
+	@JsonIgnore
 	private String username;
 	
 	@Column(name="User_firstname")
+	@JsonIgnore
 	private String firstname;
 	
 	@Column(name="User_lastname")
+	@JsonIgnore
 	private String lastname;
 	
 	@Column(name="User_emailid")
+	@JsonIgnore
 	private String emailid;
 	
 	@Column(name="User_mobileno")
+	@JsonIgnore
 	private String mobilenumber;
 	
 	@Column(name="User_password")
+	@JsonIgnore
 	private String password;
 	
 	@Transient
+	@JsonIgnore
 	private String confirm_password;
 	
 	@Column(name="User_role")
+	@JsonIgnore
 	private String Role;
 	
 	@Column(name="User_enable")
+	@JsonIgnore
 	private boolean enabled;
 	
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

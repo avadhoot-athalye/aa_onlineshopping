@@ -1,13 +1,14 @@
-<div class=" font-style">
-	<h3 class="header-margin">Featured & Popular</h3>
-</div>
-<div class="row div-featured ">
+<c:if test="${not empty msg}">
+	<div class="alert-msg">
+		<div id="success-alert" class="alert alert-success" role="alert">
+			<strong>${msg}</strong>
+		</div>
+	</div>
+</c:if>
 
-	<%@include file="../share/featured & Recommeded.jsp"%>
-
-
-
-	<div class="col-md-9">
+<div style="padding-top: 50px; padding-bottom: 50px;">
+	<div class="container" >
+		
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -19,24 +20,24 @@
 
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner" role="listbox">
-				<div class="item active img img-responsive">
+				<div class="item active img img-responsive" style="height: 500px;">
 					<a href="${contextRoot}/game/232"><img src="${img}/gta5.jpg"
-						alt="Grand Theft Auto V"></a>
+						alt="Grand Theft Auto V" style="height: 500px; width: 100%;"></a>
 				</div>
 
-				<div class="item">
+				<div class="item" style="height: 500px;">
 					<a href="${contextRoot}/game/238"><img
-						src="${img}/GodOfWar3.jpg" alt="GodOfWar3"></a>
+						src="${img}/GodOfWar3.jpg" alt="GodOfWar3" style="height: 500px; width: 100%;"></a>
 				</div>
 
-				<div class="item">
+				<div class="item" style="height: 500px;">
 					<a href="${contextRoot}/game/235"><img
-						src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3"></a>
+						src="${img}/AssasinCreed3.jpg" alt="AssasinCreed3" style="height: 500px; width: 100%;"></a>
 				</div>
 
-				<div class="item">
+				<div class="item" style="height: 500px;">
 					<a href="${contextRoot}/game/236"><img
-						src="${img}/Fallout4.png" alt="Fallout4"></a>
+						src="${img}/Fallout4.png" alt="Fallout4" style="height: 500px; width: 100%;"></a>
 				</div>
 			</div>
 
@@ -54,20 +55,11 @@
 		<!--Carousal ends -->
 
 	</div>
-	<div
-		class="col-md-9 text-center special-banner img img-responsive hidden-xs">
-		<img alt="" src="${img}/Banner.jpg">
-	</div>
 </div>
-
 
 <!-- Thumbnail carousel starts here -->
-
-<div class="page-header thumbnail-adjust no-padding font-style ">
-	<h3 class="header-margin">Recommended</h3>
-</div>
-
 <div class="container">
+
 	<div class="panel">
 		<div class="row">
 
@@ -76,23 +68,26 @@
 					<a href="${contextRoot}/game/240"><img
 						src="${img}/products/240.png" alt="..." class="thubnail-feat "></a>
 					<div class="caption text-center">
-						<a href="${contextRoot}/game/240"><h3>Resident Evil 7</h3></a>
+						<a href="${contextRoot}/game/240"><h4><b>Resident Evil 7</b></h4></a>
 						<p>
 							<sec:authorize access="hasAuthority('admin')">
-							<a href="${contextRoot}/admin/editproduct/240"
-								class="btn btn-warning" role="button"> <span
-								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
-							</a> <a href="${contextRoot}/admin/deleteproduct/240"
-								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+								<a href="${contextRoot}/admin/editproduct/240"
+									class="btn btn-warning" role="button"> <span
+									class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+								</a>
+								<a href="${contextRoot}/admin/deleteproduct/240"
+									class="btn btn-danger" role="button"><span
+									class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
 							</sec:authorize>
-							
+
 							<!-- For user Add to cart button should be displayed -->
 							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<a href="${contextRoot}/user/cart/add/240"
-								class="btn btn-primary" role="button"> <span
-								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-							</a> <a href="${contextRoot}/user/cart/add/240"
-								class="btn btn-default" role="button">BUY NOW</a>
+								<a href="${contextRoot}/user/cart/add/240"
+									class="btn btn-primary" role="button"> <span
+									class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+								</a>
+								<a href="${contextRoot}/user/cart/add/240"
+									class="btn btn-default" role="button">BUY NOW</a>
 							</sec:authorize>
 						</p>
 					</div>
@@ -104,23 +99,26 @@
 					<a href="${contextRoot}/game/241"><img
 						src="${img}/products/241.png" alt="..." class="thubnail-feat "></a>
 					<div class="caption text-center">
-						<a href="${contextRoot}/game/241"><h3>PREY</h3></a>
+						<a href="${contextRoot}/game/241"><h4><b>PREY</b></h4></a>
 						<p>
 							<sec:authorize access="hasAuthority('admin')">
-							<a href="${contextRoot}/admin/editproduct/241"
-								class="btn btn-warning" role="button"> <span
-								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
-							</a> <a href="${contextRoot}/admin/deleteproduct/241"
-								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+								<a href="${contextRoot}/admin/editproduct/241"
+									class="btn btn-warning" role="button"> <span
+									class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+								</a>
+								<a href="${contextRoot}/admin/deleteproduct/241"
+									class="btn btn-danger" role="button"><span
+									class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
 							</sec:authorize>
-							
+
 							<!-- For user Add to cart button should be displayed -->
 							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<a href="${contextRoot}/user/cart/add/241"
-								class="btn btn-primary" role="button"> <span
-								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-							</a> <a href="${contextRoot}/user/cart/add/241"
-								class="btn btn-default" role="button">BUY NOW</a>
+								<a href="${contextRoot}/user/cart/add/241"
+									class="btn btn-primary" role="button"> <span
+									class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+								</a>
+								<a href="${contextRoot}/user/cart/add/241"
+									class="btn btn-default" role="button">BUY NOW</a>
 							</sec:authorize>
 						</p>
 					</div>
@@ -132,25 +130,28 @@
 					<a href="${contextRoot}/game/242"><img
 						src="${img}/products/242.png" alt="..." class="thubnail-feat "></a>
 					<div class="caption text-center">
-						<a href="${contextRoot}/game/242"><h3>Hitman</h3></a>
+						<a href="${contextRoot}/game/242"><h4><b>Hitman</b></h4></a>
 						<p>
 							<sec:authorize access="hasAuthority('admin')">
-							<a href="${contextRoot}/admin/editproduct/242"
-								class="btn btn-warning" role="button"> <span
-								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
-							</a> <a href="${contextRoot}/admin/deleteproduct/242"
-								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+								<a href="${contextRoot}/admin/editproduct/242"
+									class="btn btn-warning" role="button"> <span
+									class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+								</a>
+								<a href="${contextRoot}/admin/deleteproduct/242"
+									class="btn btn-danger" role="button"><span
+									class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
 							</sec:authorize>
-							
+
 							<!-- For user Add to cart button should be displayed -->
 							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<a href="${contextRoot}/user/cart/add/242"
-								class="btn btn-primary" role="button"> <span
-								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-							</a> <a href="${contextRoot}/user/cart/add/243"
-								class="btn btn-default" role="button">BUY NOW</a>
+								<a href="${contextRoot}/user/cart/add/242"
+									class="btn btn-primary" role="button"> <span
+									class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+								</a>
+								<a href="${contextRoot}/user/cart/add/243"
+									class="btn btn-default" role="button">BUY NOW</a>
 							</sec:authorize>
-							
+
 						</p>
 					</div>
 				</div>
@@ -162,25 +163,28 @@
 					<a href="${contextRoot}/game/243"><img
 						src="${img}/products/243.png" alt="..." class="thubnail-feat "></a>
 					<div class="caption text-center">
-						<a href="${contextRoot}/game/243"><h3>Watch Dogs 2</h3></a>
+						<a href="${contextRoot}/game/243"><h4><b>Watch Dogs 2</b></h4></a>
 						<p>
 							<!-- For admin both edit and delete button should be displayed -->
-							
+
 							<sec:authorize access="hasAuthority('admin')">
-							<a href="${contextRoot}/admin/editproduct/243"
-								class="btn btn-warning" role="button"> <span
-								class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
-							</a> <a href="${contextRoot}/admin/deleteproduct/243"
-								class="btn btn-danger" role="button"><span class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
+								<a href="${contextRoot}/admin/editproduct/243"
+									class="btn btn-warning" role="button"> <span
+									class="glyphicon glyphicon-pencil"></span> &nbsp; Edit
+								</a>
+								<a href="${contextRoot}/admin/deleteproduct/243"
+									class="btn btn-danger" role="button"><span
+									class="glyphicon glyphicon-trash"></span>&nbsp; Delete</a>
 							</sec:authorize>
-							
+
 							<!-- For user Add to cart button should be displayed -->
 							<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<a href="${contextRoot}/user/cart/add/243"
-								class="btn btn-primary" role="button"> <span
-								class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-							</a> <a href="${contextRoot}/user/cart/add/243"
-								class="btn btn-default" role="button">BUY NOW</a>
+								<a href="${contextRoot}/user/cart/add/243"
+									class="btn btn-primary" role="button"> <span
+									class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+								</a>
+								<a href="${contextRoot}/user/cart/add/243"
+									class="btn btn-default" role="button">BUY NOW</a>
 							</sec:authorize>
 						</p>
 					</div>
@@ -190,12 +194,6 @@
 		</div>
 	</div>
 
-
-
-
-	<div class="page-header thumbnail-adjust no-padding font-style ">
-		<h3 class="header-margin">Best-seller</h3>
-	</div>
 	<div class="row bottom-featured-game">
 		<!-- Left side featured games -->
 		<div class="col-md-6">
@@ -206,7 +204,7 @@
 				</div>
 				<div class="media-body">
 					<a href="${contextRoot}/game/244"><h4
-							class="media-heading header-margin">Final Fantasy XV</h4></a>
+							class="media-heading header-margin"><b>Final Fantasy XV</b></h4></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -221,8 +219,8 @@
 				</div>
 				<div class="media-body">
 					<a href="${contextRoot}/game/245"><h4
-							class="media-heading header-margin">Call Of Duty: Infinite
-							Warfare</h4></a>
+							class="media-heading header-margin"><b>Call Of Duty: Infinite
+							Warfare</b></h4></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -241,7 +239,7 @@
 				</div>
 				<div class="media-body">
 					<a href="${contextRoot}/game/246"><h4
-							class="media-heading header-margin">Dishonored 2</h4></a>
+							class="media-heading header-margin"><b>Dishonored 2</b></h4></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 						penatibus et magnis dis parturient montes, nascetur ridiculus mus.
@@ -256,7 +254,7 @@
 				</div>
 				<div class="media-body">
 					<a href="${contextRoot}/game/247"><h4
-							class="media-heading header-margin">Dragon Ball Xenoverse</h4></a>
+							class="media-heading header-margin"><b>Dragon Ball Xenoverse</b></h4></a>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 						Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
 						penatibus et magnis dis parturient montes, nascetur ridiculus mus.

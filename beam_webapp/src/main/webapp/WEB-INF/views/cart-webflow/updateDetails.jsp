@@ -82,7 +82,8 @@
 
 		<div class="well">
 			<form:form class="form-horizontal sign-up-form"
-				modelAttribute="orderBean" method="POST" id="updateDetails">
+				modelAttribute="orderBean" method="POST" id="updateDetails"
+				data-toggle="validator">
 
 				<!-- Change your address here -->
 
@@ -92,9 +93,10 @@
 				<div class="form-group">
 					<label for="firstname" class="col-sm-5 control-label">First
 						Name</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="user.firstname" placeholder="John" class="form-control" id="firstname"
-							value="${orderBean.user.firstname}" />
+					<div class="col-sm-3">
+						<form:input path="user.firstname" placeholder="John"
+							class="form-control" id="firstname"
+							value="${orderBean.user.firstname}" type="text" />
 						<form:hidden path="user.id" value="${orderBean.user.id}" />
 						<form:hidden path="address.id" value="${orderBean.address.id}" />
 
@@ -105,9 +107,10 @@
 				<div class="form-group">
 					<label for="lastname" class="col-sm-5 control-label">Last
 						Name</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="user.lastname" placeholder="Smith" class="form-control"
-							value="${orderBean.user.lastname}" />
+					<div class="col-sm-3">
+						<form:input path="user.lastname" placeholder="Smith"
+							class="form-control" value="${orderBean.user.lastname}"
+							id="lastname" type="text" />
 					</div>
 				</div>
 
@@ -115,9 +118,11 @@
 				<div class="form-group">
 					<label for="address_line_1" class="col-sm-5 control-label">Address
 						Line 1</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="address.addressLine1" placeholder="Room no, Street name" class="form-control"
-							value="${orderBean.address.addressLine1}" name="addressLine1"/>
+					<div class="col-sm-3">
+						<form:input path="address.addressLine1"
+							placeholder="Room no, Street name" class="form-control"
+							value="${orderBean.address.addressLine1}" id="addressLine1"
+							type="text" />
 					</div>
 				</div>
 
@@ -125,18 +130,19 @@
 				<div class="form-group">
 					<label for="address_line_2" class="col-sm-5 control-label">Address
 						Line 2</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="address.addressLine2" type="text" id="addressLine2" name="address_line_2"
-							placeholder="local area name" class="form-control"/>
+					<div class="col-sm-3">
+						<form:input path="address.addressLine2" type="text"
+							id="addressLine2" name="address_line_2"
+							placeholder="local area name" class="form-control" />
 					</div>
 				</div>
 
 				<!-- Update landmark here -->
 				<div class="form-group">
 					<label for="landmark" class="col-sm-5 control-label">Landmark</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="address.landMark" type="text" id="landmark" name="landmark"
-							placeholder="landmark" class="form-control"/>
+					<div class="col-sm-3">
+						<form:input path="address.landMark" type="text" id="landmark"
+							name="landmark" placeholder="landmark" class="form-control" />
 					</div>
 				</div>
 
@@ -144,8 +150,8 @@
 				<div class="form-group">
 					<label for="city" class="col-sm-5 control-label">Choose a
 						City:</label>
-					<div class="col-sm-3 input-group">
-						<form:select path="address.city" class="form-control">
+					<div class="col-sm-3">
+						<form:select path="address.city" class="form-control" id="city">
 							<form:option value="${orderBean.address.city}">${orderBean.address.city}</form:option>
 							<form:option value="Mumbai">Mumbai</form:option>
 							<form:option value="Nagpur">Nagpur</form:option>
@@ -159,9 +165,9 @@
 				<div class="form-group">
 					<label for="state" class="col-sm-5 control-label">Choose a
 						State:</label>
-					<div class="col-sm-3 input-group">
-						<form:select path="address.state" class="form-control">
-							<form:option value="${orderBean.address.state}">${orderBean.address.state}</form:option>
+					<div class="col-sm-3">
+						<form:select path="address.state" class="form-control" id="state">
+
 							<form:option value="Maharashtra">Maharashtra</form:option>
 						</form:select>
 					</div>
@@ -172,9 +178,10 @@
 				<div class="form-group">
 					<label for="country" class="col-sm-5 control-label">Choose
 						a Country: </label>
-					<div class="col-sm-3 input-group">
-						<form:select path="address.country" class="form-control">
-							<form:option value="${orderBean.address.country}">${orderBean.address.country}</form:option>
+					<div class="col-sm-3">
+						<form:select path="address.country" class="form-control"
+							id="country">
+
 							<form:option value="India">India</form:option>
 						</form:select>
 
@@ -185,22 +192,25 @@
 
 				<div class="form-group">
 					<label for="pincode" class="col-sm-5 control-label">Pincode:</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="address.pincode" type="text" id="pincode" name="pincode"
-							class="form-control" placeholder="pincode" />
+					<div class="col-sm-3">
+						<form:input path="address.pincode" type="text" id="pincode"
+							name="pincode" class="form-control" placeholder="pincode"
+							pattern="[0-9]{4}" />
 					</div>
 				</div>
 
 				<!-- Update Mobile number here -->
-				<div class="form-group">
+				<div class="form-group has-feedback">
 					<label for="mobileno" class="col-sm-5 control-label">Mobile
 						No.</label>
-					<div class="col-sm-3 input-group">
-						<form:input path="user.mobilenumber" placeholder="mobile no." id="mobilenumber"
-							class="form-control" />
+					<div class="col-sm-3">
+						<form:input path="user.mobilenumber" placeholder="mobile no."
+							id="mobilenumber" class="form-control" />
 					</div>
+					<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+					<div class="help-block with-errors"></div>
 				</div>
-
+				
 				<!-- Submit Button -->
 
 				<div class="form-group">
@@ -217,9 +227,9 @@
 
 	<!-- Script placed at the end -->
 	<script src="${js}/jquery.js"></script>
+	<script src="${js}/bootstrap.js"></script>
 	<script src="${js}/jquery.validate.js"></script>
 	<script src="${js}/addValidate.js"></script>
-	<script src="${js}/bootstrap.js"></script>
 	<script src="${js}/app.js"></script>
 	<%-- 		<script src="${js}/pace.js"></script> --%>
 </body>
