@@ -1,3 +1,10 @@
+<%-- <script src="${js}/angular.js"></script> --%>
+<%-- <script src="${js}/viewport-units-buggyfill.js"></script> --%>
+<%-- <script src="${js}/carouselapp.js"></script> --%>
+<%-- <script src="${js}/UiController.js"></script> --%>
+<%-- <script src="${js}/angular-3d-carousel.js"></script> --%>
+<!-- <script>window.viewportUnitsBuggyfill.init();</script> -->
+
 <c:if test="${not empty msg}">
 	<div class="alert-msg">
 		<div id="success-alert" class="alert alert-success" role="alert">

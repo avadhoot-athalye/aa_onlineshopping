@@ -3,11 +3,13 @@
 
 <div class="container">
 	<div ng-app="productList" >
-		<form>
-		<div class="input-group col-md-10" >
-			<input type="text" class="form-control" placeholder="Search for a game" ng-model="searchGame"/>
+		<div style="padding-left: 75px;">
+			<form>
+				<div class="input-group col-md-10" >
+					<input type="text" class="form-control" placeholder="Search for a game" ng-model="searchGame"/>
+				</div>
+			</form>
 		</div>
-	</form>
 	<br />
 	
 		<div ng-controller="productDetails" items="${products}" var="product" >

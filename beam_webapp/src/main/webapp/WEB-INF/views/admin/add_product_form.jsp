@@ -84,7 +84,7 @@
 			<label for="quantity" class="col-sm-5 control-label">Available
 				Stock:</label>
 			<div class="col-sm-3 input-group">
-				<form:input path="product_quantity" type="number" id="quantity"
+				<form:input path="product_quantity" type="number" id="stock"
 					name="quantity" class="form-control"
 					placeholder="Available in stock" />
 			</div>

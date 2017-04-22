@@ -17,7 +17,7 @@ create table product
 (
 product_id identity,
 product_name varchar2(30) not null,
-product_description varchar2(100),
+product_description varchar2(1000),
 product_price decimal(8,2) not null,
 product_quantity number(5) not null,
 category_id bigint(10) not null,

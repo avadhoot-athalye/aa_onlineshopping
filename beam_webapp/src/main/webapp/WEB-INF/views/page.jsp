@@ -17,6 +17,10 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="This is a home Page of gaming website">
 <meta name="author" content="Avadhoot Athalye">
+
+<script type="text/javascript">
+	window.menu = '${title}';
+</script>
 <!--Files for Favicon -->
 <link rel="apple-touch-icon" sizes="57x57"
 	href="${img}/favicon/apple-icon-57x57.png">
@@ -50,13 +54,17 @@
 	content="${img}/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<title>${title}|Beam</title>
+<title>${title}&nbsp;|&nbsp;Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
 <%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
 <link href="${css}/style.css" rel="stylesheet">
+<%-- <link href="${css}/carouselstyle.css" rel="stylesheet"> --%>
+<%-- <link href="${css}/angular-3d-carousel.css" rel="stylesheet"> --%>
+
+
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,13 +78,13 @@
 
 <!-- Body of the content starts here -->
 <body>
-	
 
+	<div class="main-wrapper">
 		<!--Header image ends -->
 
 		<%@include file="./share/navbar.jsp"%>
 
-		
+		<div class="content">
 			<c:if test="${ifUserClickedHome == true}">
 				<%@include file="admin/home.jsp"%>
 			</c:if>
@@ -121,7 +129,7 @@
 				<%@include file="admin/authority.jsp"%>
 			</c:if>
 
-		
+		</div>
 
 		<%@include file="./share/footer.jsp"%>
 
@@ -132,12 +140,13 @@
 		<script src="${js}/jquery.validate.js"></script>
 		<script src="${js}/validation.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		
 		<%-- 	<script src="${js}/angular.js"></script>
  --%>
 		<script src="${js}/app.js"></script>
 		<%-- 	<script src="${js}/cart.js"></script>
  --%>
 		<%-- 		<script src="${js}/pace.js"></script> --%>
-	
+	</div>
 </body>
 </HTML>

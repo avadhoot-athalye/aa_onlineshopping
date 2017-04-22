@@ -8,18 +8,18 @@
 	</div>
 </c:if>
 
-<div class="well">
+<div class="container" >
 	<form class="form-horizontal sign-up-form" method="post"
-		action="${contextRoot}/login">
-
-		<h2 class="text-center header-sign-up">Log In</h2>
-		<div class="form-group">
-			<label for="username" class="col-sm-5 control-label">Username:</label>
-			<div class="col-sm-3">
-				<input type="text" id="username" name="username"
-					placeholder="username" class="form-control" />
+		action="${contextRoot}/login" >
+	<div style="padding-top: 50px;">
+		<h1 class="text-center ">Log In</h1>
+			<div class="form-group">
+				<label for="username" class="col-sm-5 control-label">Username:</label>
+				<div class="col-sm-3">
+					<input type="text" id="username" name="username"
+						placeholder="username" class="form-control" />
+				</div>
 			</div>
-		</div>
 
 		<div class="form-group">
 			<label for="password" class="col-sm-5 control-label">Password:</label>
@@ -35,6 +35,7 @@
 				<button id="login" type="submit" class="btn btn-primary  ">Log In</button>
 			</div>
 		</div>
+		</div>	
 	</form>
 	
 </div>

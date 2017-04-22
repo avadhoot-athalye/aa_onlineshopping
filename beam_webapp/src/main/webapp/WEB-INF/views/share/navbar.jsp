@@ -18,7 +18,7 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 
-				<li class="dropdown text-center"><a class="dropdown-toggle"
+				<li id="game-menu" class="dropdown text-center"><a class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">GAMES <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -51,23 +51,23 @@
 						</div>
 					</div>
 				</form>
-				<li data-toggle="tooltip" data-placement="bottom" title="Home"><a href="${contextRoot}/store" class="text-center">
+				<li id="home" data-toggle="tooltip" data-placement="bottom" title="Home"><a href="${contextRoot}/store" class="text-center">
 						<span class="glyphicon glyphicon-home" aria-hidden="true" ></span>
 				</a></li>
 				<sec:authorize access="hasAuthority('customer')">
-				<li role="presentation" class="text-center"><a
+				<li id="cart" role="presentation" class="text-center"><a
 					href="${contextRoot}/user/cart/"><span
 						class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
 						CART <span class="badge">${noOfCartItems}</span></a></li>
 				</sec:authorize>
 				<sec:authorize access="isAnonymous()">
-				<li data-toggle="tooltip" data-placement="bottom" title="LogIn"><a href="${contextRoot}/login" class="text-center"><span class="glyphicon glyphicon-log-in" aria-hidden="true" ></span></a></li>
-				<li data-toggle="tooltip" data-placement="bottom" title="SignUp"><a href="memberShip" class="text-center"><i class="fa fa-user-plus" ></i></a></li>
+				<li id="login" data-toggle="tooltip" data-placement="bottom" title="LogIn"><a href="${contextRoot}/login" class="text-center"><span class="glyphicon glyphicon-log-in" aria-hidden="true" ></span></a></li>
+				<li id="signin" data-toggle="tooltip" data-placement="bottom" title="SignUp"><a href="memberShip" class="text-center"><i class="fa fa-user-plus" ></i></a></li>
 				</sec:authorize>		
 						
 				<sec:authorize access="hasAuthority('admin')">
-				<li><a href="#" data-toggle="dropdown"
-					class="dropdown-toggle dropdown text-center"><sec:authentication property="name"/>(ADMIN)<span
+				<li id="admin-panel"><a href="#" data-toggle="dropdown"
+					class="dropdown-toggle dropdown text-center">ADMIN<span
 						class="caret" aria-haspopup="true" aria-expanded="true"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 						<li><a href="${contextRoot}/admin/addproduct"
@@ -86,7 +86,7 @@
 				</sec:authorize>
 				
 				<sec:authorize access="hasAuthority('customer')">
-				<li><a href="#" data-toggle="dropdown"
+				<li id="user-panel"><a href="#" data-toggle="dropdown"
 					class="dropdown-toggle dropdown text-center"><sec:authentication
 							property="name" /><span class="caret" aria-haspopup="true"
 						aria-expanded="true"></span></a>
