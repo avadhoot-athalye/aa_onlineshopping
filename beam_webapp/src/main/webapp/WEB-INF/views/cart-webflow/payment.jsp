@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
 <%@taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -61,9 +57,10 @@
 <%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
 <link href="${css}/style.css" rel="stylesheet">
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans"
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text"
 	rel="stylesheet">
 <!-- Pace.css for loader -->
 <%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
@@ -71,14 +68,10 @@
 
 </HEAD>
 
-
-
+<!-- Body of the content starts here -->
 <body>
-	<div class="container margin-centered">
-		<div class="no-margin no-padding">
-			<img src="${img}/page-header.jpg"
-				class="img img-responsive hidden-xs">
-		</div>
+
+	<div class="main-wrapper">
 		<!--Header image ends -->
 
 		<%@include file="../share/navbar.jsp"%>

@@ -57,9 +57,10 @@
 <%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
 <link href="${css}/style.css" rel="stylesheet">
+
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans"
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text"
 	rel="stylesheet">
 <!-- Pace.css for loader -->
 <%-- 		<link href="${css}/pace.css" rel="stylesheet"> --%>
@@ -67,15 +68,10 @@
 
 </HEAD>
 
-
-
+<!-- Body of the content starts here -->
 <body>
 
-	<div class="container margin-centered">
-		<div class="no-margin no-padding">
-			<img src="${img}/page-header.jpg"
-				class="img img-responsive hidden-xs">
-		</div>
+	<div class="main-wrapper">
 		<!--Header image ends -->
 
 		<%@include file="../share/navbar.jsp"%>
@@ -223,14 +219,19 @@
 			</form:form>
 		</div>
 		<%@include file="../share/footer.jsp"%>
-	</div>
+<!--End of the Footer -->
 
-	<!-- Script placed at the end -->
-	<script src="${js}/jquery.js"></script>
-	<script src="${js}/bootstrap.js"></script>
-	<script src="${js}/jquery.validate.js"></script>
-	<script src="${js}/addValidate.js"></script>
-	<script src="${js}/app.js"></script>
-	<%-- 		<script src="${js}/pace.js"></script> --%>
+		<!-- Script placed at the end -->
+		<script src="${js}/jquery.js"></script>
+		<script src="${js}/jquery.validate.js"></script>
+		<script src="${js}/validation.js"></script>
+		<script src="${js}/bootstrap.js"></script>
+		<%-- 	<script src="${js}/angular.js"></script>
+ --%>
+		<script src="${js}/app.js"></script>
+		<%-- 	<script src="${js}/cart.js"></script>
+ --%>
+		<%-- 		<script src="${js}/pace.js"></script> --%>
+	</div>
 </body>
 </HTML>

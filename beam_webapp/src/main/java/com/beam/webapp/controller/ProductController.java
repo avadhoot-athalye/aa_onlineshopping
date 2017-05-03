@@ -56,9 +56,10 @@ import com.beam.backend.entity.User;
 	}
 	
 	@RequestMapping(value = "/cartItems/list")
-	public @ResponseBody List<CartItems> cartItemsList(Principal principal) { // need to receive response
+	public @ResponseBody List<CartItems> cartItemsList(Principal principal) {// need to receive response
+		System.out.println("Fetching cartItems");
 		User user = userDAO.getbyUserName(principal.getName());
-		int cartId = user.getCart().getId();
-		return cartItemDAO.list(cartId);
+		List<CartItems> cartItems = cartItemDAO.list(user.getCart().getId());
+		return cartItems;
 	}
 }

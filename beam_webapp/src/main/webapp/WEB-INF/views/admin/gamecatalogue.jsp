@@ -28,17 +28,17 @@
 					</sec:authorize>
 				</div>
 				<div class="caption ">
-					<H4 class="text-center">
-						<small><a ng-href="${contextRoot}/game/{{product.product_id}}"><b>{{product.product_name}}</b></a></small>
-					</H4>
+					<H6 class="text-center">
+						<a ng-href="${contextRoot}/game/{{product.product_id}}"><b>{{product.product_name}}</b></a>
+					</H6>
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-6">
 							<H4>
 								<small>&#8377; {{product.product_price}}</small>
 							</H4>
 						</div>
 						<sec:authorize access="hasAuthority('customer') or isAnonymous()">
-							<div class="col-md-offset-4 col-md-2" data-toggle="tooltip" data-placement="bottom" title="Add to cart">
+							<div class="col-md-offset-2 col-md-2" data-toggle="tooltip" data-placement="bottom" title="Add to cart">
 								<a href="${contextRoot}/user/cart/add/{{product.product_id}}" class="btn btn-default" role="button" > <span
 									class="glyphicon glyphicon-shopping-cart" ></span>
 								</a>
