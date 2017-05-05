@@ -20,7 +20,7 @@
 
 				<li id="game-menu" class="dropdown text-center"><a class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"
-					aria-expanded="false">GAMES <span class="caret"></span></a>
+					aria-expanded="false" data-hover="dropdown">GAMES <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="${contextRoot}/games/all">ALL GAMES</a></li>
 						<li role="separator" class="divider"></li>
@@ -66,8 +66,8 @@
 				</sec:authorize>		
 						
 				<sec:authorize access="hasAuthority('admin')">
-				<li id="admin-panel"><a href="#" data-toggle="dropdown"
-					class="dropdown-toggle dropdown text-center">ADMIN<span
+				<li id="admin-panel" class="dropdown"><a href="#" data-toggle="dropdown"
+					class="dropdown-toggle dropdown text-center" data-hover="dropdown">ADMIN<span
 						class="caret" aria-haspopup="true" aria-expanded="true"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
 						<li><a href="${contextRoot}/admin/addproduct"
@@ -86,8 +86,8 @@
 				</sec:authorize>
 				
 				<sec:authorize access="hasAuthority('customer')">
-				<li id="user-panel"><a href="#" data-toggle="dropdown"
-					class="dropdown-toggle dropdown text-center"><sec:authentication
+				<li id="user-panel" class="dropdown"><a href="#" data-toggle="dropdown"
+					class="dropdown-toggle dropdown text-center" data-hover="dropdown"><sec:authentication
 							property="name" /><span class="caret" aria-haspopup="true"
 						aria-expanded="true"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

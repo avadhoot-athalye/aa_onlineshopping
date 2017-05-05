@@ -57,6 +57,8 @@
 <title>${title}&nbsp;|&nbsp;Beam</title>
 <!--Core css files -->
 <link href="${css}/bootstrap_sandstone.css" rel="stylesheet">
+<link href="${css}/animate.css" rel="stylesheet">
+<link href="${css}/bootstrap-dropdownhover.css" rel="stylesheet">
 <%-- <link href="${css}/bootstrap-theme.css" rel="stylesheet"> --%>
 <%-- <link href="${css}/bootstrap.css" rel="stylesheet"> --%>
 <!--Custom css file -->
@@ -140,6 +142,7 @@
 		<script src="${js}/jquery.validate.js"></script>
 		<script src="${js}/validation.js"></script>
 		<script src="${js}/bootstrap.js"></script>
+		<script src="${js}/bootstrap-dropdownhover.js"></script>
 		
 		<%-- 	<script src="${js}/angular.js"></script>
  --%>

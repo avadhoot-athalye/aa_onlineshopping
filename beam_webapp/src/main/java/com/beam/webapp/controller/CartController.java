@@ -148,29 +148,29 @@ public class CartController {
 		}
 	}
 	
-	@RequestMapping(value={"/update"}, method = RequestMethod.POST)
-	
-	public String updateCartItem(@ModelAttribute CartItems cartItems, HttpServletRequest request) {
-		
-		String url = null;
-		int quantity = cartItems.getQuantity();		//quantity demanded by user
-		cartItems = cartItemDAO.getCartItem(cartItems.getId());		//fetching the cart item that needs to be updated by its id
-		int existingQuantity = cartItems.getQuantity();		//number of quantities user already had
-		int changeQuantity = existingQuantity - quantity;	//difference between quantity user had and he demanded - answer is negative
-		product = productDAO.get(cartItems.getProduct().getProduct_id());	//fetching the product that needs to be updated
-		if(product.getProduct_quantity() > quantity) {	//if stock is more than demanded quantity
-			cartItems.setQuantity(quantity);			//updating cart item quantity
-			cartItems.setTotalPrice(cartItems.getPrice() * cartItems.getQuantity());	//changing total price of product
-			cartItemDAO.updateCartItems(cartItems);
-			product.setProduct_quantity(product.getProduct_quantity() + changeQuantity);	//changing product stock
-			productDAO.updateProduct(product);	
-			cart = user.getCart();
-			cartDAO.updateGrandTotal(cart);
-			cartDAO.updateCart(cart);
-			return url = "redirect:/user/cart/?op=success";
-		} else {
-			return url = "redirect:/user/cart/?op=fail";
-		}
-	
-	}
+//	@RequestMapping(value={"/update"}, method = RequestMethod.POST)
+//	
+//	public String updateCartItem(@ModelAttribute CartItems cartItems, HttpServletRequest request) {
+//		System.out.println("Updating cart item now...!");
+//		String url = null;
+//		int quantity = cartItems.getQuantity();		//quantity demanded by user
+//		cartItems = cartItemDAO.getCartItem(cartItems.getId());		//fetching the cart item that needs to be updated by its id
+//		int existingQuantity = cartItems.getQuantity();		//number of quantities user already had
+//		int changeQuantity = existingQuantity - quantity;	//difference between quantity user had and he demanded - answer is negative
+//		product = productDAO.get(cartItems.getProduct().getProduct_id());	//fetching the product that needs to be updated
+//		if(product.getProduct_quantity() > quantity) {	//if stock is more than demanded quantity
+//			cartItems.setQuantity(quantity);			//updating cart item quantity
+//			cartItems.setTotalPrice(cartItems.getPrice() * cartItems.getQuantity());	//changing total price of product
+//			cartItemDAO.updateCartItems(cartItems);
+//			product.setProduct_quantity(product.getProduct_quantity() + changeQuantity);	//changing product stock
+//			productDAO.updateProduct(product);	
+//			cart = user.getCart();
+//			cartDAO.updateGrandTotal(cart);
+//			cartDAO.updateCart(cart);
+//			return url = "redirect:/user/cart/?op=success";
+//		} else {
+//			return url = "redirect:/user/cart/?op=fail";
+//		}
+//	
+//	}
 }

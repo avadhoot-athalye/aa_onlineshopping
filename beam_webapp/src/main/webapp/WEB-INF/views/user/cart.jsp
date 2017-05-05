@@ -59,30 +59,40 @@
 
 									<!-- Product name will come here -->
 									<div class="col-md-3 col-xs-12">
-										<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"><strong>{{cartItem.product.product_name}}</strong></a>
+										<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"><strong>{{Item.product.product_name}}</strong></a>
 									</div>
 
 									<!-- Quantity is added here -->
 									<div class="col-md-2 col-xs-12">
-										<input id="quantity" type="number" min="1" max="10"
-											ng-model="quantity" ng-change="update(quantity)">
+										<input id="{{Item.id}}" type="number" min="1" max="10"
+											ng-model="Item.quantity" ng-change="update(Item)">
+
+
+										<%-- 										<form:form action="${contextRoot}/user/cart/update" --%>
+										<%-- 											method="post" modelAttribute="cartItems"> --%>
+										<%-- 											<form:input path="quantity" id="${cartItems.id}" --%>
+										<%-- 												type="number" class="cartQuant" --%>
+										<%-- 												value="${cartItems.quantity}"></form:input> --%>
+										<%-- 											<form:hidden path="id" value="${cartItems.id}" /> --%>
+										<%-- 											<input type="submit" id="save_${cartItems.id}" --%>
+										<!-- 												class="btn btn-default" style="display: none;" value="Save" /> -->
+										<%-- 										</form:form> --%>
+
 									</div>
 
 									<!-- per unit price will come here -->
 									<div class="col-md-1 col-xs-12">
-										<strong>&#8377;
-											{{Item.product.product_price }}</strong>
+										<strong>&#8377; {{Item.product.product_price }}</strong>
 									</div>
 
 									<!-- Total price of a single product will come here -->
 									<div class="col-md-offset-1 col-md-2">
-										<strong>&#8377; {{quantity *
-											Item.product.product_price}}</strong>
+										<strong>&#8377; {{Item.totalPrice}}</strong>
 									</div>
 
 									<!-- Option to remove cart item -->
 									<div class="col-md-1 col-xs-12">
-										<a href="${contextRoot}/user/cart/delete/{{cartItem.id}}"
+										<a href="${contextRoot}/user/cart/delete/{{Item.id}}"
 											class="btn btn-default" data-toggle="tooltip"
 											data-placement="bottom" title="Remove"><span
 											class="glyphicon glyphicon-trash"></span></a>
@@ -105,6 +115,8 @@
 								</div>
 							</div>
 						</div>
+
+
 
 
 
