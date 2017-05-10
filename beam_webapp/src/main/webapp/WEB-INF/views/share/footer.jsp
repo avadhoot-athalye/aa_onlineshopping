@@ -1,4 +1,4 @@
- <div class="container footer" style="padding-top: 20px;">
+ <div class="container footer" >
  	
  	<hr >
  	

@@ -23,9 +23,9 @@
 						<a href="${contextRoot}/admin/editproduct/{{product.product_id}}"><span
 							class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
 					</sec:authorize>
-					<sec:authorize access="hasAuthority('customer')">
+					<!-- <sec:authorize access="hasAuthority('customer')">
 						<span class="glyphicon glyphicon-heart"></span>
-					</sec:authorize>
+					</sec:authorize> -->
 				</div>
 				<div class="caption ">
 					<H6 class="text-center">

@@ -76,7 +76,7 @@
 
 		<%@include file="./share/navbar.jsp"%>
 
-		<div class="container">
+		<div class="container content" >
 			<form:form id="sign-up" class="form-horizontal sign-up-form"
 				modelAttribute="user" method="post">
 

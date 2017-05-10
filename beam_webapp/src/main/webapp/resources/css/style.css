@@ -357,7 +357,7 @@ a:HOVER {
 
 .footer {
 	position: absolute;
-	bottom: 15px;
+	bottom: 25px;
 	height: 60px;
 	width: 100%;
 }
@@ -378,4 +378,8 @@ footer {
 }
 #showcase {
 	font-size: 13px;
+}
+.float-my-children > * {
+    float:left;
+    margin-right:5px;
 } 

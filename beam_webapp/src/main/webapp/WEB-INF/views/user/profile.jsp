@@ -1,5 +1,5 @@
 
-<div class="well">
+<div>
 	<form class="form-horizontal sign-up-form">
 
 		<!-- Change your settings here -->

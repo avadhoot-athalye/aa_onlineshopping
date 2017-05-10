@@ -1,12 +1,11 @@
+<div class="container">
 <div class="row" style="padding-top: 50px;" >
-
-	<div>
 		<div class="col-md-4 col-md-offset-1" style="width: 346px;">
 			<div class="thumbnail" style="width: 326px;">
 				<img src="${img}/products/${product.product_id}.png" alt="..." style="margin-left: 0px; margin-right: 0px; width: 100%">
 			</div>
 		</div>
-		<div class="col-md-offset-1 col-md-6 body">
+		<div class="col-md-offset-1 col-md-6">
 			<div class="caption">
 				<h1>${product.product_name}</h1>
 				<br>
@@ -30,7 +29,7 @@
 					</div>
 				</sec:authorize>
 				<sec:authorize access="hasAuthority('admin')">
-					<div class="row col-md-12" items="${products}" var="product">
+					<div class="row" items="${products}" var="product">
 						<div class="col-md-5">
 							<a href="${contextRoot}/admin/editproduct/${product.product_id}"
 								class="btn btn-warning" role="button"> <span
@@ -46,5 +45,6 @@
 			</div>
 
 		</div>
-	</div>
+	
+</div>
 </div>
