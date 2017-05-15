@@ -76,14 +76,14 @@
 
 		<%@include file="../share/navbar.jsp"%>
 
-		<div class="well">
+		<div class="content">
 			<form:form class="form-horizontal sign-up-form"
 				modelAttribute="orderBean" method="POST" id="updateDetails"
 				data-toggle="validator">
 
 				<!-- Change your address here -->
 
-				<h2 class="text-center header-sign-up">Update User Address</h2>
+				<h2 class="text-center header-sign-up">Update Shipping Details</h2>
 
 				<!-- Update First Name here -->
 				<div class="form-group">
@@ -191,7 +191,7 @@
 					<div class="col-sm-3">
 						<form:input path="address.pincode" type="text" id="pincode"
 							name="pincode" class="form-control" placeholder="pincode"
-							pattern="[0-9]{4}" />
+							pattern="[0-9]{6}" />
 					</div>
 				</div>
 

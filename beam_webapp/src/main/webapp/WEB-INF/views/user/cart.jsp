@@ -3,7 +3,7 @@
 
 
 
-<div class="container" style="padding-top: 25px;" ng-app="cart"
+<div class="container" style="padding-bottom: 50px;" ng-app="cart"
 	ng-controller="cal" ng-init="fetchCartItems()">
 
 	<!-- If cart is empty show this message -->
@@ -22,79 +22,106 @@
 
 	<!-- If cart items exist show cart here -->
 
-	<div ng-if="!isEmpty" class="panel panel-default">
-		<!-- Default panel contents -->
-		<div class="panel-heading"
-			style="font-size: 25px; text-align: center; background-color: #3e3f3a; color: #fff;">IN
-			YOUR CART</div>
+	<div ng-if="!isEmpty">
 
-		<!-- Cart starts here -->
-		<table class="table table-hover">
-
-			<thead>
-				<tr>
-					<th>PRODUCT DETAILS</th>
-					<th>QUANTITY</th>
-					<th>PRICE</th>
-					<th>TOTAL PRICE</th>
-					<th>TOOLS</th>
-				</tr>
-			</thead>
+		<div style="padding-bottom: 20px">
+			<div>
+				<a class="btn btn-primary special-banner"
+					href="${contextRoot}/games/all" role="navigation">Continue
+					Shopping
+				</a>
+			</div>
 
 
-			<tbody>
+			
+		</div>
+			<%-- <div class="text-center" style="padding-bottom: 20px">
+				<a class="btn btn-success special-banner"
+					href="${contextRoot}/confirmDetails" role="button">PROCEED TO
+					CHECKOUT </a>
+			</div>
+ --%>
+			<div class="class=" panelpanel-default">
+				<!-- Default panel contents -->
+				<div class="panel-heading"
+					style="font-size: 25px; text-align: center; background-color: #3e3f3a; color: #fff;">IN
+					YOUR CART</div>
 
-				<tr ng-repeat="Item in cartItems">
+				<!-- Cart starts here -->
+				<table class="table table-hover">
 
-					<!-- Product Image and name is here -->
-					<td>
-						<div class="clearfix float-my-children">
-							<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"><img
-								class="img img-responsive cartImage" alt=""
-								ng-src="${img}/products/{{Item.product.product_id}}.png"></a>
-							<!-- <h4 style="padding-left: 10px;">Need for Speed Most Wanted</h4> -->
-							<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"
-								style="padding-left: 10px;">{{Item.product.product_name}}</a>
-						</div>
-					</td>
-
-					<!-- Quantity demanded is here -->
-					<td><input id="{{Item.id}}" type="number" min="1" max="10"
-						ng-model="Item.quantity" ng-change="update(Item)"></td>
-
-					<!-- Product price is here -->
-					<td>{{Item.product.product_price }} &#8377;</td>
-
-					<!-- Total price is here -->
-					<td>{{Item.totalPrice}} &#8377;</td>
+					<thead>
+						<tr>
+							<th>PRODUCT DETAILS</th>
+							<th>QUANTITY</th>
+							<th>PRICE</th>
+							<th>TOTAL PRICE</th>
+							<th>TOOLS</th>
+						</tr>
+					</thead>
 
 
-					<!-- Options to remove cart item or to move to wishlist is here -->
-					<td>
-						<div class="clearfix float-my-children">
-							<a href="${contextRoot}/user/cart/delete/{{Item.id}}"
-								class="btn btn-danger" data-toggle="tooltip"
-								data-placement="bottom" title="Move to Wishlist"><span
-								class="glyphicon glyphicon-heart"></span></a> <a
-								href="${contextRoot}/user/cart/delete/{{Item.id}}"
-								class="btn btn-primary" data-toggle="tooltip"
-								data-placement="bottom" title="Remove"><span
-								class="glyphicon glyphicon-trash"></span></a>
-						</div>
-					</td>
-				</tr>
+					<tbody>
 
-			</tbody>
-		</table>
+						<tr ng-repeat="Item in cartItems">
 
-		<div class="panel-footer text-right"
-			style="font-size: 25px; background-color: #3e3f3a; color: #fff; padding-right: 50px;">AMOUNT
-			DUE : {{grandTotal}} &#8377;</div>
+							<!-- Product Image and name is here -->
+							<td>
+								<div class="clearfix float-my-children">
+									<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"><img
+										class="img img-responsive cartImage" alt=""
+										ng-src="${img}/products/{{Item.product.product_id}}.png"></a>
+									<!-- <h4 style="padding-left: 10px;">Need for Speed Most Wanted</h4> -->
+									
+									<a ng-href="${contextRoot}/game/{{Item.product.product_id}}"
+										style="padding-left: 10px;">{{Item.product.product_name}}</a>
+								</div>
+							</td>
 
-		
-	</div>
-	
-	<div class="row">
+							<!-- Quantity demanded is here -->
+							<td><input id="{{Item.id}}" type="number" min="1" max="7"
+								ng-model="Item.quantity" ng-change="update(Item)"></td>
+
+							<!-- Product price is here -->
+							<td>&#8377;{{Item.product.product_price }}</td>
+
+							<!-- Total price is here -->
+							<td>&#8377; {{Item.totalPrice}}</td>
+
+
+							<!-- Options to remove cart item or to move to wishlist is here -->
+							<td>
+								<div class="clearfix float-my-children">
+									<a href="${contextRoot}/user/cart/delete/{{Item.id}}"
+										class="btn btn-danger" data-toggle="tooltip"
+										data-placement="bottom" title="Move to Wishlist"><span
+										class="glyphicon glyphicon-heart"></span></a> <a
+										href="${contextRoot}/user/cart/delete/{{Item.id}}"
+										class="btn btn-primary" data-toggle="tooltip"
+										data-placement="bottom" title="Remove"><span
+										class="glyphicon glyphicon-trash"></span></a>
+								</div>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+				<div class="panel-footer text-right"
+					style="font-size: 25px; background-color: #3e3f3a; color: #fff; padding-right: 50px;">AMOUNT
+					DUE &#8377; {{grandTotal}}</div>
+
+
+			</div>
+			
+			<div class="col-md-2 col-md-offset-10">
+				<div class="Text-container">
+					<a class="btn btn-success special-banner"
+						href="${contextRoot}/confirmDetails" role="button">PROCEED TO CHECKOUT</a>
+				</div>
+			</div>
+
+			<%-- <div class="row">
 			<div class="col-md-2">
 				<a class="btn btn-primary special-banner"
 					href="${contextRoot}/games/all" role="navigation"> <span
@@ -112,6 +139,6 @@
 					</a>
 				</div>
 			</div>
-
+ --%>
 		</div>
-</div>
+	</div>
